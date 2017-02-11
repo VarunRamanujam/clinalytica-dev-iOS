@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerController" customModule="Hospital" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="blM-x0-jcN" id="kVB-Vu-SCG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFy-fH-9mT">
+                    <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="blM-x0-jcN">
+                    <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <date key="date" timeIntervalSinceReferenceDate="489751828.89842498">
+                        <!--2016-07-09 10:10:28 +0000-->
+                    </date>
+                </datePicker>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASb-jB-umM">
+                    <rect key="frame" x="0.0" y="407" width="375" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <items>
+                        <barButtonItem style="done" systemItem="flexibleSpace" id="sEa-ky-oSU"/>
+                        <barButtonItem style="done" systemItem="done" id="DzU-08-OuS">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="doneButtonClickedWithSender:" destination="-1" id="aW5-Jz-rJz"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="blM-x0-jcN" firstAttribute="top" secondItem="ASb-jB-umM" secondAttribute="bottom" id="5tG-l7-vYZ"/>
+                <constraint firstAttribute="bottom" secondItem="blM-x0-jcN" secondAttribute="bottom" id="FrF-4h-KBL"/>
+                <constraint firstItem="RFy-fH-9mT" firstAttribute="height" secondItem="blM-x0-jcN" secondAttribute="height" id="ODw-38-vtX"/>
+                <constraint firstItem="RFy-fH-9mT" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ay8-mD-KqF"/>
+                <constraint firstItem="ASb-jB-umM" firstAttribute="leading" secondItem="blM-x0-jcN" secondAttribute="leading" id="cya-lk-hL2"/>
+                <constraint firstAttribute="trailing" secondItem="blM-x0-jcN" secondAttribute="trailing" id="cyz-oe-qYu"/>
+                <constraint firstItem="ASb-jB-umM" firstAttribute="trailing" secondItem="blM-x0-jcN" secondAttribute="trailing" id="kxK-pX-ucW"/>
+                <constraint firstItem="RFy-fH-9mT" firstAttribute="top" secondItem="blM-x0-jcN" secondAttribute="top" id="oBw-ks-Whv"/>
+                <constraint firstItem="RFy-fH-9mT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rF1-WK-KcI"/>
+                <constraint firstItem="blM-x0-jcN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xVt-Al-wvL"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="ogL-HT-ijf" appends="YES" id="38r-d8-Gjs"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="ogL-HT-ijf">
+            <connections>
+                <action selector="dismissViewControllerWithSender:" destination="-1" id="1BV-id-JPZ"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

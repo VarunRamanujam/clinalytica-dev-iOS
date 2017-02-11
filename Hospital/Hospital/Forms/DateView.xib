@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateView" customModule="Hospital" customModuleProvider="target">
+            <connections>
+                <outlet property="dayLabel" destination="kzB-n8-c4z" id="pXn-Gl-iBP"/>
+                <outlet property="dayWidthConstraint" destination="VwV-yT-N4y" id="Li3-86-zvQ"/>
+                <outlet property="monthLabel" destination="lZx-VH-tk7" id="NSP-AP-S0d"/>
+                <outlet property="monthWidthConstraint" destination="pwf-O1-Bpx" id="LSs-8t-joQ"/>
+                <outlet property="yearLabel" destination="qNS-tR-6yI" id="mXf-EE-v8p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-VH-tk7" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="89" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TV-j2-07L">
+                    <rect key="frame" x="89" y="0.0" width="2" height="62"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="2" id="mJ2-EL-Hgv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzB-n8-c4z" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="91" y="-0.5" width="63.5" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-ZM-xPm">
+                    <rect key="frame" x="154.5" y="0.0" width="2" height="62"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNS-tR-6yI" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="156.5" y="0.5" width="97.5" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qNS-tR-6yI" secondAttribute="trailing" id="25h-gg-1VT"/>
+                <constraint firstItem="qNS-tR-6yI" firstAttribute="height" secondItem="lZx-VH-tk7" secondAttribute="height" id="2iu-K2-kxp"/>
+                <constraint firstItem="ooQ-ZM-xPm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3Qv-DC-KSC"/>
+                <constraint firstItem="kzB-n8-c4z" firstAttribute="height" secondItem="lZx-VH-tk7" secondAttribute="height" id="3XX-Bu-SKl"/>
+                <constraint firstItem="2TV-j2-07L" firstAttribute="leading" secondItem="lZx-VH-tk7" secondAttribute="trailing" id="8R7-Uf-oLq"/>
+                <constraint firstItem="lZx-VH-tk7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K0Z-4x-oxo"/>
+                <constraint firstItem="kzB-n8-c4z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K8O-uU-aec"/>
+                <constraint firstItem="qNS-tR-6yI" firstAttribute="leading" secondItem="ooQ-ZM-xPm" secondAttribute="trailing" id="Uk4-oH-bYm"/>
+                <constraint firstItem="kzB-n8-c4z" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="2.5:10" id="VwV-yT-N4y"/>
+                <constraint firstItem="2TV-j2-07L" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="a3I-Po-oqm"/>
+                <constraint firstItem="lZx-VH-tk7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aIT-Eu-aNU"/>
+                <constraint firstItem="qNS-tR-6yI" firstAttribute="height" secondItem="kzB-n8-c4z" secondAttribute="height" id="c4a-27-J9V"/>
+                <constraint firstItem="2TV-j2-07L" firstAttribute="height" secondItem="lZx-VH-tk7" secondAttribute="height" id="d0l-g6-DBZ"/>
+                <constraint firstItem="qNS-tR-6yI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d1z-Vu-4kq"/>
+                <constraint firstItem="ooQ-ZM-xPm" firstAttribute="height" secondItem="lZx-VH-tk7" secondAttribute="height" id="dfU-XO-d7c"/>
+                <constraint firstItem="ooQ-ZM-xPm" firstAttribute="width" secondItem="2TV-j2-07L" secondAttribute="width" id="ef6-1b-XZZ"/>
+                <constraint firstItem="ooQ-ZM-xPm" firstAttribute="leading" secondItem="kzB-n8-c4z" secondAttribute="trailing" id="nOs-Zs-R0K"/>
+                <constraint firstAttribute="bottom" secondItem="lZx-VH-tk7" secondAttribute="bottom" id="o2T-Sm-3dL"/>
+                <constraint firstItem="lZx-VH-tk7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3.5:10" id="pwf-O1-Bpx"/>
+                <constraint firstItem="kzB-n8-c4z" firstAttribute="leading" secondItem="2TV-j2-07L" secondAttribute="trailing" id="rbC-jh-7Yi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-33" y="88"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="Ri4-KK-eeT" customClass="TakenMedicationCell" customModule="Hospital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ri4-KK-eeT" id="h7Q-gy-LCd">
+                <rect key="frame" x="0.0" y="0.0" width="2078" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Drug Name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T09-NS-ATb" userLabel="Drug Name" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="297.5" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="FOI-Oa-KGy"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chk-ak-x8s" userLabel="Border 1">
+                        <rect key="frame" x="297.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="nKq-Nd-7ek"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-Bu-MjU" userLabel="Code Drug" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="299.5" y="0.0" width="166" height="85"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-NI-OLL" userLabel="Border 2">
+                        <rect key="frame" x="465.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Q2-gx-tiB" userLabel="Strength" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="467.5" y="0.0" width="208" height="85"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhY-Fx-08r" userLabel="Border 3">
+                        <rect key="frame" x="675.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yis-o8-xwh" userLabel="Doses per Day" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="677.5" y="0.0" width="145.5" height="85"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pz1-9E-0ad" userLabel="Border 4">
+                        <rect key="frame" x="823" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-eo-SiH" userLabel="Code Indication" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="825" y="0.0" width="208" height="85"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmj-0E-Hdw" userLabel="Border 5">
+                        <rect key="frame" x="1033" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKw-bc-8O7" userLabel="Start Date">
+                        <rect key="frame" x="1035" y="0.0" width="415.5" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tG-4J-eRS" customClass="DateView" customModule="Hospital" customModuleProvider="target">
+                                <rect key="frame" x="10" y="15" width="395.5" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5nz-ho-VaT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7tG-4J-eRS" secondAttribute="trailing" constant="10" id="6j8-6n-qy1"/>
+                            <constraint firstItem="7tG-4J-eRS" firstAttribute="leading" secondItem="pKw-bc-8O7" secondAttribute="leading" constant="10" id="juO-c1-o83"/>
+                            <constraint firstItem="7tG-4J-eRS" firstAttribute="centerY" secondItem="pKw-bc-8O7" secondAttribute="centerY" id="sx2-m4-8cg"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YH1-vC-6KK" userLabel="Border 6">
+                        <rect key="frame" x="1450.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuq-rz-4Yu" userLabel="Stop Date">
+                        <rect key="frame" x="1452.5" y="0.0" width="415.5" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmM-bW-3LU" customClass="DateView" customModule="Hospital" customModuleProvider="target">
+                                <rect key="frame" x="10" y="15" width="395.5" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="dve-dO-CaY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QmM-bW-3LU" secondAttribute="trailing" constant="10" id="Xrg-Nm-aqQ"/>
+                            <constraint firstItem="QmM-bW-3LU" firstAttribute="leading" secondItem="uuq-rz-4Yu" secondAttribute="leading" constant="10" id="Xs3-dx-W3G"/>
+                            <constraint firstItem="QmM-bW-3LU" firstAttribute="centerY" secondItem="uuq-rz-4Yu" secondAttribute="centerY" id="gmJ-Ka-ESp"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-Rb-htY" userLabel="Border 7">
+                        <rect key="frame" x="1868" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZA-9E-Txl" userLabel="Check Box Holder">
+                        <rect key="frame" x="1870" y="0.0" width="208" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWp-LD-r15" customClass="BEMCheckBox">
+                                <rect key="frame" x="79" y="17.5" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TWp-LD-r15" secondAttribute="height" multiplier="1:1" id="N68-4B-Jjj"/>
+                                    <constraint firstAttribute="width" constant="50" id="hVb-4o-Zhe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TWp-LD-r15" firstAttribute="centerY" secondItem="uZA-9E-Txl" secondAttribute="centerY" id="dMW-8P-6VG"/>
+                            <constraint firstItem="TWp-LD-r15" firstAttribute="centerX" secondItem="uZA-9E-Txl" secondAttribute="centerX" id="rrJ-1s-54N"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STg-AK-HuQ" userLabel="Bottom Border" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="83" width="2078" height="2"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="I9i-C0-yH5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uuq-rz-4Yu" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="2:10" id="0aj-X7-xO6"/>
+                    <constraint firstItem="4Q2-gx-tiB" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="1:10" id="1iV-yN-8Jv"/>
+                    <constraint firstItem="T09-NS-ATb" firstAttribute="leading" secondItem="h7Q-gy-LCd" secondAttribute="leading" id="2r1-Gs-38C"/>
+                    <constraint firstItem="pKw-bc-8O7" firstAttribute="centerY" secondItem="Tzc-NI-OLL" secondAttribute="centerY" id="36t-LZ-AXZ"/>
+                    <constraint firstItem="XhY-Fx-08r" firstAttribute="bottom" secondItem="4Q2-gx-tiB" secondAttribute="bottom" id="39q-xQ-RPq"/>
+                    <constraint firstItem="dV1-Bu-MjU" firstAttribute="centerY" secondItem="chk-ak-x8s" secondAttribute="centerY" id="4Lv-Un-i1Y"/>
+                    <constraint firstItem="Pz1-9E-0ad" firstAttribute="bottom" secondItem="yis-o8-xwh" secondAttribute="bottom" id="5Ha-gB-5Kg"/>
+                    <constraint firstItem="pKw-bc-8O7" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="2:10" id="5tw-tY-v7m"/>
+                    <constraint firstItem="yis-o8-xwh" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="0.7:10" id="67a-M4-oVp"/>
+                    <constraint firstItem="chk-ak-x8s" firstAttribute="height" secondItem="T09-NS-ATb" secondAttribute="height" id="7hk-ig-9pI"/>
+                    <constraint firstItem="dV1-Bu-MjU" firstAttribute="height" secondItem="T09-NS-ATb" secondAttribute="height" id="ATK-SK-tGB"/>
+                    <constraint firstItem="uuq-rz-4Yu" firstAttribute="centerY" secondItem="YH1-vC-6KK" secondAttribute="centerY" id="C3E-kF-HW3"/>
+                    <constraint firstItem="uuq-rz-4Yu" firstAttribute="leading" secondItem="YH1-vC-6KK" secondAttribute="trailing" id="DuL-Wj-ta3"/>
+                    <constraint firstItem="4Q2-gx-tiB" firstAttribute="bottom" secondItem="Tzc-NI-OLL" secondAttribute="bottom" id="Ewx-SY-EyG"/>
+                    <constraint firstItem="WXX-eo-SiH" firstAttribute="bottom" secondItem="Pz1-9E-0ad" secondAttribute="bottom" id="FHe-8H-QdF"/>
+                    <constraint firstItem="WXX-eo-SiH" firstAttribute="leading" secondItem="Pz1-9E-0ad" secondAttribute="trailing" id="Fdj-n8-cPa"/>
+                    <constraint firstItem="JHg-Rb-htY" firstAttribute="leading" secondItem="uuq-rz-4Yu" secondAttribute="trailing" id="J9h-u5-z2x"/>
+                    <constraint firstItem="pKw-bc-8O7" firstAttribute="height" secondItem="Tzc-NI-OLL" secondAttribute="height" id="Jqn-ZB-unx"/>
+                    <constraint firstItem="rmj-0E-Hdw" firstAttribute="top" secondItem="WXX-eo-SiH" secondAttribute="top" id="Kf3-Iu-kDT"/>
+                    <constraint firstAttribute="bottom" secondItem="T09-NS-ATb" secondAttribute="bottom" priority="999" id="LMv-99-ZwU"/>
+                    <constraint firstItem="dV1-Bu-MjU" firstAttribute="leading" secondItem="chk-ak-x8s" secondAttribute="trailing" id="MIE-eY-bOb"/>
+                    <constraint firstItem="rmj-0E-Hdw" firstAttribute="width" secondItem="chk-ak-x8s" secondAttribute="width" id="Q6T-KI-iB1"/>
+                    <constraint firstItem="4Q2-gx-tiB" firstAttribute="leading" secondItem="Tzc-NI-OLL" secondAttribute="trailing" id="Qoa-zi-kJr"/>
+                    <constraint firstItem="uZA-9E-Txl" firstAttribute="bottom" secondItem="JHg-Rb-htY" secondAttribute="bottom" id="R4I-Ry-A57"/>
+                    <constraint firstItem="Pz1-9E-0ad" firstAttribute="top" secondItem="yis-o8-xwh" secondAttribute="top" id="RER-KL-rmZ"/>
+                    <constraint firstItem="Tzc-NI-OLL" firstAttribute="leading" secondItem="dV1-Bu-MjU" secondAttribute="trailing" id="UPA-v1-mWP"/>
+                    <constraint firstItem="STg-AK-HuQ" firstAttribute="leading" secondItem="h7Q-gy-LCd" secondAttribute="leading" id="UWe-ab-DVN"/>
+                    <constraint firstItem="Pz1-9E-0ad" firstAttribute="leading" secondItem="yis-o8-xwh" secondAttribute="trailing" id="Uxe-po-G1n"/>
+                    <constraint firstItem="yis-o8-xwh" firstAttribute="top" secondItem="XhY-Fx-08r" secondAttribute="top" id="VId-Gp-oKJ"/>
+                    <constraint firstItem="WXX-eo-SiH" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="1:10" id="W4w-qQ-kNz"/>
+                    <constraint firstItem="rmj-0E-Hdw" firstAttribute="bottom" secondItem="WXX-eo-SiH" secondAttribute="bottom" id="Xp2-IC-dpP"/>
+                    <constraint firstItem="uZA-9E-Txl" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="1:10" id="Z8p-KP-pOn"/>
+                    <constraint firstItem="yis-o8-xwh" firstAttribute="leading" secondItem="XhY-Fx-08r" secondAttribute="trailing" id="ZCh-Pi-7ii"/>
+                    <constraint firstItem="pKw-bc-8O7" firstAttribute="leading" secondItem="rmj-0E-Hdw" secondAttribute="trailing" id="a84-4C-PBS"/>
+                    <constraint firstItem="4Q2-gx-tiB" firstAttribute="top" secondItem="Tzc-NI-OLL" secondAttribute="top" id="b9C-J9-RlU"/>
+                    <constraint firstItem="XhY-Fx-08r" firstAttribute="top" secondItem="4Q2-gx-tiB" secondAttribute="top" id="cef-JR-8Me"/>
+                    <constraint firstItem="chk-ak-x8s" firstAttribute="leading" secondItem="T09-NS-ATb" secondAttribute="trailing" id="crV-1H-sU3"/>
+                    <constraint firstItem="chk-ak-x8s" firstAttribute="centerY" secondItem="T09-NS-ATb" secondAttribute="centerY" id="dzN-YV-Sg8"/>
+                    <constraint firstItem="XhY-Fx-08r" firstAttribute="width" secondItem="chk-ak-x8s" secondAttribute="width" id="eoh-PG-Fq2"/>
+                    <constraint firstItem="JHg-Rb-htY" firstAttribute="centerY" secondItem="pKw-bc-8O7" secondAttribute="centerY" id="ghe-9o-RJb"/>
+                    <constraint firstItem="dV1-Bu-MjU" firstAttribute="width" secondItem="h7Q-gy-LCd" secondAttribute="width" multiplier="0.8:10" id="gsk-pl-3Z7"/>
+                    <constraint firstItem="yis-o8-xwh" firstAttribute="bottom" secondItem="XhY-Fx-08r" secondAttribute="bottom" id="hln-Rg-6cK"/>
+                    <constraint firstItem="YH1-vC-6KK" firstAttribute="width" secondItem="chk-ak-x8s" secondAttribute="width" id="i6N-pJ-2qx"/>
+                    <constraint firstItem="YH1-vC-6KK" firstAttribute="leading" secondItem="pKw-bc-8O7" secondAttribute="trailing" id="iP9-LB-yCd"/>
+                    <constraint firstItem="YH1-vC-6KK" firstAttribute="centerY" secondItem="pKw-bc-8O7" secondAttribute="centerY" id="j9Z-91-igf"/>
+                    <constraint firstItem="Tzc-NI-OLL" firstAttribute="centerY" secondItem="dV1-Bu-MjU" secondAttribute="centerY" id="jon-IE-umU"/>
+                    <constraint firstItem="JHg-Rb-htY" firstAttribute="height" secondItem="chk-ak-x8s" secondAttribute="height" id="k7p-jc-FNA"/>
+                    <constraint firstItem="Tzc-NI-OLL" firstAttribute="width" secondItem="chk-ak-x8s" secondAttribute="width" id="kHz-2A-cZ9"/>
+                    <constraint firstItem="XhY-Fx-08r" firstAttribute="leading" secondItem="4Q2-gx-tiB" secondAttribute="trailing" id="kX9-6f-a9U"/>
+                    <constraint firstItem="WXX-eo-SiH" firstAttribute="top" secondItem="Pz1-9E-0ad" secondAttribute="top" id="lgs-ue-M3A"/>
+                    <constraint firstItem="uZA-9E-Txl" firstAttribute="leading" secondItem="JHg-Rb-htY" secondAttribute="trailing" id="oBH-FV-kbg"/>
+                    <constraint firstItem="JHg-Rb-htY" firstAttribute="width" secondItem="chk-ak-x8s" secondAttribute="width" id="oX2-R5-wTa"/>
+                    <constraint firstAttribute="trailing" secondItem="STg-AK-HuQ" secondAttribute="trailing" id="pGc-WM-g5h"/>
+                    <constraint firstItem="YH1-vC-6KK" firstAttribute="height" secondItem="pKw-bc-8O7" secondAttribute="height" id="qKH-fl-LKe"/>
+                    <constraint firstItem="T09-NS-ATb" firstAttribute="top" secondItem="h7Q-gy-LCd" secondAttribute="top" id="rEC-Sa-kQO"/>
+                    <constraint firstAttribute="trailing" secondItem="uZA-9E-Txl" secondAttribute="trailing" id="re7-YO-Oem"/>
+                    <constraint firstItem="Tzc-NI-OLL" firstAttribute="height" secondItem="chk-ak-x8s" secondAttribute="height" id="v7J-Bt-vbW"/>
+                    <constraint firstItem="Pz1-9E-0ad" firstAttribute="width" secondItem="chk-ak-x8s" secondAttribute="width" id="vRk-rR-LZX"/>
+                    <constraint firstAttribute="bottom" secondItem="STg-AK-HuQ" secondAttribute="bottom" id="xO2-zY-qTT"/>
+                    <constraint firstItem="rmj-0E-Hdw" firstAttribute="leading" secondItem="WXX-eo-SiH" secondAttribute="trailing" id="xRq-Pg-RBT"/>
+                    <constraint firstItem="uZA-9E-Txl" firstAttribute="top" secondItem="JHg-Rb-htY" secondAttribute="top" id="xoO-GY-Vuy"/>
+                    <constraint firstItem="uuq-rz-4Yu" firstAttribute="height" secondItem="YH1-vC-6KK" secondAttribute="height" id="ynB-tV-kdV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="codeDrugTF" destination="dV1-Bu-MjU" id="BZP-Ev-7Ym"/>
+                <outlet property="codeIndicationTF" destination="WXX-eo-SiH" id="Pao-yQ-KUG"/>
+                <outlet property="continueingCheckBox" destination="TWp-LD-r15" id="w10-TO-GKn"/>
+                <outlet property="dosesPerDayTF" destination="yis-o8-xwh" id="Aja-tP-4gY"/>
+                <outlet property="drugNameTF" destination="T09-NS-ATb" id="xav-yx-2OB"/>
+                <outlet property="startDate" destination="7tG-4J-eRS" id="89T-u8-e4x"/>
+                <outlet property="stopDate" destination="QmM-bW-3LU" id="Fvm-v5-04L"/>
+                <outlet property="strengthTF" destination="4Q2-gx-tiB" id="odK-bc-nZn"/>
+            </connections>
+            <point key="canvasLocation" x="416" y="73"/>
+        </tableViewCell>
+    </objects>
+</document>

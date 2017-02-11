@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="MmT-ye-Vzf" customClass="PastProblemsForm16Cell" customModule="Hospital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MmT-ye-Vzf" id="MTX-Ch-NTe">
+                <rect key="frame" x="0.0" y="0.0" width="2078" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Nature of Problem" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ycW-4Q-KoU" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="473.5" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="T3p-db-hGc"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0q-EG-zBU" userLabel="Border 1">
+                        <rect key="frame" x="473.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="psV-mF-PaK"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAp-uh-846" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="475.5" y="0.0" width="259" height="85"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Oa-h4-LPL" userLabel="Border 2">
+                        <rect key="frame" x="734.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjF-FB-3GI" userLabel="Date Of Onset">
+                        <rect key="frame" x="736.5" y="0.0" width="301" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgO-K2-hEg" customClass="DateView" customModule="Hospital" customModuleProvider="target">
+                                <rect key="frame" x="10" y="15" width="281" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2hv-OO-N79"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PgO-K2-hEg" firstAttribute="centerX" secondItem="UjF-FB-3GI" secondAttribute="centerX" id="0cH-lx-Ufp"/>
+                            <constraint firstAttribute="trailing" secondItem="PgO-K2-hEg" secondAttribute="trailing" constant="10" id="7zh-uP-sby"/>
+                            <constraint firstItem="PgO-K2-hEg" firstAttribute="centerY" secondItem="UjF-FB-3GI" secondAttribute="centerY" id="WkO-3c-xpY"/>
+                            <constraint firstItem="PgO-K2-hEg" firstAttribute="leading" secondItem="UjF-FB-3GI" secondAttribute="leading" constant="10" id="q2D-0V-Pgy"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pz-Lx-nMJ" userLabel="Border 3">
+                        <rect key="frame" x="1037.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSO-Ol-zl2" userLabel="Date Of Resolution">
+                        <rect key="frame" x="1039.5" y="0.0" width="301" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-iz-p1e" customClass="DateView" customModule="Hospital" customModuleProvider="target">
+                                <rect key="frame" x="10" y="15" width="281" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="oDW-oS-0wC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vih-iz-p1e" firstAttribute="leading" secondItem="sSO-Ol-zl2" secondAttribute="leading" constant="10" id="Lws-ZQ-qgU"/>
+                            <constraint firstAttribute="trailing" secondItem="Vih-iz-p1e" secondAttribute="trailing" constant="10" id="PKT-FS-z9p"/>
+                            <constraint firstItem="Vih-iz-p1e" firstAttribute="centerY" secondItem="sSO-Ol-zl2" secondAttribute="centerY" id="gZI-hE-9ZR"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHF-hs-Hmk" userLabel="Border 5">
+                        <rect key="frame" x="1340.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og1-ZW-kbI" userLabel="Type Of Report Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="1342.5" y="0.0" width="145.5" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="typeOfReportButtonClicked:" destination="MmT-ye-Vzf" eventType="touchUpInside" id="MlW-YZ-BX5"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8f-8c-IJG" userLabel="Border 6">
+                        <rect key="frame" x="1488" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7on-wB-M0f" userLabel="Relatedness Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="1490" y="0.0" width="145.5" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="relatednessButtonClicked:" destination="MmT-ye-Vzf" eventType="touchUpInside" id="KSp-7m-GdE"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKn-jM-TLG" userLabel="Border 7">
+                        <rect key="frame" x="1635.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-ki-FRh" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="1637.5" y="0.0" width="145.5" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="severityButtonClicked:" destination="MmT-ye-Vzf" eventType="touchUpInside" id="enC-8A-Bk3"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ht-Be-ZR2" userLabel="Border 8">
+                        <rect key="frame" x="1783" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s00-QA-qeT" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="1785" y="0.0" width="145.5" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="ActionTakenButtonClicked:" destination="MmT-ye-Vzf" eventType="touchUpInside" id="Vtu-3l-gqO"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmj-6Y-pNp" userLabel="Border 9">
+                        <rect key="frame" x="1930.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScP-er-ygM" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="1932.5" y="0.0" width="145.5" height="85"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="outcomeButtonClicked:" destination="MmT-ye-Vzf" eventType="touchUpInside" id="O9j-db-9J9"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBA-7J-m8m" userLabel="Bottom Border" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="83" width="2078" height="2"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="nHa-2G-upm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HKn-jM-TLG" firstAttribute="centerY" secondItem="7on-wB-M0f" secondAttribute="centerY" id="0D8-AB-Tc1"/>
+                    <constraint firstItem="cHF-hs-Hmk" firstAttribute="centerY" secondItem="sSO-Ol-zl2" secondAttribute="centerY" id="1TL-aL-X4X"/>
+                    <constraint firstItem="Og1-ZW-kbI" firstAttribute="centerY" secondItem="cHF-hs-Hmk" secondAttribute="centerY" id="3Fc-Vw-hvf"/>
+                    <constraint firstAttribute="bottom" secondItem="YBA-7J-m8m" secondAttribute="bottom" id="3H9-Lg-Eyj"/>
+                    <constraint firstItem="UjF-FB-3GI" firstAttribute="leading" secondItem="4Oa-h4-LPL" secondAttribute="trailing" id="3ZB-oG-nw8"/>
+                    <constraint firstItem="sSO-Ol-zl2" firstAttribute="leading" secondItem="8pz-Lx-nMJ" secondAttribute="trailing" id="491-lj-LH1"/>
+                    <constraint firstItem="dAp-uh-846" firstAttribute="leading" secondItem="J0q-EG-zBU" secondAttribute="trailing" id="4YH-EG-5Hp"/>
+                    <constraint firstItem="J0q-EG-zBU" firstAttribute="leading" secondItem="ycW-4Q-KoU" secondAttribute="trailing" id="63l-qn-yeh"/>
+                    <constraint firstItem="ScP-er-ygM" firstAttribute="trailing" secondItem="MTX-Ch-NTe" secondAttribute="trailing" id="6Ox-rz-0fk"/>
+                    <constraint firstItem="s00-QA-qeT" firstAttribute="leading" secondItem="8ht-Be-ZR2" secondAttribute="trailing" id="7FP-n3-ifN"/>
+                    <constraint firstItem="7on-wB-M0f" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="0.7:10" id="83Y-JW-Lgi"/>
+                    <constraint firstItem="Q8f-8c-IJG" firstAttribute="leading" secondItem="Og1-ZW-kbI" secondAttribute="trailing" id="89t-Sv-Kif"/>
+                    <constraint firstItem="YBA-7J-m8m" firstAttribute="leading" secondItem="MTX-Ch-NTe" secondAttribute="leading" id="C9V-1l-WhU"/>
+                    <constraint firstItem="vmj-6Y-pNp" firstAttribute="centerY" secondItem="s00-QA-qeT" secondAttribute="centerY" id="Cy0-Cj-YeX"/>
+                    <constraint firstItem="UjF-FB-3GI" firstAttribute="height" secondItem="4Oa-h4-LPL" secondAttribute="height" id="Djx-WU-64N"/>
+                    <constraint firstItem="dAp-uh-846" firstAttribute="centerY" secondItem="J0q-EG-zBU" secondAttribute="centerY" id="EZi-OO-cKC"/>
+                    <constraint firstItem="ScP-er-ygM" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="0.7:10" id="GBJ-Pg-tG0"/>
+                    <constraint firstItem="8pz-Lx-nMJ" firstAttribute="leading" secondItem="UjF-FB-3GI" secondAttribute="trailing" id="Ge3-kG-BoQ"/>
+                    <constraint firstItem="s00-QA-qeT" firstAttribute="centerY" secondItem="8ht-Be-ZR2" secondAttribute="centerY" id="Gpc-XZ-kO1"/>
+                    <constraint firstItem="SlX-ki-FRh" firstAttribute="height" secondItem="HKn-jM-TLG" secondAttribute="height" id="H7S-Uh-cSa"/>
+                    <constraint firstItem="J0q-EG-zBU" firstAttribute="height" secondItem="ycW-4Q-KoU" secondAttribute="height" id="HMG-00-tVc"/>
+                    <constraint firstItem="Q8f-8c-IJG" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="Hv7-sp-elw"/>
+                    <constraint firstItem="8pz-Lx-nMJ" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="JWy-FB-hJu"/>
+                    <constraint firstItem="Og1-ZW-kbI" firstAttribute="height" secondItem="cHF-hs-Hmk" secondAttribute="height" id="L1p-l8-YFH"/>
+                    <constraint firstAttribute="bottom" secondItem="ycW-4Q-KoU" secondAttribute="bottom" priority="999" id="LGJ-ch-8fk"/>
+                    <constraint firstItem="UjF-FB-3GI" firstAttribute="centerY" secondItem="4Oa-h4-LPL" secondAttribute="centerY" id="LSe-m5-bbx"/>
+                    <constraint firstItem="HKn-jM-TLG" firstAttribute="height" secondItem="7on-wB-M0f" secondAttribute="height" id="NAQ-E3-Vli"/>
+                    <constraint firstItem="ycW-4Q-KoU" firstAttribute="leading" secondItem="MTX-Ch-NTe" secondAttribute="leading" id="NGN-6c-Z3I"/>
+                    <constraint firstItem="s00-QA-qeT" firstAttribute="height" secondItem="8ht-Be-ZR2" secondAttribute="height" id="NP1-v0-Pt5"/>
+                    <constraint firstItem="Q8f-8c-IJG" firstAttribute="centerY" secondItem="Og1-ZW-kbI" secondAttribute="centerY" id="NTM-cw-LJF"/>
+                    <constraint firstItem="sSO-Ol-zl2" firstAttribute="centerY" secondItem="8pz-Lx-nMJ" secondAttribute="centerY" id="NTQ-Rj-AtS"/>
+                    <constraint firstItem="UjF-FB-3GI" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="1.45:10" id="Nky-DD-CqC"/>
+                    <constraint firstItem="s00-QA-qeT" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="0.7:10" id="OpI-1a-YJS"/>
+                    <constraint firstItem="8ht-Be-ZR2" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="PEI-zZ-TeK"/>
+                    <constraint firstItem="dAp-uh-846" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="1.25:10" id="PSF-TI-Js3"/>
+                    <constraint firstItem="ScP-er-ygM" firstAttribute="centerY" secondItem="vmj-6Y-pNp" secondAttribute="centerY" id="QoY-nW-Fvn"/>
+                    <constraint firstItem="vmj-6Y-pNp" firstAttribute="leading" secondItem="s00-QA-qeT" secondAttribute="trailing" id="SNn-Ir-zxd"/>
+                    <constraint firstItem="7on-wB-M0f" firstAttribute="leading" secondItem="Q8f-8c-IJG" secondAttribute="trailing" id="SVn-Jd-wfE"/>
+                    <constraint firstItem="ycW-4Q-KoU" firstAttribute="top" secondItem="MTX-Ch-NTe" secondAttribute="top" id="Sgm-cD-ZRK"/>
+                    <constraint firstItem="7on-wB-M0f" firstAttribute="centerY" secondItem="Q8f-8c-IJG" secondAttribute="centerY" id="Txb-Ta-CUQ"/>
+                    <constraint firstItem="Q8f-8c-IJG" firstAttribute="height" secondItem="Og1-ZW-kbI" secondAttribute="height" id="UBb-gx-RuI"/>
+                    <constraint firstItem="4Oa-h4-LPL" firstAttribute="centerY" secondItem="dAp-uh-846" secondAttribute="centerY" id="Y9Z-FM-NVg"/>
+                    <constraint firstItem="vmj-6Y-pNp" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="ZhC-IK-6Uf"/>
+                    <constraint firstItem="ScP-er-ygM" firstAttribute="height" secondItem="vmj-6Y-pNp" secondAttribute="height" id="cIY-tC-bOB"/>
+                    <constraint firstItem="8pz-Lx-nMJ" firstAttribute="centerY" secondItem="UjF-FB-3GI" secondAttribute="centerY" id="d51-Hs-OyE"/>
+                    <constraint firstItem="HKn-jM-TLG" firstAttribute="leading" secondItem="7on-wB-M0f" secondAttribute="trailing" id="dvf-yo-Or1"/>
+                    <constraint firstItem="8ht-Be-ZR2" firstAttribute="leading" secondItem="SlX-ki-FRh" secondAttribute="trailing" id="eOc-At-Ebm"/>
+                    <constraint firstItem="ScP-er-ygM" firstAttribute="leading" secondItem="vmj-6Y-pNp" secondAttribute="trailing" id="fSd-xR-CQc"/>
+                    <constraint firstItem="SlX-ki-FRh" firstAttribute="leading" secondItem="HKn-jM-TLG" secondAttribute="trailing" id="hCs-zR-Vba"/>
+                    <constraint firstItem="SlX-ki-FRh" firstAttribute="centerY" secondItem="HKn-jM-TLG" secondAttribute="centerY" id="iX3-iL-DzF"/>
+                    <constraint firstItem="sSO-Ol-zl2" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="1.45:10" id="jib-88-6i2"/>
+                    <constraint firstItem="8ht-Be-ZR2" firstAttribute="centerY" secondItem="SlX-ki-FRh" secondAttribute="centerY" id="kQi-ms-HBc"/>
+                    <constraint firstItem="cHF-hs-Hmk" firstAttribute="leading" secondItem="sSO-Ol-zl2" secondAttribute="trailing" id="l60-H9-ECj"/>
+                    <constraint firstItem="SlX-ki-FRh" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="0.7:10" id="n4B-pM-1gJ"/>
+                    <constraint firstItem="cHF-hs-Hmk" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="nb1-9W-itp"/>
+                    <constraint firstItem="vmj-6Y-pNp" firstAttribute="height" secondItem="s00-QA-qeT" secondAttribute="height" id="nwQ-c7-A9q"/>
+                    <constraint firstItem="4Oa-h4-LPL" firstAttribute="leading" secondItem="dAp-uh-846" secondAttribute="trailing" id="oCi-wj-AxP"/>
+                    <constraint firstItem="HKn-jM-TLG" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="qbc-5C-BRz"/>
+                    <constraint firstItem="Og1-ZW-kbI" firstAttribute="width" secondItem="MTX-Ch-NTe" secondAttribute="width" multiplier="0.7:10" id="qvT-b8-DDy"/>
+                    <constraint firstItem="4Oa-h4-LPL" firstAttribute="height" secondItem="J0q-EG-zBU" secondAttribute="height" id="sMa-Yj-o9Z"/>
+                    <constraint firstItem="7on-wB-M0f" firstAttribute="height" secondItem="Q8f-8c-IJG" secondAttribute="height" id="t7f-qb-Ejl"/>
+                    <constraint firstItem="sSO-Ol-zl2" firstAttribute="height" secondItem="8pz-Lx-nMJ" secondAttribute="height" id="t9e-3e-muw"/>
+                    <constraint firstItem="Og1-ZW-kbI" firstAttribute="leading" secondItem="cHF-hs-Hmk" secondAttribute="trailing" id="tzh-lz-1At"/>
+                    <constraint firstItem="8ht-Be-ZR2" firstAttribute="height" secondItem="J0q-EG-zBU" secondAttribute="height" id="vIF-hG-Gks"/>
+                    <constraint firstItem="dAp-uh-846" firstAttribute="height" secondItem="ycW-4Q-KoU" secondAttribute="height" id="vpm-hU-gsl"/>
+                    <constraint firstAttribute="trailing" secondItem="YBA-7J-m8m" secondAttribute="trailing" id="wpX-bu-aMf"/>
+                    <constraint firstItem="8pz-Lx-nMJ" firstAttribute="height" secondItem="UjF-FB-3GI" secondAttribute="height" id="yIe-RK-vOE"/>
+                    <constraint firstItem="J0q-EG-zBU" firstAttribute="centerY" secondItem="ycW-4Q-KoU" secondAttribute="centerY" id="zXi-Ib-A2x"/>
+                    <constraint firstItem="4Oa-h4-LPL" firstAttribute="width" secondItem="J0q-EG-zBU" secondAttribute="width" id="zoS-Td-dWb"/>
+                    <constraint firstItem="cHF-hs-Hmk" firstAttribute="height" secondItem="sSO-Ol-zl2" secondAttribute="height" id="zvg-7q-b4P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionTakenButton" destination="s00-QA-qeT" id="xVg-9U-ROg"/>
+                <outlet property="dateOfOnset" destination="PgO-K2-hEg" id="QSt-fW-0jL"/>
+                <outlet property="dateOfResolution" destination="Vih-iz-p1e" id="6HX-Ax-cuk"/>
+                <outlet property="medicalEventCodeTF" destination="dAp-uh-846" id="Fyu-6l-KOz"/>
+                <outlet property="natureOfIllnessTF" destination="ycW-4Q-KoU" id="L12-Dx-ViV"/>
+                <outlet property="outcomeButton" destination="ScP-er-ygM" id="WoP-As-HFS"/>
+                <outlet property="relatednessButton" destination="7on-wB-M0f" id="n8e-42-rxU"/>
+                <outlet property="severityButton" destination="SlX-ki-FRh" id="ht6-JV-mzD"/>
+                <outlet property="typeOfReportButton" destination="Og1-ZW-kbI" id="CgP-tx-su5"/>
+            </connections>
+            <point key="canvasLocation" x="416" y="73"/>
+        </tableViewCell>
+    </objects>
+</document>

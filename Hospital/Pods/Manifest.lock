@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.3.0)
+  - AlamofireObjectMapper (4.0.1):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - BEMCheckBox (1.4.0)
+  - IQKeyboardManagerSwift (4.0.8)
+  - ObjectMapper (2.2.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - BEMCheckBox
+  - IQKeyboardManagerSwift
+  - ObjectMapper
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  BEMCheckBox: e18e4a148905b290bd03d98b767651c104f4eda3
+  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+
+PODFILE CHECKSUM: f5e66c23c15b6959934154af9bf4978ef6420c10
+
+COCOAPODS: 1.0.0

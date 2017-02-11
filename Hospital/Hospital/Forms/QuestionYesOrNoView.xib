@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionYesOrNoView" customModule="Hospital" customModuleProvider="target">
+            <connections>
+                <outlet property="serialNumberLabel" destination="ikJ-hL-qGK" id="vmf-q1-PJn"/>
+                <outlet property="titleLabel" destination="10h-xi-vLe" id="Kom-Ci-hcd"/>
+                <outlet property="yesOrNoStackView" destination="eyA-CD-pCB" id="8YP-lN-Li8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="1." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikJ-hL-qGK" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="15.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10h-xi-vLe" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="35.5" y="0.0" width="339.5" height="53"/>
+                    <string key="text">Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live? Is there Heroin or Cocaine use in the household where you live?</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-CD-pCB" userLabel="Commuting distance clinic" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="35.5" y="58" width="310" height="55"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rj4-zn-bXE" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="c5D-Yw-D3e"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Yes"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="boxTypeInteger">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POT-nJ-0e3" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
+                            <rect key="frame" x="160" y="0.0" width="150" height="55"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="Z6d-NC-e25"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="No"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="boxTypeInteger">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="CAx-PV-fyY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ikJ-hL-qGK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5be-wo-tGZ"/>
+                <constraint firstItem="eyA-CD-pCB" firstAttribute="leading" secondItem="10h-xi-vLe" secondAttribute="leading" id="GBD-eu-bXa"/>
+                <constraint firstAttribute="trailing" secondItem="10h-xi-vLe" secondAttribute="trailing" id="NX2-CG-2fp"/>
+                <constraint firstItem="ikJ-hL-qGK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NuW-Fh-AFH"/>
+                <constraint firstItem="10h-xi-vLe" firstAttribute="leading" secondItem="ikJ-hL-qGK" secondAttribute="trailing" constant="20" id="P1Q-Ni-Lur"/>
+                <constraint firstItem="10h-xi-vLe" firstAttribute="top" secondItem="ikJ-hL-qGK" secondAttribute="top" id="co8-7l-Zlu"/>
+                <constraint firstItem="eyA-CD-pCB" firstAttribute="top" secondItem="10h-xi-vLe" secondAttribute="bottom" constant="5" id="h27-FA-dF8"/>
+                <constraint firstAttribute="bottom" secondItem="eyA-CD-pCB" secondAttribute="bottom" id="jOo-5j-qbY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="-222.5"/>
+        </view>
+    </objects>
+</document>

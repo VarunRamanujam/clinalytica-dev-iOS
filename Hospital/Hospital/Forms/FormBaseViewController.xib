@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormBaseViewController" customModule="Hospital" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomButtonsStackView" destination="lce-eH-Gb5" id="ORt-Ed-WHU"/>
+                <outlet property="bottomView" destination="zSo-Ad-hKl" id="79z-4V-UHd"/>
+                <outlet property="clearButton" destination="Of8-Zg-JKe" id="PLg-EW-ajS"/>
+                <outlet property="nextButton" destination="H5c-Fv-AFj" id="AO0-nA-Pho"/>
+                <outlet property="pageNumbersStackView" destination="hVR-ag-dd7" id="4el-1q-kzQ"/>
+                <outlet property="scrollContentStackView" destination="ZO5-8V-WED" id="JHC-P6-8zS"/>
+                <outlet property="scrollView" destination="svM-m0-ka7" id="owq-aj-INo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="pageNumberButtons" destination="QpG-sd-8XL" collectionClass="NSMutableArray" id="qN0-b2-vXQ"/>
+                <outletCollection property="pageNumberButtons" destination="mLf-DU-5fT" collectionClass="NSMutableArray" id="E2K-Z2-L0w"/>
+                <outletCollection property="pageNumberButtons" destination="uYY-uU-wcJ" collectionClass="NSMutableArray" id="1cG-L1-Sn7"/>
+                <outletCollection property="pageNumberButtons" destination="QWC-9t-bua" collectionClass="NSMutableArray" id="3jE-fk-HZW"/>
+                <outletCollection property="pageNumberButtons" destination="TrI-x9-frg" collectionClass="NSMutableArray" id="mVT-Os-4tv"/>
+                <outletCollection property="pageNumberDividers" destination="rdA-gs-5It" collectionClass="NSMutableArray" id="KEb-xo-bTU"/>
+                <outletCollection property="pageNumberDividers" destination="PzM-X5-NVZ" collectionClass="NSMutableArray" id="6L6-M4-SYP"/>
+                <outletCollection property="pageNumberDividers" destination="H4Z-ub-dt3" collectionClass="NSMutableArray" id="uhr-7y-wgK"/>
+                <outletCollection property="pageNumberDividers" destination="hbv-Pv-xnE" collectionClass="NSMutableArray" id="8M7-4R-FJQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhy-uz-gIw" customClass="FormHeaderView" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="1024" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" placeholder="YES" id="SHs-ol-nai"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hVR-ag-dd7" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="202" y="168" width="620" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpG-sd-8XL">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="DPG-qX-u4o"/>
+                                <constraint firstAttribute="width" secondItem="QpG-sd-8XL" secondAttribute="height" multiplier="1:1" id="rRG-Vd-tbn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="1">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnPageNumberButton:" destination="-1" eventType="touchUpInside" id="Mtq-Ak-A1o"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-gs-5It">
+                            <rect key="frame" x="60" y="28" width="80" height="4"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="AoO-0p-3fk"/>
+                                <constraint firstAttribute="width" constant="80" id="oFA-QT-Y3j"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLf-DU-5fT">
+                            <rect key="frame" x="140" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="lJB-48-cCE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="2">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnPageNumberButton:" destination="-1" eventType="touchUpInside" id="5lH-Z5-7Gn"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-X5-NVZ">
+                            <rect key="frame" x="200" y="28" width="80" height="4"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYY-uU-wcJ">
+                            <rect key="frame" x="280" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="K9u-4O-Kh3"/>
+                                <constraint firstAttribute="width" secondItem="uYY-uU-wcJ" secondAttribute="height" multiplier="1:1" id="lVi-kY-6IV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="3">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnPageNumberButton:" destination="-1" eventType="touchUpInside" id="JTh-Qg-UVn"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4Z-ub-dt3">
+                            <rect key="frame" x="340" y="28" width="80" height="4"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWC-9t-bua">
+                            <rect key="frame" x="420" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="7Ij-tv-oTb"/>
+                                <constraint firstAttribute="width" secondItem="QWC-9t-bua" secondAttribute="height" multiplier="1:1" id="N8G-va-sxQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="4">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnPageNumberButton:" destination="-1" eventType="touchUpInside" id="XY5-KD-KpL"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbv-Pv-xnE">
+                            <rect key="frame" x="480" y="28" width="80" height="4"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrI-x9-frg">
+                            <rect key="frame" x="560" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.71764705880000002" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TrI-x9-frg" secondAttribute="height" multiplier="1:1" id="TUl-uL-VBQ"/>
+                                <constraint firstAttribute="width" constant="60" id="gA1-N0-Bnd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="5">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnPageNumberButton:" destination="-1" eventType="touchUpInside" id="KjP-DE-2rZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hbv-Pv-xnE" firstAttribute="height" secondItem="rdA-gs-5It" secondAttribute="height" id="3jH-5x-64r"/>
+                        <constraint firstItem="mLf-DU-5fT" firstAttribute="width" secondItem="mLf-DU-5fT" secondAttribute="height" multiplier="1:1" id="Jw9-iK-fBr"/>
+                        <constraint firstItem="hbv-Pv-xnE" firstAttribute="width" secondItem="rdA-gs-5It" secondAttribute="width" id="Whj-HA-4ir"/>
+                        <constraint firstItem="H4Z-ub-dt3" firstAttribute="height" secondItem="rdA-gs-5It" secondAttribute="height" id="ZsI-Zb-Akd"/>
+                        <constraint firstItem="PzM-X5-NVZ" firstAttribute="width" secondItem="rdA-gs-5It" secondAttribute="width" id="jcP-31-phd"/>
+                        <constraint firstItem="QWC-9t-bua" firstAttribute="width" secondItem="QWC-9t-bua" secondAttribute="height" multiplier="1:1" id="nfs-7f-Woy"/>
+                        <constraint firstItem="uYY-uU-wcJ" firstAttribute="width" secondItem="uYY-uU-wcJ" secondAttribute="height" multiplier="1:1" id="p0Q-oG-i7a"/>
+                        <constraint firstItem="H4Z-ub-dt3" firstAttribute="width" secondItem="rdA-gs-5It" secondAttribute="width" id="tGr-sS-JNI"/>
+                        <constraint firstItem="PzM-X5-NVZ" firstAttribute="height" secondItem="rdA-gs-5It" secondAttribute="height" id="tth-fU-nfV"/>
+                        <constraint firstItem="TrI-x9-frg" firstAttribute="width" secondItem="TrI-x9-frg" secondAttribute="height" multiplier="1:1" id="wjy-dG-FtD"/>
+                    </constraints>
+                </stackView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svM-m0-ka7" customClass="RUIScrollView" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="248" width="1024" height="1020"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO5-8V-WED" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="1020"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ZO5-8V-WED" firstAttribute="leading" secondItem="svM-m0-ka7" secondAttribute="leading" id="0va-i7-4nm"/>
+                        <constraint firstItem="ZO5-8V-WED" firstAttribute="width" secondItem="svM-m0-ka7" secondAttribute="width" placeholder="YES" id="9pF-fw-gsE"/>
+                        <constraint firstAttribute="bottom" secondItem="ZO5-8V-WED" secondAttribute="bottom" id="Hhz-id-Lt0"/>
+                        <constraint firstItem="ZO5-8V-WED" firstAttribute="top" secondItem="svM-m0-ka7" secondAttribute="top" id="NiY-gL-YXS"/>
+                        <constraint firstItem="ZO5-8V-WED" firstAttribute="height" secondItem="svM-m0-ka7" secondAttribute="height" id="nGH-fs-rZs"/>
+                        <constraint firstAttribute="trailing" secondItem="ZO5-8V-WED" secondAttribute="trailing" id="o73-Vh-wv8"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="eYo-XM-r7o"/>
+                    </connections>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSo-Ad-hKl">
+                    <rect key="frame" x="-2" y="1268" width="1028" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lce-eH-Gb5" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
+                            <rect key="frame" x="364" y="20" width="300" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of8-Zg-JKe" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
+                                    <color key="backgroundColor" red="0.81176470588235294" green="0.81568627450980391" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="HGJ-kJ-abO"/>
+                                        <constraint firstAttribute="width" constant="140" id="sVa-IZ-kWu"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <state key="normal" title="Clear"/>
+                                    <connections>
+                                        <action selector="didPressClearButton:" destination="-1" eventType="touchUpInside" id="bmy-Ox-w8u"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-Fv-AFj" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="160" y="0.0" width="140" height="60"/>
+                                    <color key="backgroundColor" red="0.22745098039215686" green="0.41960784313725491" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <state key="normal" title="Next"/>
+                                    <connections>
+                                        <action selector="didPressNextButton:" destination="-1" eventType="touchUpInside" id="OR4-Fs-EEK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="lce-eH-Gb5" firstAttribute="centerX" secondItem="zSo-Ad-hKl" secondAttribute="centerX" id="OV5-Dl-m4o"/>
+                        <constraint firstItem="lce-eH-Gb5" firstAttribute="top" secondItem="zSo-Ad-hKl" secondAttribute="top" constant="20" id="R2i-xj-Zv0"/>
+                        <constraint firstAttribute="bottom" secondItem="lce-eH-Gb5" secondAttribute="bottom" constant="20" id="z1f-iJ-Aax"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zSo-Ad-hKl" firstAttribute="top" secondItem="svM-m0-ka7" secondAttribute="bottom" id="6ZB-op-Zum"/>
+                <constraint firstItem="svM-m0-ka7" firstAttribute="top" secondItem="hVR-ag-dd7" secondAttribute="bottom" constant="20" id="7df-cD-LJH"/>
+                <constraint firstAttribute="bottom" secondItem="zSo-Ad-hKl" secondAttribute="bottom" constant="-2" id="9Bu-P6-SFf"/>
+                <constraint firstItem="nhy-uz-gIw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AaE-Fe-CML"/>
+                <constraint firstAttribute="trailing" secondItem="nhy-uz-gIw" secondAttribute="trailing" id="NZE-5h-QqU"/>
+                <constraint firstAttribute="trailing" secondItem="svM-m0-ka7" secondAttribute="trailing" id="SCK-93-2cM"/>
+                <constraint firstItem="zSo-Ad-hKl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="T3c-fB-Eko"/>
+                <constraint firstItem="nhy-uz-gIw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Tmu-67-gPx"/>
+                <constraint firstItem="svM-m0-ka7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xrp-lL-jPw"/>
+                <constraint firstItem="hVR-ag-dd7" firstAttribute="top" secondItem="nhy-uz-gIw" secondAttribute="bottom" constant="20" id="bpD-bb-bZN"/>
+                <constraint firstAttribute="trailing" secondItem="zSo-Ad-hKl" secondAttribute="trailing" constant="-2" id="o3X-g7-4RB"/>
+                <constraint firstItem="hVR-ag-dd7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yWM-bl-I6a"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

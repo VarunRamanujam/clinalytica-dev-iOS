@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="7Lf-Mu-8fc" customClass="MedicalStatusTitleCell" customModule="Hospital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1337" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Lf-Mu-8fc" id="TJV-Wd-8T1">
+                <rect key="frame" x="0.0" y="0.0" width="1337" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7F-7h-USH" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="172"/>
+                        <string key="text">Drug Name
+(Generic Preferred)</string>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzs-1k-Ab7" userLabel="1 Border">
+                        <rect key="frame" x="401.5" y="0.0" width="2" height="172"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="oPA-aP-Atv"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Event Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MW9-b7-Mg4" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="403.5" y="0.0" width="267.5" height="172.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-Uq-XJW" userLabel="2 Border">
+                        <rect key="frame" x="671" y="0.0" width="2" height="172"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eR0-R6-GU2">
+                        <rect key="frame" x="673" y="0.0" width="312" height="171.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Onset" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm6-Ce-ono" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                                <rect key="frame" x="84" y="10" width="144.5" height="91.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qub-Ep-3Ax" customClass="DateView" customModule="Hospital" customModuleProvider="target">
+                                <rect key="frame" x="56" y="106.5" width="200" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="rOU-p6-siM"/>
+                                    <constraint firstAttribute="width" constant="200" id="tIr-DT-jQB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="canChooseDate" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jm6-Ce-ono" firstAttribute="top" secondItem="eR0-R6-GU2" secondAttribute="top" constant="10" id="MwD-Gb-Pu4"/>
+                            <constraint firstItem="qub-Ep-3Ax" firstAttribute="top" secondItem="jm6-Ce-ono" secondAttribute="bottom" constant="5" id="Va7-oF-r4H"/>
+                            <constraint firstItem="qub-Ep-3Ax" firstAttribute="centerX" secondItem="eR0-R6-GU2" secondAttribute="centerX" id="gnQ-nm-HBz"/>
+                            <constraint firstAttribute="bottom" secondItem="qub-Ep-3Ax" secondAttribute="bottom" constant="10" id="nta-3a-s7Z"/>
+                            <constraint firstItem="jm6-Ce-ono" firstAttribute="centerX" secondItem="eR0-R6-GU2" secondAttribute="centerX" id="xhC-Lb-p0p"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tE-g8-smc" userLabel="3 Border">
+                        <rect key="frame" x="985" y="0.0" width="2" height="172"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severity" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="202-rr-etz" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="987" y="0.0" width="173.5" height="172.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VA3-r2-zxF" userLabel="4 Border">
+                        <rect key="frame" x="1160.5" y="0.0" width="2" height="172.5"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Taken" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Roo-bX-KwX" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="1163" y="0.0" width="174" height="172.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-Td-eDz" userLabel="Bottom Border" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="169.5" width="1337" height="2"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="Vgj-eG-JZc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MW9-b7-Mg4" firstAttribute="top" secondItem="bzs-1k-Ab7" secondAttribute="top" id="0pd-hf-HGh"/>
+                    <constraint firstItem="s7F-7h-USH" firstAttribute="width" secondItem="TJV-Wd-8T1" secondAttribute="width" multiplier="3:10" id="2gj-SC-5uE"/>
+                    <constraint firstItem="4tE-g8-smc" firstAttribute="bottom" secondItem="eR0-R6-GU2" secondAttribute="bottom" id="304-Pp-WLe"/>
+                    <constraint firstItem="Roo-bX-KwX" firstAttribute="top" secondItem="VA3-r2-zxF" secondAttribute="top" id="5tM-j6-81l"/>
+                    <constraint firstItem="202-rr-etz" firstAttribute="top" secondItem="4tE-g8-smc" secondAttribute="top" id="6Ru-7d-S7v"/>
+                    <constraint firstItem="MW9-b7-Mg4" firstAttribute="leading" secondItem="bzs-1k-Ab7" secondAttribute="trailing" id="7G0-Fb-rym"/>
+                    <constraint firstItem="VA3-r2-zxF" firstAttribute="bottom" secondItem="202-rr-etz" secondAttribute="bottom" id="7SB-h0-ky9"/>
+                    <constraint firstItem="VA3-r2-zxF" firstAttribute="leading" secondItem="202-rr-etz" secondAttribute="trailing" id="ETl-TJ-05A"/>
+                    <constraint firstAttribute="bottom" secondItem="G2l-Td-eDz" secondAttribute="bottom" id="K4T-np-aFV"/>
+                    <constraint firstItem="s7F-7h-USH" firstAttribute="leading" secondItem="TJV-Wd-8T1" secondAttribute="leading" id="Mex-xQ-jkg"/>
+                    <constraint firstItem="TA2-Uq-XJW" firstAttribute="bottom" secondItem="MW9-b7-Mg4" secondAttribute="bottom" id="POE-5o-lWw"/>
+                    <constraint firstAttribute="trailing" secondItem="G2l-Td-eDz" secondAttribute="trailing" id="PSJ-TR-ewn"/>
+                    <constraint firstItem="TA2-Uq-XJW" firstAttribute="top" secondItem="MW9-b7-Mg4" secondAttribute="top" id="Pjo-Na-IIP"/>
+                    <constraint firstItem="VA3-r2-zxF" firstAttribute="top" secondItem="202-rr-etz" secondAttribute="top" id="QHT-MH-Wav"/>
+                    <constraint firstAttribute="bottom" secondItem="eR0-R6-GU2" secondAttribute="bottom" priority="999" id="RM3-gx-gdV"/>
+                    <constraint firstItem="bzs-1k-Ab7" firstAttribute="top" secondItem="s7F-7h-USH" secondAttribute="top" id="Rku-kB-0TS"/>
+                    <constraint firstItem="MW9-b7-Mg4" firstAttribute="width" secondItem="TJV-Wd-8T1" secondAttribute="width" multiplier="2:10" id="TnP-B1-chN"/>
+                    <constraint firstItem="VA3-r2-zxF" firstAttribute="width" secondItem="bzs-1k-Ab7" secondAttribute="width" id="UHb-0E-2Df"/>
+                    <constraint firstItem="bzs-1k-Ab7" firstAttribute="leading" secondItem="s7F-7h-USH" secondAttribute="trailing" constant="0.5" id="UTc-8j-ckS"/>
+                    <constraint firstItem="202-rr-etz" firstAttribute="leading" secondItem="4tE-g8-smc" secondAttribute="trailing" id="UXA-dH-Lbb"/>
+                    <constraint firstItem="G2l-Td-eDz" firstAttribute="leading" secondItem="TJV-Wd-8T1" secondAttribute="leading" id="WD3-1T-PlT"/>
+                    <constraint firstItem="Roo-bX-KwX" firstAttribute="leading" secondItem="VA3-r2-zxF" secondAttribute="trailing" constant="0.5" id="aSc-wY-hMf"/>
+                    <constraint firstItem="eR0-R6-GU2" firstAttribute="leading" secondItem="TA2-Uq-XJW" secondAttribute="trailing" id="axq-qK-YTH"/>
+                    <constraint firstItem="4tE-g8-smc" firstAttribute="top" secondItem="eR0-R6-GU2" secondAttribute="top" id="cAW-V9-SF7"/>
+                    <constraint firstItem="bzs-1k-Ab7" firstAttribute="bottom" secondItem="s7F-7h-USH" secondAttribute="bottom" id="cMa-WM-f3C"/>
+                    <constraint firstItem="MW9-b7-Mg4" firstAttribute="bottom" secondItem="bzs-1k-Ab7" secondAttribute="bottom" id="cS1-wU-HBw"/>
+                    <constraint firstItem="s7F-7h-USH" firstAttribute="height" secondItem="TJV-Wd-8T1" secondAttribute="height" id="ciz-Cv-Fg4"/>
+                    <constraint firstAttribute="trailing" secondItem="Roo-bX-KwX" secondAttribute="trailing" id="dZO-y5-i3g"/>
+                    <constraint firstItem="202-rr-etz" firstAttribute="width" secondItem="TJV-Wd-8T1" secondAttribute="width" multiplier="1.3:10" id="drQ-Am-n9i"/>
+                    <constraint firstItem="TA2-Uq-XJW" firstAttribute="leading" secondItem="MW9-b7-Mg4" secondAttribute="trailing" id="gxf-bu-RWa"/>
+                    <constraint firstItem="s7F-7h-USH" firstAttribute="top" secondItem="TJV-Wd-8T1" secondAttribute="top" id="hH2-FX-Og2"/>
+                    <constraint firstItem="202-rr-etz" firstAttribute="bottom" secondItem="4tE-g8-smc" secondAttribute="bottom" id="kjC-ac-ZEa"/>
+                    <constraint firstItem="4tE-g8-smc" firstAttribute="leading" secondItem="eR0-R6-GU2" secondAttribute="trailing" id="mig-Nh-1aX"/>
+                    <constraint firstItem="Roo-bX-KwX" firstAttribute="bottom" secondItem="VA3-r2-zxF" secondAttribute="bottom" id="nRs-2a-vHg"/>
+                    <constraint firstItem="Roo-bX-KwX" firstAttribute="width" secondItem="TJV-Wd-8T1" secondAttribute="width" multiplier="1.3:10" id="ojj-MB-yDv"/>
+                    <constraint firstItem="4tE-g8-smc" firstAttribute="width" secondItem="bzs-1k-Ab7" secondAttribute="width" id="pkn-YH-O2b"/>
+                    <constraint firstItem="eR0-R6-GU2" firstAttribute="top" secondItem="TJV-Wd-8T1" secondAttribute="top" id="v2s-QW-lhK"/>
+                    <constraint firstItem="TA2-Uq-XJW" firstAttribute="width" secondItem="bzs-1k-Ab7" secondAttribute="width" id="vjU-Wr-Hgd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="1224.5" y="129"/>
+        </tableViewCell>
+    </objects>
+</document>

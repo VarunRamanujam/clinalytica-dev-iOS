@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="MedicalHistoryAndStatusCell" customModule="Hospital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="493" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a. Head, eyes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBa-7b-PzE" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="10" y="26" width="153.5" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLR-m7-bDJ" userLabel="Border">
+                        <rect key="frame" x="173.5" y="0.0" width="2" height="80"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="wnE-vs-4la"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Se5-QC-Kgf">
+                        <rect key="frame" x="175.5" y="0.0" width="142" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtE-NJ-QfG" userLabel="Yes Check Box" customClass="BEMCheckBox">
+                                <rect key="frame" x="10" y="15" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1nt-ks-C8M"/>
+                                    <constraint firstAttribute="width" secondItem="LtE-NJ-QfG" secondAttribute="height" multiplier="1:1" id="SJX-tx-9Bz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                        <color key="value" red="0.70980392156862748" green="0.78431372549019607" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.70980392160000005" green="0.7843137255" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                        <color key="value" red="0.28235294117647058" green="0.76078431372549016" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offFillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3P-W9-ICi">
+                                <rect key="frame" x="70" y="0.0" width="2" height="80"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVR-dS-TdX" userLabel="No Check Box" customClass="BEMCheckBox">
+                                <rect key="frame" x="82" y="15" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                        <color key="value" red="0.70980392160000005" green="0.7843137255" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.70980392160000005" green="0.7843137255" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                        <color key="value" red="0.28235294117647058" green="0.76078431372549016" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offFillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y3P-W9-ICi" firstAttribute="leading" secondItem="LtE-NJ-QfG" secondAttribute="trailing" constant="10" id="Fpv-TD-UBi"/>
+                            <constraint firstAttribute="bottom" secondItem="LtE-NJ-QfG" secondAttribute="bottom" constant="15" id="Gk0-ns-XVJ"/>
+                            <constraint firstItem="uVR-dS-TdX" firstAttribute="height" secondItem="LtE-NJ-QfG" secondAttribute="height" id="J8D-PO-sP2"/>
+                            <constraint firstItem="uVR-dS-TdX" firstAttribute="centerY" secondItem="LtE-NJ-QfG" secondAttribute="centerY" id="MVn-lm-Nj2"/>
+                            <constraint firstItem="Y3P-W9-ICi" firstAttribute="top" secondItem="Se5-QC-Kgf" secondAttribute="top" id="MgH-iG-SUU"/>
+                            <constraint firstItem="LtE-NJ-QfG" firstAttribute="top" secondItem="Se5-QC-Kgf" secondAttribute="top" constant="15" id="PMz-o2-oVn"/>
+                            <constraint firstItem="uVR-dS-TdX" firstAttribute="leading" secondItem="Y3P-W9-ICi" secondAttribute="trailing" constant="10" id="VGd-WD-2H8"/>
+                            <constraint firstItem="uVR-dS-TdX" firstAttribute="width" secondItem="LtE-NJ-QfG" secondAttribute="width" id="WSG-fv-DHr"/>
+                            <constraint firstAttribute="bottom" secondItem="Y3P-W9-ICi" secondAttribute="bottom" id="bkD-Ag-VAh"/>
+                            <constraint firstItem="LtE-NJ-QfG" firstAttribute="leading" secondItem="Se5-QC-Kgf" secondAttribute="leading" constant="10" id="mMn-WI-NK5"/>
+                            <constraint firstAttribute="trailing" secondItem="uVR-dS-TdX" secondAttribute="trailing" constant="10" id="oeq-WV-dDI"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irY-kR-4hK" userLabel="Border">
+                        <rect key="frame" x="317.5" y="0.0" width="2" height="80"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please describe briefly here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SB9-tb-plc" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                        <rect key="frame" x="329.5" y="0.0" width="153.5" height="80"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kT-mS-Tng" userLabel="Bottom Border">
+                        <rect key="frame" x="0.0" y="77" width="493" height="2"/>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="SqS-hb-r87"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2kT-mS-Tng" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1St-qG-NPL"/>
+                    <constraint firstItem="PBa-7b-PzE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerYWithinMargins" id="7ez-Q2-Xal"/>
+                    <constraint firstItem="SLR-m7-bDJ" firstAttribute="leading" secondItem="PBa-7b-PzE" secondAttribute="trailing" constant="10" id="9Oy-NH-ld5"/>
+                    <constraint firstAttribute="bottom" secondItem="2kT-mS-Tng" secondAttribute="bottom" id="A22-cV-OOP"/>
+                    <constraint firstItem="SB9-tb-plc" firstAttribute="bottom" secondItem="irY-kR-4hK" secondAttribute="bottom" id="AiS-96-amI"/>
+                    <constraint firstItem="irY-kR-4hK" firstAttribute="bottom" secondItem="Se5-QC-Kgf" secondAttribute="bottom" id="CdH-m4-lI5"/>
+                    <constraint firstItem="SLR-m7-bDJ" firstAttribute="top" secondItem="Se5-QC-Kgf" secondAttribute="top" id="KoA-Qy-l3I"/>
+                    <constraint firstAttribute="top" secondItem="Se5-QC-Kgf" secondAttribute="top" id="RoW-Zt-p0H"/>
+                    <constraint firstItem="SB9-tb-plc" firstAttribute="top" secondItem="irY-kR-4hK" secondAttribute="top" id="WME-xE-lrS"/>
+                    <constraint firstItem="SLR-m7-bDJ" firstAttribute="bottom" secondItem="Se5-QC-Kgf" secondAttribute="bottom" id="YMT-fJ-fjB"/>
+                    <constraint firstItem="irY-kR-4hK" firstAttribute="top" secondItem="Se5-QC-Kgf" secondAttribute="top" id="YXQ-Iu-lut"/>
+                    <constraint firstAttribute="trailing" secondItem="2kT-mS-Tng" secondAttribute="trailing" id="dys-cJ-wBh"/>
+                    <constraint firstItem="SB9-tb-plc" firstAttribute="leading" secondItem="irY-kR-4hK" secondAttribute="trailing" constant="10" id="eXj-XO-1BR"/>
+                    <constraint firstAttribute="bottom" secondItem="Se5-QC-Kgf" secondAttribute="bottom" priority="999" id="fxi-Ay-fH8"/>
+                    <constraint firstAttribute="trailing" secondItem="SB9-tb-plc" secondAttribute="trailing" constant="10" id="iF0-W8-mPB"/>
+                    <constraint firstItem="Se5-QC-Kgf" firstAttribute="leading" secondItem="SLR-m7-bDJ" secondAttribute="trailing" id="ljT-6G-sZE"/>
+                    <constraint firstItem="Y3P-W9-ICi" firstAttribute="width" secondItem="SLR-m7-bDJ" secondAttribute="width" id="mp5-xC-PpL"/>
+                    <constraint firstItem="PBa-7b-PzE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oRY-Ji-yva"/>
+                    <constraint firstItem="irY-kR-4hK" firstAttribute="leading" secondItem="Se5-QC-Kgf" secondAttribute="trailing" id="rid-xt-tuL"/>
+                    <constraint firstItem="Se5-QC-Kgf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="teR-cM-rPZ"/>
+                    <constraint firstItem="irY-kR-4hK" firstAttribute="width" secondItem="SLR-m7-bDJ" secondAttribute="width" id="z7W-zK-3lG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="noCheckBox" destination="uVR-dS-TdX" id="uHn-tD-h4W"/>
+                <outlet property="textField" destination="SB9-tb-plc" id="XwZ-5c-vCk"/>
+                <outlet property="titleLabel" destination="PBa-7b-PzE" id="bz5-hb-tQy"/>
+                <outlet property="yesCheckBox" destination="LtE-NJ-QfG" id="yT4-r7-V3T"/>
+            </connections>
+            <point key="canvasLocation" x="-18.5" y="39"/>
+        </tableViewCell>
+    </objects>
+</document>
