@@ -14,6 +14,7 @@
                 <outlet property="bottomButtonsStackView" destination="lce-eH-Gb5" id="ORt-Ed-WHU"/>
                 <outlet property="bottomView" destination="zSo-Ad-hKl" id="79z-4V-UHd"/>
                 <outlet property="clearButton" destination="Of8-Zg-JKe" id="PLg-EW-ajS"/>
+                <outlet property="headerView" destination="nhy-uz-gIw" id="WBG-an-bKF"/>
                 <outlet property="nextButton" destination="H5c-Fv-AFj" id="AO0-nA-Pho"/>
                 <outlet property="pageNumbersStackView" destination="hVR-ag-dd7" id="4el-1q-kzQ"/>
                 <outlet property="scrollContentStackView" destination="ZO5-8V-WED" id="JHC-P6-8zS"/>
@@ -196,6 +197,7 @@
                                     <color key="backgroundColor" red="0.22745098039215686" green="0.41960784313725491" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                     <state key="normal" title="Next"/>
+                                    <state key="selected" title="Submit"/>
                                     <connections>
                                         <action selector="didPressNextButton:" destination="-1" eventType="touchUpInside" id="OR4-Fs-EEK"/>
                                     </connections>

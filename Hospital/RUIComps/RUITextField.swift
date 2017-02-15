@@ -10,6 +10,7 @@ import UIKit
 
 class RUITextField: UITextField {
 
+    @IBInspectable var canPasteText : Bool = true
     
     @IBInspectable var needBorderAndCornerRadius : Bool = true {
         didSet {
@@ -37,7 +38,16 @@ class RUITextField: UITextField {
         initializeRUITextField()
     }
     
-    func initializeRUITextField() {
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        
+        if action == #selector(UIResponderStandardEditActions.paste(_:)) {
+            return canPasteText
+        }
+        
+        return super.canPerformAction(action, withSender: sender)
+    }
+    
+    private func initializeRUITextField() {
         if needBorderAndCornerRadius {
             self.addBorderAndCornerRadius()
         } else {

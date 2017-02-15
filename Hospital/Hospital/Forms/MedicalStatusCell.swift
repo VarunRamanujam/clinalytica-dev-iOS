@@ -35,14 +35,16 @@ class MedicalStatusCell: RUITableViewCell, DateViewDelegate, OptionsPopOverViewC
     }
     
     func dateChanged(sender: DateView, newDate: Date) {
-        medicalStatus.dateOfOnSet = newDate
+        medicalStatus.dateOfOnSet = newDate.getString()
     }
     
     func didSelectOption(sender: OptionsPopOverViewController, index: Int, title: String) {
         if sender.popoverPresentationController?.sourceView == severityButton {
             severityButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            medicalStatus.severity = index + 1
         } else if sender.popoverPresentationController?.sourceView == actionTakenButton {
             actionTakenButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            medicalStatus.ationTaken = index + 1
         }
     }
     
@@ -56,10 +58,33 @@ class MedicalStatusCell: RUITableViewCell, DateViewDelegate, OptionsPopOverViewC
     
 }
 
+//MARK:- UITextFieldDelegate
+extension MedicalStatusCell : UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let newStr = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        if textField == medicalEventCodeTF {
+            if newStr.length() > Medical_Event_Code_Length {
+                return false
+            }
+            return newStr.canStringBeNumber()
+        } else if textField == natureOfProblemTF {
+            if newStr.length() > Text_Length {
+                return false
+            }
+        }
+        
+        return true
+    }
+}
+
 //MARK:- Private Methods
 extension MedicalStatusCell {
     func initializeMedicalStatusCell() {
         dateOfOnset.delegate = self
+        
+        natureOfProblemTF.delegate = self
+        medicalEventCodeTF.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(MedicalStatusCell.natureOfProblemTextDidChange(sender:)), name: NSNotification.Name.UITextFieldTextDidChange, object: natureOfProblemTF)
         NotificationCenter.default.addObserver(self, selector: #selector(MedicalStatusCell.medicalEventCodeTextDidChange(sender:)), name: NSNotification.Name.UITextFieldTextDidChange, object: medicalEventCodeTF)
@@ -67,8 +92,14 @@ extension MedicalStatusCell {
     
     func updatedData() {
         natureOfProblemTF.text = medicalStatus.natureOfProblem
-        medicalEventCodeTF.text = medicalStatus.eventCode
-        dateOfOnset.date = medicalStatus.dateOfOnSet
+        if medicalStatus.eventCode != nil &&
+            medicalStatus.eventCode != 0  {
+            medicalEventCodeTF.text = "\(medicalStatus.eventCode!)"
+        } else {
+            medicalEventCodeTF.text = ""
+        }
+        
+        dateOfOnset.date = Date.getDate(str: medicalStatus.dateOfOnSet)
         
         if medicalStatus.severity != nil {
             severityButton.setTitle("\(medicalStatus.severity!)", for: UIControlState.normal)
@@ -89,7 +120,7 @@ extension MedicalStatusCell {
     }
     
     func medicalEventCodeTextDidChange(sender : Notification) {
-        medicalStatus.eventCode = medicalEventCodeTF.text
+        medicalStatus.eventCode = medicalEventCodeTF.text?.toInt()
     }
     
     func presentOptionsViewCntl(options : [String], view : UIView, size : CGSize, title : String) {

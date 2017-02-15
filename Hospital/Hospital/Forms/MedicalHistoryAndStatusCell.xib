@@ -122,6 +122,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="zT7-5x-YPH"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kT-mS-Tng" userLabel="Bottom Border">
                         <rect key="frame" x="0.0" y="77" width="493" height="2"/>

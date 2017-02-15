@@ -119,7 +119,6 @@ public func isValidPassword(checkString : String?) -> Bool{
     
 }
 
-
 public func showNetworkActivityIndicator(){
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
 }

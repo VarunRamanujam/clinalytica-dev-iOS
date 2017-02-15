@@ -57,7 +57,7 @@ class MedicalHistoryAndStatusCell: RUITableViewCell, BEMCheckBoxDelegate {
             yesCheckBox.on = false
             noCheckBox.on = false
         } else {
-            if medicalHistoryData.status == true {
+            if medicalHistoryData.status == 1 {
                 yesCheckBox.on = true
                 noCheckBox.on = false
                 textField.isHidden = false
@@ -72,10 +72,10 @@ class MedicalHistoryAndStatusCell: RUITableViewCell, BEMCheckBoxDelegate {
     func didTap(_ checkBox: BEMCheckBox) {
         if checkBox.on {
             if yesCheckBox == checkBox {
-                medicalHistoryData.status = true
+                medicalHistoryData.status = 1
                 textField.isHidden = false
             } else {
-                medicalHistoryData.status = false
+                medicalHistoryData.status = 2
                 textField.isHidden = true
             }
         }
@@ -83,5 +83,17 @@ class MedicalHistoryAndStatusCell: RUITableViewCell, BEMCheckBoxDelegate {
     
     func textFieldTextDidChange(sender : Notification) {
         medicalHistoryData.medicalDescription = textField.text
+    }
+}
+
+//MARK:- UITextFieldDelegate
+extension MedicalHistoryAndStatusCell : UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let newStr = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        if newStr.length() > Text_Length {
+            return false
+        }
+        return true
     }
 }

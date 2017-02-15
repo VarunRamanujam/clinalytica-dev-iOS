@@ -11,6 +11,8 @@ import UIKit
 //@IBDesignable
 class RUINavigationBar: UINavigationBar {
     
+    let bottomBorder = CALayer()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -35,6 +37,15 @@ class RUINavigationBar: UINavigationBar {
         
         self.barTintColor = UIColor(red: 250, green: 251, blue: 253)
         self.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.black,
-                                    NSFontAttributeName: UIFont.systemFont(ofSize: 20)]
+                                    NSFontAttributeName: UIFont.boldSystemFont(ofSize: 22.0)]
+        
+        self.layer.addSublayer(bottomBorder)
+        bottomBorder.backgroundColor = UIColor(red: 216, green: 225, blue: 229).cgColor
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        bottomBorder.frame = CGRect(x: 0, y: self.frame.height - 2, width: self.frame.width, height: 2.0)
     }
 }

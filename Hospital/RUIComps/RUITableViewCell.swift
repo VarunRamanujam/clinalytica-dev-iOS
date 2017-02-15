@@ -10,6 +10,16 @@ import UIKit
 
 class RUITableViewCell: UITableViewCell {
 
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        initializeRUITableViewCell()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +34,10 @@ class RUITableViewCell: UITableViewCell {
     
     func initializeRUITableViewCell() {
         self.selectionStyle = .none
+        
+        self.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        self.preservesSuperviewLayoutMargins = false
+        self.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0)
     }
 
 }

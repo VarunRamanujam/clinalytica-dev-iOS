@@ -16,6 +16,7 @@ enum FormStatus {
 
 class FormBaseViewController: RUIViewController {
     
+    @IBOutlet var headerView: FormHeaderView!
     @IBOutlet var pageNumbersStackView: UIStackView!
     @IBOutlet var pageNumberButtons: [UIButton]!
     @IBOutlet var pageNumberDividers: [UIView]!
@@ -36,18 +37,13 @@ class FormBaseViewController: RUIViewController {
     
     var selectedPage = 0 {
         didSet {
-            updatePageNumberButtons()
-            
-            if selectedPage == 4 {
-                nextButton.setTitle("Submit", for: .normal)
-            } else {
-                nextButton.setTitle("Next", for: .normal)
-            }
+            self.perform(#selector(FormBaseViewController.selectedPageNumberChanged), with: nil, afterDelay: 0.2)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initializeFormBaseViewController()
     }
     
@@ -79,6 +75,8 @@ extension FormBaseViewController : UIScrollViewDelegate {
 extension FormBaseViewController {
     @IBAction func didTapOnPageNumberButton(_ sender: UIButton) {
         
+        self.view.endEditing(true)
+        
         if selectedPage == sender.tag {
             return
         }
@@ -99,9 +97,19 @@ extension FormBaseViewController {
         childFormViewControllers[selectedPage].beginAppearanceTransition(false, animated: false)
         childFormViewControllers[selectedPage].endAppearanceTransition()
         
+        
         selectedPage = sender.tag
-        childFormViewControllers[selectedPage].beginAppearanceTransition(true, animated: true)
-        scrollView.setContentOffset(CGPoint(x: (CGFloat(selectedPage) * scrollView.frame.width), y: 0), animated: true)
+        addViewController(at: sender.tag)
+    }
+    
+    func selectedPageNumberChanged() {
+        updatePageNumberButtons()
+        
+        if selectedPage == 4 {
+            nextButton.setTitle("Submit", for: .normal)
+        } else {
+            nextButton.setTitle("Next", for: .normal)
+        }
     }
     
     @IBAction func didPressClearButton(_ sender: RUIButton) {
@@ -109,8 +117,17 @@ extension FormBaseViewController {
     }
     
     @IBAction func didPressNextButton(_ sender: RUIButton) {
-        
 
+        let status = childFormViewControllers[selectedPage].submitForm()
+        if status == false {
+            formSubmitted(sender: childFormViewControllers[selectedPage])
+        }
+    }
+}
+
+//MARK:- FormViewControllerDelegate Menthods
+extension FormBaseViewController : FormViewControllerDelegate {
+    func formSubmitted(sender: FormViewController) {
         if (selectedPage + 1) >= formsStatus.count {
             return
         }
@@ -120,10 +137,9 @@ extension FormBaseViewController {
         childFormViewControllers[selectedPage].endAppearanceTransition()
         
         formsStatus[selectedPage + 1] = .Inprogresss
-        selectedPage += 1
         
-        childFormViewControllers[selectedPage].beginAppearanceTransition(true, animated: true)
-        scrollView.setContentOffset(CGPoint(x: (CGFloat(selectedPage) * scrollView.frame.width), y: 0), animated: true)
+        selectedPage += 1
+        addViewController(at: selectedPage)
     }
 }
 
@@ -133,25 +149,29 @@ extension FormBaseViewController {
         
         bottomView.addBorder()
         
-        addChildViewControllers()
+        childFormViewControllers = [FormOneViewController(nibName: "FormOneViewController", bundle: nil),
+                                    FormTwoViewController(nibName: "FormTwoViewController", bundle: nil),
+                                    FormThreeController(nibName: "FormThreeController", bundle: nil),
+                                    FormFourViewController(nibName: "FormFourViewController", bundle: nil),
+                                    FormFiveViewController(nibName: "FormFiveViewController", bundle: nil)]
+        addViewController(at: 0)
         updatePageNumberButtons()
         updateBottomStackView()
         
-        #if DEBUG
-//            self.perform(#selector(FormBaseViewController.didTapOnPageNumberButton(_:)), with: pageNumberButtons[4], afterDelay: 2.0)
-        #endif
+//        #if DEBUG
+            self.perform(#selector(FormBaseViewController.didTapOnPageNumberButton(_:)), with: pageNumberButtons[0], afterDelay: 0.5)
+//        #endif
 
     }
     
-    private func addChildViewControllers() {
-        let viewCntls = [FormOneViewController(nibName: "FormOneViewController", bundle: nil),
-                         FormTwoViewController(nibName: "FormTwoViewController", bundle: nil),
-                         FormThreeController(nibName: "FormThreeController", bundle: nil),
-                         FormFourViewController(nibName: "FormFourViewController", bundle: nil),
-                         FormFiveViewController(nibName: "FormFiveViewController", bundle: nil)]
-        for viewCnt in viewCntls {
+    func addViewController(at index : Int) {
+        
+        let viewCnt = childFormViewControllers[index]
+        
+        if viewCnt.parent == nil {
+            viewCnt.delegate = self
             self.addChildViewController(viewCnt)
-            childFormViewControllers.append(viewCnt)
+            
             scrollContentStackView.addArrangedSubview(viewCnt.view)
             viewCnt.didMove(toParentViewController: self)
             let widthConstr = NSLayoutConstraint(item: viewCnt.view,
@@ -162,6 +182,11 @@ extension FormBaseViewController {
                                                  multiplier: 1.0,
                                                  constant: 0.0)
             self.view.addConstraint(widthConstr)
+            scrollView.setContentOffset(CGPoint(x: (CGFloat(index) * scrollView.frame.width), y: 0), animated: false)
+        } else {
+            
+            viewCnt.beginAppearanceTransition(true, animated: true)
+            scrollView.setContentOffset(CGPoint(x: (CGFloat(index) * scrollView.frame.width), y: 0), animated: true)
         }
     }
     

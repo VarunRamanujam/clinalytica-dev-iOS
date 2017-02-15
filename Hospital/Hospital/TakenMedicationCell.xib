@@ -16,10 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ri4-KK-eeT" id="h7Q-gy-LCd">
-                <rect key="frame" x="0.0" y="0.0" width="2078" height="85"/>
+                <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Drug Name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T09-NS-ATb" userLabel="Drug Name" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Problem Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T09-NS-ATb" userLabel="Drug Name" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="297.5" height="85"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="85" id="FOI-Oa-KGy"/>
@@ -30,6 +30,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Ri4-KK-eeT" id="u28-IK-B4Q"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chk-ak-x8s" userLabel="Border 1">
                         <rect key="frame" x="297.5" y="0.0" width="2" height="85"/>
@@ -46,6 +49,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Ri4-KK-eeT" id="Pif-kQ-vGU"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-NI-OLL" userLabel="Border 2">
                         <rect key="frame" x="465.5" y="0.0" width="2" height="85"/>
@@ -59,6 +65,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Ri4-KK-eeT" id="GVC-Y9-AsQ"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhY-Fx-08r" userLabel="Border 3">
                         <rect key="frame" x="675.5" y="0.0" width="2" height="85"/>
@@ -72,6 +81,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Ri4-KK-eeT" id="8eK-I6-6Qg"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pz1-9E-0ad" userLabel="Border 4">
                         <rect key="frame" x="823" y="0.0" width="2" height="85"/>
@@ -85,6 +97,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="Ri4-KK-eeT" id="JxX-dK-zK2"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmj-0E-Hdw" userLabel="Border 5">
                         <rect key="frame" x="1033" y="0.0" width="2" height="85"/>
@@ -144,6 +159,23 @@
                                     <constraint firstAttribute="width" secondItem="TWp-LD-r15" secondAttribute="height" multiplier="1:1" id="N68-4B-Jjj"/>
                                     <constraint firstAttribute="width" constant="50" id="hVb-4o-Zhe"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                        <color key="value" red="0.70980392156862748" green="0.78431372549019607" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.70980392160000005" green="0.7843137255" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                        <color key="value" red="0.28235294117647058" green="0.76078431372549016" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offFillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

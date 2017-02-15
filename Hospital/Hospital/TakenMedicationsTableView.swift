@@ -15,6 +15,14 @@ class TakenMedicationsTableView: RUITableView {
 
     var medications = [Medication]()
     
+    func clearData() {
+        for obj in medications {
+            obj.clearData()
+        }
+        
+        reloadData()
+    }
+    
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         

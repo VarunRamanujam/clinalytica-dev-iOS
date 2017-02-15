@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JI9-Le-56d" id="bDj-Cc-6Jh">
-                <rect key="frame" x="0.0" y="0.0" width="2078" height="85"/>
+                <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Nature of Problem" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5EX-Is-p9g" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
@@ -29,6 +29,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="JI9-Le-56d" id="sUg-ib-ZZV"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hde-u3-Vdd" userLabel="Border 1">
                         <rect key="frame" x="478" y="0.0" width="2" height="85"/>
@@ -45,6 +48,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="JI9-Le-56d" id="2O6-5Z-NXm"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yL-WS-hfc" userLabel="Border 2">
                         <rect key="frame" x="739" y="0.0" width="2" height="85"/>

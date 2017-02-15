@@ -15,6 +15,13 @@ class PastProblemsTableView: RUITableView {
 
     var pastProbles = [PastProblem]()
     
+    func clearData() {
+        for obj in pastProbles {
+            obj.clearData()
+        }
+        reloadData()
+    }
+    
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         

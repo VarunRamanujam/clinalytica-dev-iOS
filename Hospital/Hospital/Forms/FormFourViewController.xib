@@ -11,9 +11,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormFourViewController" customModule="Hospital" customModuleProvider="target">
             <connections>
+                <outlet property="OtherTF" destination="B0W-yi-Rew" id="aoX-AS-dNH"/>
+                <outlet property="dateOfFirstDose" destination="eek-01-RZs" id="rEV-5f-jPR"/>
+                <outlet property="dateRandomized" destination="hzc-Ui-1xZ" id="Hi9-Nh-rjM"/>
+                <outlet property="formCompletedByTF" destination="61f-rV-qoY" id="Glz-CL-oBT"/>
+                <outlet property="investigatorSignatureTF" destination="Q4a-sF-Ux2" id="svg-aD-BpU"/>
                 <outlet property="oneToFiveQuestionsStackView" destination="Cr6-qI-aIi" id="CJ7-Rg-Cr1"/>
                 <outlet property="seventeenthQuestion" destination="9yD-U1-bTc" id="eKm-2x-NAh"/>
-                <outlet property="sixToSixteenQuestionsStackView" destination="Yvf-YP-U1s" id="urL-3N-FIe"/>
+                <outlet property="signDate" destination="VUf-J4-9bs" id="V2f-B5-Q81"/>
+                <outlet property="sixToFifteenQuestionsStackView" destination="Yvf-YP-U1s" id="VWN-VV-HHR"/>
+                <outlet property="sixteenthQuestionYesOrNoStackView" destination="QBM-bf-Twx" id="1iL-h3-ocy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +33,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPh-26-YhR">
-                            <rect key="frame" x="0.0" y="0.0" width="1024" height="1255.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="1440"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-qI-aIi" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="984" height="276"/>
@@ -48,13 +55,13 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IF ANY NO RESPONSE IN QUESTIONS 1-5, PATIENT IS INELIGIBLE FOR THE STUDY." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOH-yZ-mkY" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="296" width="984" height="29"/>
+                                    <rect key="frame" x="20" y="306" width="984" height="29"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-YP-U1s" userLabel="Six To Sixteen" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="345" width="984" height="276"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-YP-U1s" userLabel="Six To Fifteen" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="365" width="984" height="276"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NH-19-YvE" customClass="QuestionYesOrNoView" customModule="Hospital" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="984" height="128"/>
@@ -72,14 +79,73 @@
                                         </view>
                                     </subviews>
                                 </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="16." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-Gk-550" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="675" width="30" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other, specify" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z0-ay-cV2" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="70" y="675" width="137" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0W-yi-Rew" userLabel="Other TF" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="217" y="661" width="350" height="55"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="55" id="FdI-hA-Bo3"/>
+                                        <constraint firstAttribute="width" constant="350" id="O8A-Sb-f7R"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Nbg-Xw-p85"/>
+                                    </connections>
+                                </textField>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QBM-bf-Twx" userLabel="Sixteenth Question Options" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="70" y="721" width="310" height="55"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNx-D8-FwO" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="WXv-Cs-2FN"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Yes"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="boxTypeInteger">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lke-OH-cUF" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
+                                            <rect key="frame" x="160" y="0.0" width="150" height="55"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="kmL-sh-NfT"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="No"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="boxTypeInteger">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="55" id="8Nf-C8-iwr"/>
+                                    </constraints>
+                                </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IF ANY YES RESPONSE IN QUESTIONS 6-16, PATIENT IS INELIGIBLE FOR THE STUDY." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fez-Au-EoG" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="641" width="984" height="29"/>
+                                    <rect key="frame" x="20" y="805.5" width="984" height="29"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Th-UI4" userLabel="Seventeen Quest">
-                                    <rect key="frame" x="20" y="690" width="984" height="312.5"/>
+                                    <rect key="frame" x="20" y="864.5" width="984" height="312.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yD-U1-bTc" customClass="QuestionYesOrNoView" customModule="Hospital" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="984" height="128"/>
@@ -152,7 +218,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-IH-yaM" userLabel="Bottom View">
-                                    <rect key="frame" x="20" y="1022.5" width="984" height="213"/>
+                                    <rect key="frame" x="20" y="1207" width="984" height="213"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form Completed By" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKE-7g-GfC" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
@@ -168,6 +234,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="WQ1-sZ-9pQ"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investigator's Signature" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-Aq-7Wz" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="106.5" width="230" height="26.5"/>
@@ -180,6 +249,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="ZXM-QS-3fj"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfY-2h-gyo" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
                                             <rect key="frame" x="784" y="106.5" width="46" height="26.5"/>
@@ -220,25 +292,33 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="6Z0-ay-cV2" firstAttribute="centerY" secondItem="B0W-yi-Rew" secondAttribute="centerY" id="1pu-Dw-YiH"/>
                                 <constraint firstItem="fez-Au-EoG" firstAttribute="trailing" secondItem="Yvf-YP-U1s" secondAttribute="trailing" id="3go-kD-uHu"/>
-                                <constraint firstItem="Yvf-YP-U1s" firstAttribute="top" secondItem="wOH-yZ-mkY" secondAttribute="bottom" constant="20" id="5f2-GD-8EO"/>
+                                <constraint firstItem="Yvf-YP-U1s" firstAttribute="top" secondItem="wOH-yZ-mkY" secondAttribute="bottom" constant="30" id="5f2-GD-8EO"/>
                                 <constraint firstItem="wOH-yZ-mkY" firstAttribute="leading" secondItem="Cr6-qI-aIi" secondAttribute="leading" id="9DK-0i-uRz"/>
                                 <constraint firstItem="Yvf-YP-U1s" firstAttribute="leading" secondItem="wOH-yZ-mkY" secondAttribute="leading" id="AV8-18-toA"/>
                                 <constraint firstItem="vKe-IH-yaM" firstAttribute="trailing" secondItem="l3q-Th-UI4" secondAttribute="trailing" id="Jdh-qS-Ovl"/>
+                                <constraint firstItem="Twf-Gk-550" firstAttribute="centerY" secondItem="6Z0-ay-cV2" secondAttribute="centerY" id="KOg-Xc-5rZ"/>
                                 <constraint firstItem="vKe-IH-yaM" firstAttribute="leading" secondItem="l3q-Th-UI4" secondAttribute="leading" id="R3a-27-18b"/>
                                 <constraint firstAttribute="trailing" secondItem="Cr6-qI-aIi" secondAttribute="trailing" constant="20" id="VB6-oa-FRo"/>
                                 <constraint firstAttribute="bottom" secondItem="vKe-IH-yaM" secondAttribute="bottom" constant="20" id="WMR-fD-KSh"/>
                                 <constraint firstItem="l3q-Th-UI4" firstAttribute="trailing" secondItem="fez-Au-EoG" secondAttribute="trailing" id="XjL-ts-eYZ"/>
-                                <constraint firstItem="fez-Au-EoG" firstAttribute="top" secondItem="Yvf-YP-U1s" secondAttribute="bottom" constant="20" id="Z5w-Gb-ZrF"/>
-                                <constraint firstItem="l3q-Th-UI4" firstAttribute="top" secondItem="fez-Au-EoG" secondAttribute="bottom" constant="20" id="Z6Q-F1-e4h"/>
+                                <constraint firstItem="6Z0-ay-cV2" firstAttribute="leading" secondItem="Twf-Gk-550" secondAttribute="trailing" constant="20" id="YEH-sf-71v"/>
+                                <constraint firstItem="l3q-Th-UI4" firstAttribute="top" secondItem="fez-Au-EoG" secondAttribute="bottom" constant="30" id="Z6Q-F1-e4h"/>
+                                <constraint firstItem="B0W-yi-Rew" firstAttribute="top" secondItem="Yvf-YP-U1s" secondAttribute="bottom" constant="20" id="ZK4-ew-e48"/>
                                 <constraint firstItem="Yvf-YP-U1s" firstAttribute="trailing" secondItem="wOH-yZ-mkY" secondAttribute="trailing" id="fDK-1c-GKI"/>
                                 <constraint firstItem="wOH-yZ-mkY" firstAttribute="trailing" secondItem="Cr6-qI-aIi" secondAttribute="trailing" id="hbr-WK-gPC"/>
-                                <constraint firstItem="vKe-IH-yaM" firstAttribute="top" secondItem="l3q-Th-UI4" secondAttribute="bottom" constant="20" id="igq-Tj-J1Z"/>
+                                <constraint firstItem="vKe-IH-yaM" firstAttribute="top" secondItem="l3q-Th-UI4" secondAttribute="bottom" constant="30" id="igq-Tj-J1Z"/>
                                 <constraint firstItem="l3q-Th-UI4" firstAttribute="leading" secondItem="fez-Au-EoG" secondAttribute="leading" id="ila-Gt-1CQ"/>
                                 <constraint firstItem="Cr6-qI-aIi" firstAttribute="leading" secondItem="LPh-26-YhR" secondAttribute="leading" constant="20" id="jPU-Bx-SkT"/>
-                                <constraint firstItem="wOH-yZ-mkY" firstAttribute="top" secondItem="Cr6-qI-aIi" secondAttribute="bottom" constant="20" id="rHe-CZ-vBP"/>
+                                <constraint firstItem="B0W-yi-Rew" firstAttribute="leading" secondItem="6Z0-ay-cV2" secondAttribute="trailing" constant="10" id="lwj-LP-J27"/>
+                                <constraint firstItem="QBM-bf-Twx" firstAttribute="leading" secondItem="6Z0-ay-cV2" secondAttribute="leading" id="mBk-V6-9VH"/>
+                                <constraint firstItem="wOH-yZ-mkY" firstAttribute="top" secondItem="Cr6-qI-aIi" secondAttribute="bottom" constant="30" id="rHe-CZ-vBP"/>
+                                <constraint firstItem="QBM-bf-Twx" firstAttribute="top" secondItem="B0W-yi-Rew" secondAttribute="bottom" constant="5" id="raF-zC-gfB"/>
+                                <constraint firstItem="Twf-Gk-550" firstAttribute="leading" secondItem="Yvf-YP-U1s" secondAttribute="leading" id="rfJ-7Y-rZD"/>
                                 <constraint firstItem="fez-Au-EoG" firstAttribute="leading" secondItem="Yvf-YP-U1s" secondAttribute="leading" id="skM-D2-nV6"/>
                                 <constraint firstItem="Cr6-qI-aIi" firstAttribute="top" secondItem="LPh-26-YhR" secondAttribute="top" id="yjw-Hc-dnV"/>
+                                <constraint firstItem="fez-Au-EoG" firstAttribute="top" secondItem="QBM-bf-Twx" secondAttribute="bottom" constant="30" id="ynt-hl-iIe"/>
                             </constraints>
                         </view>
                     </subviews>

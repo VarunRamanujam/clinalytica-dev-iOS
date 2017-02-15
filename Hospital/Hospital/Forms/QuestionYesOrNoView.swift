@@ -9,7 +9,7 @@
 import UIKit
 import BEMCheckBox
 
-class QuestionYesOrNoView: RUIView {
+class QuestionYesOrNoView: RUIView, HorizontalOptionViewDelegate {
 
     @IBOutlet var serialNumberLabel: RUILabel!
     @IBOutlet var titleLabel: RUILabel!
@@ -17,29 +17,28 @@ class QuestionYesOrNoView: RUIView {
     
     private var group = BEMCheckBoxGroup()
     
-    var status : Bool? {
-        set {
-            if newValue == nil {
-                group.selectedCheckBox = nil
+    private var status : Bool?
+    
+    func getStausValue() -> Bool? {
+        return status
+    }
+    
+    func setStausValue(value : Bool?) {
+        status = value
+        if value == nil {
+            group.selectedCheckBox = nil
+        } else {
+            if value == true {
+                group.selectedCheckBox = (yesOrNoStackView.arrangedSubviews[0] as? HorizontalOptionView)?.checkBox
             } else {
-                if newValue == true {
-                    group.selectedCheckBox = (yesOrNoStackView.arrangedSubviews[0] as? HorizontalOptionView)?.checkBox
-                } else {
-                    group.selectedCheckBox = (yesOrNoStackView.arrangedSubviews[1] as? HorizontalOptionView)?.checkBox
-                }
+                group.selectedCheckBox = (yesOrNoStackView.arrangedSubviews[1] as? HorizontalOptionView)?.checkBox
             }
         }
-        get {
-            if group.selectedCheckBox == nil {
-                return nil
-            } else {
-                if group.selectedCheckBox! == yesOrNoStackView.arrangedSubviews[0] {
-                    return true
-                } else {
-                    return false
-                }
-            }
-        }
+    }
+    
+    func unSelectOptions() {
+        group.selectedCheckBox?.on = false
+        status = nil
     }
     
     var title : String! {
@@ -77,8 +76,17 @@ class QuestionYesOrNoView: RUIView {
         
         group.mustHaveSelection = true
         for view in yesOrNoStackView.arrangedSubviews as! [HorizontalOptionView] {
+            view.delegate = self
             group.addCheckBox(toGroup: view.checkBox!)
         }
     }
-
+    
+    func didTap(sender: HorizontalOptionView, selected: Bool) {
+        let views = yesOrNoStackView.arrangedSubviews as! [HorizontalOptionView]
+        if views[0] == sender {
+            status = true
+        } else {
+            status = false
+        }
+    }
 }

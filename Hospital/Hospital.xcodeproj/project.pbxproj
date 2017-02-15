@@ -38,6 +38,8 @@
 		041A36A21E3F5F2300C23BE6 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36A11E3F5F2300C23BE6 /* HelperFunctions.swift */; };
 		041A36A41E3F63CB00C23BE6 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36A31E3F63CB00C23BE6 /* PasscodeView.swift */; };
 		041A36A61E3F879B00C23BE6 /* String+RUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36A51E3F879B00C23BE6 /* String+RUI.swift */; };
+		041B9E6E1E540A23008DBE7E /* Date+RUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9E6D1E540A23008DBE7E /* Date+RUI.swift */; };
+		041B9E701E54753F008DBE7E /* MedicalHistoryAndStatusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9E6F1E54753F008DBE7E /* MedicalHistoryAndStatusInfo.swift */; };
 		041D6B041E41CA50003C6650 /* FormBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6B021E41CA50003C6650 /* FormBaseViewController.swift */; };
 		041D6B051E41CA50003C6650 /* FormBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D6B031E41CA50003C6650 /* FormBaseViewController.xib */; };
 		041D6B251E41EC4B003C6650 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6B241E41EC4B003C6650 /* FormViewController.swift */; };
@@ -56,7 +58,15 @@
 		042177EE1E4113D700F57DFE /* RUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042177ED1E4113D700F57DFE /* RUIImageView.swift */; };
 		0424DD201E43B3910061AB8B /* QuestionYesOrNoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424DD1F1E43B3910061AB8B /* QuestionYesOrNoView.swift */; };
 		0424DD221E43B3A90061AB8B /* QuestionYesOrNoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0424DD211E43B3A90061AB8B /* QuestionYesOrNoView.xib */; };
+		043B8DC51E52D6EA00DA76B1 /* AdverseEventsForm5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B8DC41E52D6EA00DA76B1 /* AdverseEventsForm5.swift */; };
 		043E638B1E49A69C0096E61A /* NSLayoutConstraint+RUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E638A1E49A69C0096E61A /* NSLayoutConstraint+RUI.swift */; };
+		0440E4221E517648009D0A34 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440E4211E517648009D0A34 /* MBProgressHUD.m */; };
+		0440E4261E522163009D0A34 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440E4251E522163009D0A34 /* Reachability.m */; };
+		0440E4281E522317009D0A34 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440E4271E522317009D0A34 /* AppManager.swift */; };
+		0440E42A1E5224A5009D0A34 /* WebComUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440E4291E5224A5009D0A34 /* WebComUrls.swift */; };
+		0440E42C1E523170009D0A34 /* BackgroundInformationForm1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440E42B1E523170009D0A34 /* BackgroundInformationForm1.swift */; };
+		0440E42E1E5231D2009D0A34 /* StudyAdmissionForm4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440E42D1E5231D2009D0A34 /* StudyAdmissionForm4.swift */; };
+		0460E9281E54D84900FC35A7 /* LaboratoryReportForm3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0460E9271E54D84900FC35A7 /* LaboratoryReportForm3.swift */; };
 		04847D401E4B75D1009462C9 /* PastProblemsForm16TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04847D3F1E4B75D1009462C9 /* PastProblemsForm16TableView.swift */; };
 		04847D431E4B7770009462C9 /* PastProblemsForm16Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04847D411E4B7770009462C9 /* PastProblemsForm16Cell.swift */; };
 		04847D441E4B7770009462C9 /* PastProblemsForm16Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04847D421E4B7770009462C9 /* PastProblemsForm16Cell.xib */; };
@@ -128,6 +138,8 @@
 		041A36A11E3F5F2300C23BE6 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		041A36A31E3F63CB00C23BE6 /* PasscodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
 		041A36A51E3F879B00C23BE6 /* String+RUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RUI.swift"; sourceTree = "<group>"; };
+		041B9E6D1E540A23008DBE7E /* Date+RUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RUI.swift"; sourceTree = "<group>"; };
+		041B9E6F1E54753F008DBE7E /* MedicalHistoryAndStatusInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalHistoryAndStatusInfo.swift; sourceTree = "<group>"; };
 		041D6B011E41B312003C6650 /* Hospital-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hospital-Bridging-Header.h"; sourceTree = "<group>"; };
 		041D6B021E41CA50003C6650 /* FormBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormBaseViewController.swift; sourceTree = "<group>"; };
 		041D6B031E41CA50003C6650 /* FormBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormBaseViewController.xib; sourceTree = "<group>"; };
@@ -147,7 +159,17 @@
 		042177ED1E4113D700F57DFE /* RUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RUIImageView.swift; sourceTree = "<group>"; };
 		0424DD1F1E43B3910061AB8B /* QuestionYesOrNoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionYesOrNoView.swift; sourceTree = "<group>"; };
 		0424DD211E43B3A90061AB8B /* QuestionYesOrNoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionYesOrNoView.xib; sourceTree = "<group>"; };
+		043B8DC41E52D6EA00DA76B1 /* AdverseEventsForm5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdverseEventsForm5.swift; sourceTree = "<group>"; };
 		043E638A1E49A69C0096E61A /* NSLayoutConstraint+RUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+RUI.swift"; sourceTree = "<group>"; };
+		0440E4201E517648009D0A34 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0440E4211E517648009D0A34 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		0440E4241E522163009D0A34 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0440E4251E522163009D0A34 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0440E4271E522317009D0A34 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		0440E4291E5224A5009D0A34 /* WebComUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebComUrls.swift; sourceTree = "<group>"; };
+		0440E42B1E523170009D0A34 /* BackgroundInformationForm1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundInformationForm1.swift; sourceTree = "<group>"; };
+		0440E42D1E5231D2009D0A34 /* StudyAdmissionForm4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyAdmissionForm4.swift; sourceTree = "<group>"; };
+		0460E9271E54D84900FC35A7 /* LaboratoryReportForm3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaboratoryReportForm3.swift; sourceTree = "<group>"; };
 		04847D3F1E4B75D1009462C9 /* PastProblemsForm16TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastProblemsForm16TableView.swift; sourceTree = "<group>"; };
 		04847D411E4B7770009462C9 /* PastProblemsForm16Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastProblemsForm16Cell.swift; sourceTree = "<group>"; };
 		04847D421E4B7770009462C9 /* PastProblemsForm16Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PastProblemsForm16Cell.xib; sourceTree = "<group>"; };
@@ -226,6 +248,7 @@
 		041A36771E3F21CF00C23BE6 = {
 			isa = PBXGroup;
 			children = (
+				0440E41E1E517648009D0A34 /* Opensource */,
 				041A36A01E3F5F2300C23BE6 /* RUIComps */,
 				041A36821E3F21D000C23BE6 /* Hospital */,
 				041A36811E3F21D000C23BE6 /* Products */,
@@ -269,6 +292,33 @@
 				04FD76341E40FF8E001AAE6D /* Data */,
 			);
 			path = RUIComps;
+			sourceTree = "<group>";
+		};
+		0440E41E1E517648009D0A34 /* Opensource */ = {
+			isa = PBXGroup;
+			children = (
+				0440E4231E522163009D0A34 /* Reachability */,
+				0440E41F1E517648009D0A34 /* MBProgressHUD */,
+			);
+			path = Opensource;
+			sourceTree = "<group>";
+		};
+		0440E41F1E517648009D0A34 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0440E4201E517648009D0A34 /* MBProgressHUD.h */,
+				0440E4211E517648009D0A34 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		0440E4231E522163009D0A34 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				0440E4241E522163009D0A34 /* Reachability.h */,
+				0440E4251E522163009D0A34 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		04BF46AE1E4244AA00E2F0AF /* Controller */ = {
@@ -316,6 +366,13 @@
 			children = (
 				04BF46BF1E42774F00E2F0AF /* Constants.swift */,
 				04204B081E44ED4C00B7CB9E /* ModelClasses.swift */,
+				0440E42B1E523170009D0A34 /* BackgroundInformationForm1.swift */,
+				0460E9271E54D84900FC35A7 /* LaboratoryReportForm3.swift */,
+				041B9E6F1E54753F008DBE7E /* MedicalHistoryAndStatusInfo.swift */,
+				0440E42D1E5231D2009D0A34 /* StudyAdmissionForm4.swift */,
+				043B8DC41E52D6EA00DA76B1 /* AdverseEventsForm5.swift */,
+				0440E4271E522317009D0A34 /* AppManager.swift */,
+				0440E4291E5224A5009D0A34 /* WebComUrls.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,6 +389,7 @@
 				041D6B2B1E422750003C6650 /* UIView+Helper.swift */,
 				041A36A11E3F5F2300C23BE6 /* HelperFunctions.swift */,
 				043E638A1E49A69C0096E61A /* NSLayoutConstraint+RUI.swift */,
+				041B9E6D1E540A23008DBE7E /* Date+RUI.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -553,6 +611,7 @@
 				04BF469B1E423F5100E2F0AF /* RUINavigationBar.swift in Sources */,
 				04187CFF1E47574200B7492D /* PastProblemsCell.swift in Sources */,
 				04BF469E1E42415F00E2F0AF /* FormTwoViewController.swift in Sources */,
+				043B8DC51E52D6EA00DA76B1 /* AdverseEventsForm5.swift in Sources */,
 				041D6B2E1E422750003C6650 /* UIColor+VIY.swift in Sources */,
 				0424DD201E43B3910061AB8B /* QuestionYesOrNoView.swift in Sources */,
 				04FD76391E40FFDC001AAE6D /* RUILabel.swift in Sources */,
@@ -563,6 +622,7 @@
 				04187D031E4760F900B7492D /* PastProblemsTitleCell.swift in Sources */,
 				041A36A61E3F879B00C23BE6 /* String+RUI.swift in Sources */,
 				04FD76451E4100A8001AAE6D /* RUIViewController.swift in Sources */,
+				0440E4281E522317009D0A34 /* AppManager.swift in Sources */,
 				041D6B251E41EC4B003C6650 /* FormViewController.swift in Sources */,
 				04187CFC1E47557100B7492D /* PastProblemsTableView.swift in Sources */,
 				041A36861E3F21D000C23BE6 /* ViewController.swift in Sources */,
@@ -571,6 +631,7 @@
 				04FD76431E410091001AAE6D /* RUISwitch.swift in Sources */,
 				04BF46C01E42774F00E2F0AF /* Constants.swift in Sources */,
 				04187D061E477BF100B7492D /* TakenMedicationsTableView.swift in Sources */,
+				0440E42C1E523170009D0A34 /* BackgroundInformationForm1.swift in Sources */,
 				0412F2151E45D3900060D952 /* OptionsPopOverViewController.swift in Sources */,
 				04BF46B11E42450C00E2F0AF /* FormHeaderView.swift in Sources */,
 				041A36961E3F25F800C23BE6 /* View1.swift in Sources */,
@@ -579,14 +640,18 @@
 				04204B061E44CA7100B7CB9E /* MedicalHistoryAndStatusCell.swift in Sources */,
 				04BF46A81E4241D000E2F0AF /* FormFourViewController.swift in Sources */,
 				04FD763B1E40FFFF001AAE6D /* RUITextField.swift in Sources */,
+				0440E4261E522163009D0A34 /* Reachability.m in Sources */,
 				041D6B2F1E422750003C6650 /* UIDevice+Model.swift in Sources */,
 				04847D401E4B75D1009462C9 /* PastProblemsForm16TableView.swift in Sources */,
 				0412F20D1E45B4400060D952 /* RUITableViewCell.swift in Sources */,
 				04187D0B1E477C3D00B7492D /* TakenMedicationCell.swift in Sources */,
 				043E638B1E49A69C0096E61A /* NSLayoutConstraint+RUI.swift in Sources */,
 				04847D431E4B7770009462C9 /* PastProblemsForm16Cell.swift in Sources */,
+				0440E42E1E5231D2009D0A34 /* StudyAdmissionForm4.swift in Sources */,
 				04FD76471E4100E0001AAE6D /* RUIDatePicker.swift in Sources */,
 				041D6B041E41CA50003C6650 /* FormBaseViewController.swift in Sources */,
+				0440E42A1E5224A5009D0A34 /* WebComUrls.swift in Sources */,
+				0460E9281E54D84900FC35A7 /* LaboratoryReportForm3.swift in Sources */,
 				042177E81E41115000F57DFE /* VerticalOptionsView.swift in Sources */,
 				04BF46BC1E4261C800E2F0AF /* DatePickerController.swift in Sources */,
 				041D6B301E422750003C6650 /* UIView+RUI.swift in Sources */,
@@ -600,8 +665,11 @@
 				04FD763D1E410016001AAE6D /* RUITextView.swift in Sources */,
 				04FD76371E40FFCA001AAE6D /* RUIButton.swift in Sources */,
 				041D6B2D1E422750003C6650 /* NSErrorAdditions.swift in Sources */,
+				0440E4221E517648009D0A34 /* MBProgressHUD.m in Sources */,
 				04FD764E1E4101E7001AAE6D /* RUINavigationController.swift in Sources */,
 				04BF46B71E42493500E2F0AF /* DateView.swift in Sources */,
+				041B9E701E54753F008DBE7E /* MedicalHistoryAndStatusInfo.swift in Sources */,
+				041B9E6E1E540A23008DBE7E /* Date+RUI.swift in Sources */,
 				041A36981E3F260200C23BE6 /* View2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

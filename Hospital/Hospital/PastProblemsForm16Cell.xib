@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MmT-ye-Vzf" id="MTX-Ch-NTe">
-                <rect key="frame" x="0.0" y="0.0" width="2078" height="85"/>
+                <rect key="frame" x="0.0" y="0.0" width="2078" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Nature of Problem" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ycW-4Q-KoU" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
@@ -29,6 +29,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="3oe-qy-u7F"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0q-EG-zBU" userLabel="Border 1">
                         <rect key="frame" x="473.5" y="0.0" width="2" height="85"/>
@@ -45,6 +48,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="AYP-Re-0e8"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Oa-h4-LPL" userLabel="Border 2">
                         <rect key="frame" x="734.5" y="0.0" width="2" height="85"/>

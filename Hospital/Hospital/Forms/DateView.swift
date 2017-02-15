@@ -18,6 +18,7 @@ class DateView: RUIView {
     @IBOutlet var monthWidthConstraint: NSLayoutConstraint!
     @IBOutlet var dayLabel: RUILabel!//This is used for Minute if type is Time
     @IBOutlet var dayWidthConstraint: NSLayoutConstraint!
+    @IBOutlet var secondBorderConstraint: NSLayoutConstraint!
     @IBOutlet var yearLabel: RUILabel!
     
     var delegate : DateViewDelegate?
@@ -68,6 +69,7 @@ class DateView: RUIView {
         }
         
         if isDateFormat == false {
+            secondBorderConstraint.constant = 0.0
             monthWidthConstraint = monthWidthConstraint.setMultiplier(multiplier: 0.5)
             dayWidthConstraint = dayWidthConstraint.setMultiplier(multiplier: 0.5)
             dayWidthConstraint.constant = -2 //This is for middle divider

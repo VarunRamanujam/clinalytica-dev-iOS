@@ -11,13 +11,15 @@ import BEMCheckBox
 
 class FormOneViewController: FormViewController {
 
+    var formOneObject = BackgroundInformationForm1()
+    
     //Left-Seide Views
     @IBOutlet var addressTF: RUITextField!
     @IBOutlet var workTF: RUITextField!
     @IBOutlet var homePhoneTF: RUITextField!
     @IBOutlet var zipCodeTF: RUITextField!
     @IBOutlet var dateOfBirth: DateView!
-    @IBOutlet var genderStackView: UIStackView!
+    @IBOutlet var genderStackView: RUIStackView!
     var genderOptionsGroup = BEMCheckBoxGroup()
     @IBOutlet var workPastThreeYearsOptionsView: VerticalOptionsView!
     @IBOutlet var incomeTF: RUITextField!
@@ -28,13 +30,13 @@ class FormOneViewController: FormViewController {
     @IBOutlet var raceOptionsView: VerticalOptionsView!
     @IBOutlet var educationOptionsView: VerticalOptionsView!
     @IBOutlet var pastEmployement: VerticalOptionsView!
-    @IBOutlet var commutingDistanceWithClinic: UIStackView!
+    @IBOutlet var commutingDistanceWithClinic: RUIStackView!
     var commutingDistanceWithClinicOptionsGroup = BEMCheckBoxGroup()
     @IBOutlet var houseHoldOptionsView: VerticalOptionsView!
     @IBOutlet var goingToJailOptionsView: RUIStackView!
     var goingToJailOptionsGroup = BEMCheckBoxGroup()
     
-    
+    //BottomView
     @IBOutlet var commentsTextView: RUITextView!
     @IBOutlet var formCompletedByTF: RUITextField!
     @IBOutlet var investigatorSignatureTF: RUITextField!
@@ -60,10 +62,10 @@ class FormOneViewController: FormViewController {
     }
     
     override func clearButtonClicked() {
-        addressTF.text = ""
-        workTF.text = ""
-        homePhoneTF.text = ""
-        zipCodeTF.text = ""
+        addressTF.text = nil
+        workTF.text = nil
+        homePhoneTF.text = nil
+        zipCodeTF.text = nil
         dateOfBirth.date = nil
         
         
@@ -71,7 +73,7 @@ class FormOneViewController: FormViewController {
         
         workPastThreeYearsOptionsView.deselectAllSelctions()
         
-        incomeTF.text = ""
+        incomeTF.text = nil
         marritalStatusOptions.deselectAllSelctions()
         livingArrangementsOptions.deselectAllSelctions()
         
@@ -85,12 +87,62 @@ class FormOneViewController: FormViewController {
         
         goingToJailOptionsGroup.selectedCheckBox?.on = false
         
-        commentsTextView.text = ""
-        formCompletedByTF.text = ""
-        investigatorSignatureTF.text = ""
+        commentsTextView.text = nil
+        formCompletedByTF.text = nil
+        investigatorSignatureTF.text = nil
         signDate.date = nil
     }
+    
+    override func submitForm() -> Bool {
+        
+        fectchModel()
+        
+        if formOneObject.isValid() == false {
+            showAlrt(fromController: self, title: "Error", message: "Some fields are missing.", cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
+            
+            return true
+        }
+        
+        sendRequestToSubmitFormOne()
+        
+        return true
+    }
 }
+
+//MARK:- UITextFieldDelegate Methods
+extension FormOneViewController : UITextFieldDelegate, UITextViewDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let newStr = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        
+        if textField == addressTF || textField == formCompletedByTF || textField == investigatorSignatureTF {
+            return newStr.length() < Text_Length
+        } else if textField == workTF || textField == homePhoneTF {
+            return newStr.canStringBePhoneNumber()
+        } else if textField == zipCodeTF {
+            return newStr.canStringBeZipcode()
+        } else if textField == incomeTF {
+            if newStr.length() > Total_Income_Length {
+                return false
+            }
+            return newStr.canStringBeDecimalNumber()
+        }
+        
+        return true
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let newStr = (textView.text as NSString?)?.replacingCharacters(in: range, with: text) ?? text
+        
+        if newStr.length() > Comment_Length {
+            return false
+        }
+        
+        return true
+    }
+}
+
 
 //MARK:- Private Methods
 extension FormOneViewController {
@@ -167,6 +219,73 @@ extension FormOneViewController {
         goingToJailOptionsGroup.mustHaveSelection = true
         for view in goingToJailOptionsView.arrangedSubviews as! [HorizontalOptionView] {
             goingToJailOptionsGroup.addCheckBox(toGroup: view.checkBox!)
+        }
+    }
+    
+    func fectchModel() {
+        formOneObject.patient_initials = FormHeaderInfo.shared.patient_initials
+        formOneObject.study = FormHeaderInfo.shared.study
+        formOneObject.form_no = FormHeaderInfo.shared.form_no
+        formOneObject.center = FormHeaderInfo.shared.center
+        formOneObject.patient_number = FormHeaderInfo.shared.patient_number
+        formOneObject.vst_date = FormHeaderInfo.shared.vst_date?.getString()
+        
+        formOneObject.current_address = addressTF.text
+        formOneObject.zip_code = zipCodeTF.text
+        formOneObject.work_phone = workTF.text
+        formOneObject.home_phone = homePhoneTF.text
+        
+        formOneObject.dob = dateOfBirth.date?.getString()
+        
+        formOneObject.q2 = getValueFromVerticalView(raceOptionsView: raceOptionsView)
+        formOneObject.q3 = nil
+        if let checkbox = genderOptionsGroup.selectedCheckBox {
+            formOneObject.q3 = genderOptionsGroup.checkBoxes.index(of: checkbox) + 1
+        }
+        
+        formOneObject.q4 = getValueFromVerticalView(raceOptionsView: educationOptionsView)
+        formOneObject.q5 = getValueFromVerticalView(raceOptionsView: workPastThreeYearsOptionsView)
+        formOneObject.q6 = getValueFromVerticalView(raceOptionsView: pastEmployement)
+        formOneObject.q7 = incomeTF.text?.toInt()
+        formOneObject.q8 = getValueFromVerticalView(raceOptionsView: marritalStatusOptions)
+        formOneObject.q9 = getValueFromVerticalView(raceOptionsView: livingArrangementsOptions)
+        formOneObject.q10 = nil
+        if let checkbox = commutingDistanceWithClinicOptionsGroup.selectedCheckBox {
+            formOneObject.q10 = commutingDistanceWithClinicOptionsGroup.checkBoxes.index(of: checkbox) + 1
+        }
+        
+        formOneObject.q11 = getValueFromVerticalView(raceOptionsView: houseHoldOptionsView)
+        formOneObject.q12 = nil
+        if let checkbox = goingToJailOptionsGroup.selectedCheckBox {
+            formOneObject.q12 = goingToJailOptionsGroup.checkBoxes.index(of: checkbox) + 1
+        }
+        
+        formOneObject.comments = commentsTextView.text
+        formOneObject.completed_by = formCompletedByTF.text
+        formOneObject.date_of_inv = signDate.date?.getString()
+    }
+    
+    private func getValueFromVerticalView(raceOptionsView: VerticalOptionsView) -> Int? {
+        let value = raceOptionsView.getSelectedIndexValue()
+        return value == nil ? nil : value! + 1
+    }
+    
+    func sendRequestToSubmitFormOne() {
+        
+        if appDelegate.hasConnectivity() == false {
+            appDelegate.showMessageHudWithMessage(message: NoInternetAccess, delay: 2.0)
+            return
+        }
+        
+        appDelegate.showProgressHudForViewMy(withDetailsLabel: "Please wait…", labelText: "Requesting")
+        appManager.sendRequestToSubmitFormOne(formOneObject: formOneObject) { (response) in
+            appDelegate.hideProgressHudInView()
+            
+            if response != nil && response!.isSuccess() {
+                self.delegate?.formSubmitted(sender: self)
+            } else {
+                showAlrt(fromController: self, title: "Error", message: response?.statusMessage ?? ServerError, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
+            }
         }
     }
 }

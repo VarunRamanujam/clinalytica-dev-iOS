@@ -15,10 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1225" height="86"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="1225" height="85"/>
+                <rect key="frame" x="0.0" y="0.0" width="1225" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Nature of Problem" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-WD-kv9" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Drug Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-WD-kv9" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="367.5" height="85"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="85" id="yqO-gi-zck"/>
@@ -29,6 +29,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="needBorderAndCornerRadius" value="NO"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="3TN-DY-sir"/>
+                        </connections>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHQ-HL-pQe" userLabel="Border">
                         <rect key="frame" x="367.5" y="0.0" width="2" height="85"/>

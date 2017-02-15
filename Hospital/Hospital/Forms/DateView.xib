@@ -15,6 +15,7 @@
                 <outlet property="dayWidthConstraint" destination="VwV-yT-N4y" id="Li3-86-zvQ"/>
                 <outlet property="monthLabel" destination="lZx-VH-tk7" id="NSP-AP-S0d"/>
                 <outlet property="monthWidthConstraint" destination="pwf-O1-Bpx" id="LSs-8t-joQ"/>
+                <outlet property="secondBorderConstraint" destination="ieO-YD-Gg2" id="b1I-ZY-Z2I"/>
                 <outlet property="yearLabel" destination="qNS-tR-6yI" id="mXf-EE-v8p"/>
             </connections>
         </placeholder>
@@ -45,6 +46,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-ZM-xPm">
                     <rect key="frame" x="154.5" y="0.0" width="2" height="62"/>
                     <color key="backgroundColor" red="0.84705882352941175" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="2" id="ieO-YD-Gg2"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNS-tR-6yI" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
                     <rect key="frame" x="156.5" y="0.5" width="97.5" height="62"/>
@@ -70,7 +74,6 @@
                 <constraint firstItem="2TV-j2-07L" firstAttribute="height" secondItem="lZx-VH-tk7" secondAttribute="height" id="d0l-g6-DBZ"/>
                 <constraint firstItem="qNS-tR-6yI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d1z-Vu-4kq"/>
                 <constraint firstItem="ooQ-ZM-xPm" firstAttribute="height" secondItem="lZx-VH-tk7" secondAttribute="height" id="dfU-XO-d7c"/>
-                <constraint firstItem="ooQ-ZM-xPm" firstAttribute="width" secondItem="2TV-j2-07L" secondAttribute="width" id="ef6-1b-XZZ"/>
                 <constraint firstItem="ooQ-ZM-xPm" firstAttribute="leading" secondItem="kzB-n8-c4z" secondAttribute="trailing" id="nOs-Zs-R0K"/>
                 <constraint firstAttribute="bottom" secondItem="lZx-VH-tk7" secondAttribute="bottom" id="o2T-Sm-3dL"/>
                 <constraint firstItem="lZx-VH-tk7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3.5:10" id="pwf-O1-Bpx"/>

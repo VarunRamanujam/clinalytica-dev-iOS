@@ -8,6 +8,22 @@
 
 import Foundation
 
+let Text_Length = 125
+let Comment_Length = 50
+
+let Form_Number_Length = 3
+let Study_Length = 4
+let Center_Length = 4
+let Patient_Number_Length = 6
+let Total_Income_Length = 6
+let Study_Week_Number_Length = 6
+let Medical_Event_Code_Length = 6
+let Code_Drug_Length = 3
+let Strength_Length = 4
+let Doses_Per_Day_Length = 3
+let Code_Indication_Length = 60
+let Event_Code_Length = 4
+
 let RaceOptions = ["White, not of Hispanic origin", "Black, not of Hispanic origin", "American Indian", "Alaskan Native", "Asian or Pacific Islander", "Hispanic"]
 
 let EducationOptions = ["Completed graduate/professional training",
@@ -143,3 +159,12 @@ let OutcomeForm16Options = ["Resolved; No sequelae",
                             "Resulted in chronic condition, severe and/or permanent disability",
                             "Deceased",
                             "Unknown"]
+
+
+//Alerts
+let NoInternetAccess = "No network access."
+let ServerError = "Server failed to process the request"
+
+
+//ResponseMessages
+let okStatus = "ok"

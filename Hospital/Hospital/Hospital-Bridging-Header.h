@@ -9,4 +9,7 @@
 #ifndef Hospital_Bridging_Header_h
 #define Hospital_Bridging_Header_h
 
+#import "MBProgressHUD.h"
+#import "Reachability.h"
+
 #endif /* Hospital_Bridging_Header_h */

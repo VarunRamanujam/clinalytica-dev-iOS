@@ -9,7 +9,7 @@
 import UIKit
 import BEMCheckBox
 
-class VerticalOptionsView: UIView {
+class VerticalOptionsView: UIView, HorizontalOptionViewDelegate {
 
     private var stackView : RUIStackView!
     let group = BEMCheckBoxGroup()
@@ -23,10 +23,33 @@ class VerticalOptionsView: UIView {
     var singleSelection = true
     
     func deselectAllSelctions() {
+        selectedIndex = nil
         group.selectedCheckBox?.on = false
         for view in stackView.arrangedSubviews as! [HorizontalOptionView] {
             view.selected = false
         }
+    }
+    
+    private var selectedIndex : Int?
+    
+    func setSelectedIndexValue(value : Int?) {
+        selectedIndex = value
+        
+        group.selectedCheckBox?.on = false
+        for view in stackView.arrangedSubviews as! [HorizontalOptionView] {
+            view.selected = false
+        }
+        
+        if selectedIndex != nil {
+            let horizontalView = (stackView.arrangedSubviews as! [HorizontalOptionView])[selectedIndex!]
+            horizontalView.selected = true
+            group.selectedCheckBox = horizontalView.checkBox
+        }
+        
+    }
+    
+    func getSelectedIndexValue() -> Int? {
+        return selectedIndex
     }
     
     override init(frame: CGRect) {
@@ -71,6 +94,7 @@ class VerticalOptionsView: UIView {
         
         for i in 0..<titels.count {
             let optionView = HorizontalOptionView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 30))
+            optionView.delegate = self
             optionView.title = titels[i]
             optionView.selected = false
             stackView.addArrangedSubview(optionView)
@@ -79,4 +103,7 @@ class VerticalOptionsView: UIView {
         }
     }
 
+    func didTap(sender: HorizontalOptionView, selected: Bool) {
+        selectedIndex = stackView.arrangedSubviews.index(of: sender)
+    }
 }

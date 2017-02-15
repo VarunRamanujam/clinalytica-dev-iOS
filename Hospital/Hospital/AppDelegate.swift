@@ -9,11 +9,14 @@
 import UIKit
 import IQKeyboardManagerSwift
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var hud: MBProgressHUD!
+    var toastMessageHub: MBProgressHUD!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navVC = RUINavigationController()
         navVC.viewControllers = [firstVC]
         window?.rootViewController = navVC
+        
         return true
     }
 
@@ -52,5 +56,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func showProgressHudForViewMy (withDetailsLabel:String!, labelText:String!)
+    {
+        DispatchQueue.main.async {
+            self.hideProgressHudInView()
+            self.hud = MBProgressHUD.showAdded(to: self.window, animated: true)
+            self.hud.removeFromSuperViewOnHide = true
+            self.hud.mode = MBProgressHUDMode.indeterminate
+            self.hud.detailsLabelText = withDetailsLabel
+            self.hud.labelText = labelText
+        }
+    }
+    
+    func hideProgressHudInView() {
+        if self.hud != nil {
+            self.hud.hide(true)
+            self.hud = nil
+        }
+    }
+    
+    /*
+     It shows message as toast.
+     */
+    func showMessageHudWithMessage(message:String, delay:CGFloat)
+    {
+        DispatchQueue.main.async {
+            
+            self.toastMessageHub = MBProgressHUD.showAdded(to: self.window, animated: true)
+            self.toastMessageHub.removeFromSuperViewOnHide = true
+            self.toastMessageHub.mode = MBProgressHUDMode.text
+            let fontName = UIFont(name: "Avenir-Roman", size: 15.0)
+            self.toastMessageHub.detailsLabelFont = fontName
+            
+            self.toastMessageHub.detailsLabelText = message as String
+            let delay = TimeInterval(delay)
+            self.toastMessageHub.hide(true, afterDelay: delay)
+        }
+    }
+
+    /**
+     Network Connectivity
+     
+     - returns: Network Connectiivity
+     */
+    func hasConnectivity() -> Bool {
+        let reachability:Reachability = Reachability.forInternetConnection()
+        let networkStatus: NetworkStatus = reachability.currentReachabilityStatus()
+        switch(networkStatus.rawValue){
+        case 0:
+            return false
+            
+        default:
+            return true
+            
+        }
+    }
 }
 

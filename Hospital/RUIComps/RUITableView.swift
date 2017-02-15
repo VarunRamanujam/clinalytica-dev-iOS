@@ -17,5 +17,11 @@ class RUITableView: UITableView {
         // Drawing code
     }
     */
+    
+    func test() {
+        
+        self.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        self.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0)
+    }
 
 }

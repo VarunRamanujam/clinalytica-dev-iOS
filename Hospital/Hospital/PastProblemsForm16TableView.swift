@@ -15,6 +15,14 @@ class PastProblemsForm16TableView: RUITableView {
     
     var pastProbles = [PastProblemForm16]()
     
+    func clearData() {
+        for obj in pastProbles {
+            obj.clearData()
+        }
+        
+        reloadData()
+    }
+    
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         

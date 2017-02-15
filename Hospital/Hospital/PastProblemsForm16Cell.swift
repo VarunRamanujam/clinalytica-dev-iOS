@@ -40,23 +40,28 @@ class PastProblemsForm16Cell: RUITableViewCell, DateViewDelegate, OptionsPopOver
     
     func dateChanged(sender: DateView, newDate: Date) {
         if dateOfOnset == sender {
-            pastProblem.dateOfOnSet = newDate
+            pastProblem.dateOfOnSet = newDate.getString()
         } else if dateOfResolution == sender {
-            pastProblem.dateOfResolution = newDate
+            pastProblem.dateOfResolution = newDate.getString()
         }
     }
     
     func didSelectOption(sender: OptionsPopOverViewController, index: Int, title: String) {
         if sender.popoverPresentationController?.sourceView == typeOfReportButton {
             typeOfReportButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            pastProblem.typeOfReport = index + 1
         } else if sender.popoverPresentationController?.sourceView == relatednessButton {
             relatednessButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            pastProblem.relatedness = index + 1
         } else if sender.popoverPresentationController?.sourceView == severityButton {
             severityButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            pastProblem.severity = index + 1
         } else if sender.popoverPresentationController?.sourceView == actionTakenButton {
             actionTakenButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            pastProblem.ationTaken = index + 1
         } else if sender.popoverPresentationController?.sourceView == outcomeButton {
             outcomeButton.setTitle("\(index + 1)", for: UIControlState.normal)
+            pastProblem.outCome = index + 1
         }
     }
     
@@ -81,10 +86,30 @@ class PastProblemsForm16Cell: RUITableViewCell, DateViewDelegate, OptionsPopOver
     }
 }
 
+//MARK:- UITextFieldDelegate Methods
+extension PastProblemsForm16Cell : UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let newStr = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        
+        if textField == natureOfIllnessTF {
+            return newStr.length() < Text_Length
+        } else if textField == medicalEventCodeTF {
+            if newStr.length() > Event_Code_Length {
+                return false
+            }
+            return newStr.canStringBeNumber()
+        }
+        return true
+    }
+}
+
 //MARK:- Private Methods
 extension PastProblemsForm16Cell {
     func initializepastProblemCell() {
         dateOfOnset.delegate = self
+        dateOfResolution.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(PastProblemsCell.natureOfProblemTextDidChange(sender:)), name: NSNotification.Name.UITextFieldTextDidChange, object: natureOfIllnessTF)
         NotificationCenter.default.addObserver(self, selector: #selector(PastProblemsCell.medicalEventCodeTextDidChange(sender:)), name: NSNotification.Name.UITextFieldTextDidChange, object: medicalEventCodeTF)
@@ -92,11 +117,11 @@ extension PastProblemsForm16Cell {
     
     func updatedData() {
         natureOfIllnessTF.text = pastProblem.natureOfIllness
-        medicalEventCodeTF.text = pastProblem.eventCode
-        dateOfOnset.date = pastProblem.dateOfOnSet
+        medicalEventCodeTF.text = pastProblem.eventCode != nil ? "\(pastProblem.eventCode!)" : ""
+        dateOfOnset.date = Date.getDate(str: pastProblem.dateOfOnSet)
         
-        if pastProblem.tyoeOfReport != nil {
-            typeOfReportButton.setTitle("\(pastProblem.tyoeOfReport!)", for: UIControlState.normal)
+        if pastProblem.typeOfReport != nil {
+            typeOfReportButton.setTitle("\(pastProblem.typeOfReport!)", for: UIControlState.normal)
         } else {
             typeOfReportButton.setTitle("", for: UIControlState.normal)
         }
@@ -132,7 +157,7 @@ extension PastProblemsForm16Cell {
     }
     
     func medicalEventCodeTextDidChange(sender : Notification) {
-        pastProblem.eventCode = medicalEventCodeTF.text
+        pastProblem.eventCode = isEmptyString(string: medicalEventCodeTF.text) == false ? Int(medicalEventCodeTF.text!) : nil
     }
     
     func presentOptionsViewCntl(options : [String], view : UIView, size : CGSize, title : String) {

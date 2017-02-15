@@ -12,22 +12,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormThreeController" customModule="Hospital" customModuleProvider="target">
             <connections>
                 <outlet property="GlucoseTF" destination="Fs7-SS-ToG" id="pKz-2a-kaU"/>
+                <outlet property="abnormalResultsMaskView" destination="p7S-C4-EMa" id="0YX-xM-WUu"/>
                 <outlet property="abnormalResultsStackView" destination="lM7-Nu-WdJ" id="t3K-u0-0Ce"/>
                 <outlet property="abnormalResultsTextView" destination="Xpb-aW-kbS" id="fKe-PX-Wfd"/>
                 <outlet property="abnormalResultsTextViewHeight" destination="Tfd-fN-fMq" id="hEi-Oy-y6e"/>
                 <outlet property="acetoneButton" destination="5tD-sf-R0C" id="GF7-mI-Taz"/>
                 <outlet property="albuminButton" destination="GZP-ro-xA0" id="ale-2A-60b"/>
                 <outlet property="albuminTF" destination="pMg-Vq-woe" id="FSc-nH-hdj"/>
+                <outlet property="alkPhosphataseTF" destination="ZUM-i1-5N1" id="AJe-kr-jIh"/>
+                <outlet property="basophilsTF" destination="LW9-ED-zMX" id="Jop-vc-mcb"/>
                 <outlet property="bloodLevelStackView" destination="MNz-F9-d0s" id="fVw-FH-Bp9"/>
                 <outlet property="bunTF" destination="Icq-7T-2p1" id="2Ui-fl-Nxl"/>
                 <outlet property="commentTextView" destination="utH-sN-gWR" id="mCf-dq-oag"/>
                 <outlet property="creatinineTF" destination="AJF-jd-MCk" id="WeV-7K-9NC"/>
                 <outlet property="dateSentToUtah" destination="CJ2-WH-Acp" id="Ob0-dx-rrC"/>
+                <outlet property="eosinophilsTF" destination="cM6-Um-eLO" id="Fc3-nn-VBc"/>
                 <outlet property="epithelialCellButton" destination="rLo-ZX-6yf" id="7AH-tr-rJe"/>
+                <outlet property="formCompletedByTF" destination="n8T-K4-q3h" id="Tsu-cC-AYo"/>
+                <outlet property="ggtTF" destination="T8G-qy-Ufh" id="H9M-2R-BL6"/>
                 <outlet property="glucoseButton" destination="bl5-dq-zvw" id="09r-cq-17t"/>
                 <outlet property="hematocritTF" destination="jPV-ow-F4o" id="yVl-ak-XOr"/>
                 <outlet property="hemoglobinTF" destination="sGV-nK-fad" id="vek-mI-r6S"/>
+                <outlet property="investigatorSignatureTF" destination="JR4-Ky-5Ew" id="HGQ-pU-tul"/>
                 <outlet property="liverFunctionTestStackView" destination="cuk-gf-i3b" id="PXM-Wh-PgK"/>
+                <outlet property="lymphocytesTF" destination="VtL-8k-cnt" id="jUE-Bx-45Y"/>
+                <outlet property="monocytesTF" destination="aOG-pJ-Xf4" id="ROv-EY-V6j"/>
+                <outlet property="neutrophilsTF" destination="oA1-G6-dQf" id="0rJ-zs-EZd"/>
                 <outlet property="plateletCountTF" destination="KQL-l0-aKp" id="6Sn-ZB-ovg"/>
                 <outlet property="pregnancyTestStackView" destination="QZc-gi-lFP" id="kGE-7p-rXs"/>
                 <outlet property="ratingPeriodStackView" destination="lJ8-v4-LW6" id="JTx-3h-ilz"/>
@@ -35,7 +45,11 @@
                 <outlet property="reactionTF" destination="0hC-X4-5Cz" id="pYR-Lc-Wch"/>
                 <outlet property="sampleDrawnDate" destination="51q-6D-0dU" id="A23-gf-IM4"/>
                 <outlet property="sampleDrawnTime" destination="7Le-ix-8GU" id="Rah-hN-t6K"/>
+                <outlet property="sgotTF" destination="42o-kM-qxn" id="UkE-rA-9sr"/>
+                <outlet property="sgptTF" destination="ikH-cN-7YQ" id="hfq-sV-B1j"/>
+                <outlet property="signDate" destination="S9z-hP-V1h" id="J9q-YS-MtS"/>
                 <outlet property="specificGravityTf" destination="kLa-8h-QDW" id="m3L-3x-RBg"/>
+                <outlet property="totalBilirubin" destination="H6V-vQ-e5s" id="meK-L5-BMd"/>
                 <outlet property="totalProteinTF" destination="Bzp-YC-Wla" id="ZrA-YZ-a6s"/>
                 <outlet property="totalRBCTF" destination="bqu-WO-YQ8" id="3hX-un-Km5"/>
                 <outlet property="totalWBCTF" destination="cIX-OU-ouB" id="KeO-8H-0UV"/>
@@ -52,19 +66,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPr-LC-bzw">
-                            <rect key="frame" x="0.0" y="0.0" width="1024" height="3302"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="3264"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-lN-agJ" userLabel="RATING PERIOD">
-                                    <rect key="frame" x="20" y="20" width="984" height="87"/>
+                                    <rect key="frame" x="20" y="20" width="984" height="86.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATING PERIOD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osl-Me-hBw" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJ8-v4-LW6" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="32" width="950" height="55"/>
+                                            <rect key="frame" x="0.0" y="31.5" width="950" height="55"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4s-Ze-quP" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
@@ -161,29 +175,29 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTF-Pb-9St" userLabel="DATE SAMPLE DRAWN">
-                                    <rect key="frame" x="20" y="150" width="984" height="87"/>
+                                    <rect key="frame" x="20" y="136.5" width="984" height="86.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE SAMPLE DRAWN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn5-Hi-qfn" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="227" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="226.5" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51q-6D-0dU" customClass="DateView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="32" width="200" height="55"/>
+                                            <rect key="frame" x="0.0" y="31.5" width="200" height="55"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="JNu-8g-BUb"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME SAMPLE DRAWN(24 hour clock)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAl-tj-adz" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="612" y="0.0" width="372" height="27"/>
+                                            <rect key="frame" x="612" y="0.0" width="372" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Le-ix-8GU" customClass="DateView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="612" y="32" width="120" height="55"/>
+                                            <rect key="frame" x="612" y="31.5" width="120" height="55"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="gKp-IV-wBt"/>
@@ -208,76 +222,91 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHR-dw-CfX" userLabel="HEMATOLOGY">
-                                    <rect key="frame" x="20" y="267" width="984" height="552"/>
+                                    <rect key="frame" x="20" y="253" width="984" height="549"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEMATOLOGY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDh-5g-0w5" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKe-IT-S6J">
-                                            <rect key="frame" x="20" y="37" width="462" height="515"/>
+                                            <rect key="frame" x="20" y="36.5" width="462" height="512.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total WBC (x 103 cu mm)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9j-ex-LCy" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-OU-ouB" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="32" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="31.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="8AH-Gq-bV7"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total RBC (x 103 cu mm)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIc-6o-GMf" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="107" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="106.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-WO-YQ8" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="139" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="138" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="faj-5q-C19"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platelet count (/cu mm)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CK-In-oui" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="214" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="213" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQL-l0-aKp" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="246" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="244.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="ZxU-Cq-pMY"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hemoglobin (gm/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pI-EA-oa4" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="321" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="319.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGV-nK-fad" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="353" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="351" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="yye-Bn-V1C"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hematocrit (gm/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kle-94-PAP" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="428" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="426" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-ow-F4o" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="460" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="457.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="D7m-fF-pdt"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -320,67 +349,82 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-uV-BMz">
-                                            <rect key="frame" x="502" y="37" width="462" height="515"/>
+                                            <rect key="frame" x="502" y="36.5" width="462" height="512.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neutrophils (%)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnb-qU-EsF" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oA1-G6-dQf" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="32" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="31.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="6PF-iH-5F5"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lymphocytes (%)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZl-JX-sO6" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="107" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="106.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtL-8k-cnt" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="139" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="138" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="UQV-MZ-s9A"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monocytes (%)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tci-XE-IkU" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="214" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="213" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOG-pJ-Xf4" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="246" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="244.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="RiN-DR-piT"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eosinophils (%)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-6C-vqz" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="321" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="319.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-Um-eLO" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="353" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="351" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="M4c-r4-aBc"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basophils (%)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-DC-OV5" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="428" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="426" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LW9-ED-zMX" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="460" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="457.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="hgH-Du-lTJ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -438,76 +482,91 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtI-V7-Xi7" userLabel="BLOOD CHEMISTRY">
-                                    <rect key="frame" x="20" y="849" width="984" height="552"/>
+                                    <rect key="frame" x="20" y="832" width="984" height="549"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLOOD CHEMISTRY" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-it-9tS" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beh-0K-yIH">
-                                            <rect key="frame" x="20" y="37" width="462" height="515"/>
+                                            <rect key="frame" x="20" y="36.5" width="462" height="512.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glucose (mg/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDx-kk-yG1" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fs7-SS-ToG" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="32" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="31.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="HHR-7c-V7c"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total protein (gm/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owP-kP-815" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="107" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="106.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzp-YC-Wla" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="139" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="138" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="S9D-IU-Afa"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albumin (gm/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJl-CO-FT9" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="214" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="213" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-Vq-woe" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="246" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="244.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="SUH-O3-T5O"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUN (mg/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQa-Ra-nnX" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="321" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="319.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icq-7T-2p1" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="353" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="351" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="Ru3-sd-c5A"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creatinine (mg/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAg-b0-v0R" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="428" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="426" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-jd-MCk" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="460" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="457.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="0Bp-yt-d4S"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -550,67 +609,82 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKR-hF-WcG">
-                                            <rect key="frame" x="502" y="37" width="462" height="515"/>
+                                            <rect key="frame" x="502" y="36.5" width="462" height="512.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SGOT (U/L)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhI-F7-eax" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42o-kM-qxn" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="32" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="31.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="5bm-cN-VjS"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SGPT (U/L)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR9-Hf-Oyk" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="107" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="106.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikH-cN-7YQ" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="139" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="138" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="jFg-lb-JA4"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GGT (U/L)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uS2-7j-M8H" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="214" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="213" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8G-qy-Ufh" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="246" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="244.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="gkB-Hi-6PS"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alk. phosphatase (U/L)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIG-en-3Mn" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="321" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="319.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUM-i1-5N1" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="353" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="351" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="pRH-Tt-zSp"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total bilirubin (mg/dl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb5-PW-QdU" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="428" width="462" height="27"/>
+                                                    <rect key="frame" x="0.0" y="426" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H6V-vQ-e5s" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="460" width="462" height="55"/>
+                                                    <rect key="frame" x="0.0" y="457.5" width="462" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="LR0-td-ygO"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -668,7 +742,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mir-Uw-GVh" userLabel="Liver function">
-                                    <rect key="frame" x="20" y="1431" width="984" height="113"/>
+                                    <rect key="frame" x="20" y="1411" width="984" height="113"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcD-Lv-dAX" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="984" height="53"/>
@@ -733,49 +807,55 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFk-AP-kyq" userLabel="URINALYSIS">
-                                    <rect key="frame" x="20" y="1574" width="984" height="552"/>
+                                    <rect key="frame" x="20" y="1554" width="984" height="549"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URINALYSIS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUc-S8-ddP" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ul-Gc-OuC">
-                                            <rect key="frame" x="20" y="37" width="964" height="515"/>
+                                            <rect key="frame" x="20" y="36.5" width="964" height="512.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specific gravity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXU-Fx-emI" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="964" height="27"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="964" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-8h-QDW" userLabel="Specific gravity TF" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="32" width="964" height="55"/>
+                                                    <rect key="frame" x="0.0" y="31.5" width="964" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="QSG-87-gHF"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reaction (record actual pH value)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gys-q8-3t4" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="107" width="964" height="27"/>
+                                                    <rect key="frame" x="0.0" y="106.5" width="964" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hC-X4-5Cz" userLabel="Reaction (record actual pH value) TF" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="139" width="964" height="55"/>
+                                                    <rect key="frame" x="0.0" y="138" width="964" height="55"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="8lm-5I-dZj"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albumin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrm-cu-XS5" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="214" width="81" height="27"/>
+                                                    <rect key="frame" x="0.0" y="213" width="80.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZP-ro-xA0" userLabel="Albumin Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="246" width="150" height="55"/>
+                                                    <rect key="frame" x="0.0" y="244.5" width="150" height="55"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="rBH-Sn-hTh"/>
                                                     </constraints>
@@ -790,13 +870,13 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glucose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQW-FA-Vt2" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="321" width="81" height="27"/>
+                                                    <rect key="frame" x="0.0" y="319.5" width="80.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl5-dq-zvw" userLabel="Glucose Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="353" width="150" height="55"/>
+                                                    <rect key="frame" x="0.0" y="351" width="150" height="55"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -808,13 +888,13 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acetone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVw-vm-NNJ" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="422" width="82" height="27"/>
+                                                    <rect key="frame" x="0.0" y="420" width="81.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tD-sf-R0C" userLabel="Acetone Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="454" width="150" height="55"/>
+                                                    <rect key="frame" x="0.0" y="451.5" width="150" height="55"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -826,13 +906,13 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WBCS/HPF" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz6-Fo-SN7" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="502" y="214" width="462" height="27"/>
+                                                    <rect key="frame" x="502" y="213" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMS-Vl-snx" userLabel="WBCS/HPF Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="502" y="246" width="150" height="55"/>
+                                                    <rect key="frame" x="502" y="244.5" width="150" height="55"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -844,13 +924,13 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RBCS/HPF" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-rB-JtP" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="502" y="321" width="462" height="27"/>
+                                                    <rect key="frame" x="502" y="319.5" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIj-hy-V1e" userLabel="RBCS/HPF Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="502" y="353" width="150" height="55"/>
+                                                    <rect key="frame" x="502" y="351" width="150" height="55"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -862,13 +942,13 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epithelial Cells" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoG-wF-sml" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="502" y="428" width="462" height="27"/>
+                                                    <rect key="frame" x="502" y="426" width="462" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLo-ZX-6yf" userLabel="Epithelial Cells Button" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
-                                                    <rect key="frame" x="502" y="460" width="150" height="55"/>
+                                                    <rect key="frame" x="502" y="457.5" width="150" height="55"/>
                                                     <state key="normal">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -950,16 +1030,16 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k59-VG-CnG" userLabel="Abnormal results">
-                                    <rect key="frame" x="20" y="2156" width="984" height="267"/>
+                                    <rect key="frame" x="20" y="2133" width="984" height="256"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were any clinically significant abnormal results observed?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-54-gmz" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lM7-Nu-WdJ" userLabel="Past Problems" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="32" width="310" height="55"/>
+                                            <rect key="frame" x="0.0" y="31.5" width="310" height="55"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nt3-wB-Jz9" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
@@ -993,29 +1073,37 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If yes, please give details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-s2-PXV" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="107" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="96.5" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-aW-kbS" customClass="RUITextView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="139" width="984" height="128"/>
+                                            <rect key="frame" x="0.0" y="128" width="984" height="128"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="Tfd-fN-fMq"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7S-C4-EMa" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                                            <rect key="frame" x="-0.5" y="128" width="984" height="128"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.070000000000000007" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="p7S-C4-EMa" firstAttribute="height" secondItem="Xpb-aW-kbS" secondAttribute="height" id="14d-YQ-O5i"/>
                                         <constraint firstItem="Xpb-aW-kbS" firstAttribute="top" secondItem="lh6-s2-PXV" secondAttribute="bottom" constant="5" id="4O5-1W-Rpa"/>
                                         <constraint firstItem="lh6-s2-PXV" firstAttribute="trailing" secondItem="aK0-54-gmz" secondAttribute="trailing" id="5tR-An-8Gg"/>
                                         <constraint firstItem="Xpb-aW-kbS" firstAttribute="trailing" secondItem="lh6-s2-PXV" secondAttribute="trailing" id="6Kp-Wx-R9E"/>
                                         <constraint firstAttribute="bottom" secondItem="Xpb-aW-kbS" secondAttribute="bottom" id="B0s-rc-1vD"/>
+                                        <constraint firstItem="p7S-C4-EMa" firstAttribute="width" secondItem="Xpb-aW-kbS" secondAttribute="width" id="C6C-r0-Tty"/>
+                                        <constraint firstItem="p7S-C4-EMa" firstAttribute="centerY" secondItem="Xpb-aW-kbS" secondAttribute="centerY" id="DUk-YD-4Rb"/>
                                         <constraint firstItem="aK0-54-gmz" firstAttribute="top" secondItem="k59-VG-CnG" secondAttribute="top" id="DqT-DB-tEp"/>
-                                        <constraint firstItem="lh6-s2-PXV" firstAttribute="top" secondItem="lM7-Nu-WdJ" secondAttribute="bottom" constant="20" id="O60-Q8-i5S"/>
+                                        <constraint firstItem="p7S-C4-EMa" firstAttribute="centerX" secondItem="Xpb-aW-kbS" secondAttribute="centerX" id="EdW-0l-HzD"/>
+                                        <constraint firstItem="lh6-s2-PXV" firstAttribute="top" secondItem="lM7-Nu-WdJ" secondAttribute="bottom" constant="10" id="O60-Q8-i5S"/>
                                         <constraint firstItem="lM7-Nu-WdJ" firstAttribute="leading" secondItem="aK0-54-gmz" secondAttribute="leading" id="Ui9-8B-98c"/>
                                         <constraint firstItem="Xpb-aW-kbS" firstAttribute="leading" secondItem="lh6-s2-PXV" secondAttribute="leading" id="WUY-L2-Zei"/>
                                         <constraint firstItem="aK0-54-gmz" firstAttribute="leading" secondItem="k59-VG-CnG" secondAttribute="leading" id="XFl-3o-roh"/>
@@ -1025,22 +1113,22 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGr-H1-AmF" userLabel="PREGNANCY TEST">
-                                    <rect key="frame" x="20" y="2453" width="984" height="129"/>
+                                    <rect key="frame" x="20" y="2419" width="984" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREGNANCY TEST (To be done only on women of childbearing potential.)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-G0-oJL" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serum Pregnancy Test" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xD-og-A2f" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="37" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="36.5" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QZc-gi-lFP" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="74" width="620" height="55"/>
+                                            <rect key="frame" x="0.0" y="73" width="620" height="55"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nv-qO-2qS" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
@@ -1098,22 +1186,22 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-bD-dB4" userLabel="BLOOD LEVELS">
-                                    <rect key="frame" x="20" y="2612" width="984" height="236"/>
+                                    <rect key="frame" x="20" y="2577" width="984" height="234.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUPRENORPINE BLOOD LEVELS (To be done at Week 02 and Week 08 ONLY.)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-1c-UpU" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was blood drawn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pru-pq-Zyk" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="37" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="36.5" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNz-F9-d0s" customClass="RUIStackView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="74" width="310" height="55"/>
+                                            <rect key="frame" x="0.0" y="73" width="310" height="55"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngw-Sv-8OB" customClass="HorizontalOptionView" customModule="Hospital" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
@@ -1144,13 +1232,13 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date sent to Utah?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYO-WJ-zVw" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="149" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="148" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJ2-WH-Acp" customClass="DateView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="181" width="200" height="55"/>
+                                            <rect key="frame" x="0.0" y="179.5" width="200" height="55"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="DRv-Yo-Zrf"/>
@@ -1176,22 +1264,25 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPt-Bf-Lra" userLabel="Comments">
-                                    <rect key="frame" x="20" y="2878" width="984" height="160"/>
+                                    <rect key="frame" x="20" y="2841.5" width="984" height="159.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMENTS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koj-tx-MRH" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="utH-sN-gWR" customClass="RUITextView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="32" width="984" height="128"/>
+                                            <rect key="frame" x="0.0" y="31.5" width="984" height="128"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="w7k-du-ZoV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="ZFY-ue-dtb"/>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1206,43 +1297,49 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYi-pX-rOg" userLabel="Bottom View">
-                                    <rect key="frame" x="20" y="3068" width="984" height="214"/>
+                                    <rect key="frame" x="20" y="3031" width="984" height="213"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form Completed By" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T9-R1-mYO" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="27"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="984" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8T-K4-q3h" userLabel="Form Completed By TF" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="32" width="984" height="55"/>
+                                            <rect key="frame" x="0.0" y="31.5" width="984" height="55"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="55" id="6cO-hn-PnA"/>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="wXn-yA-fWx"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investigator's Signature" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmD-1g-ZE3" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="107" width="230" height="27"/>
+                                            <rect key="frame" x="0.0" y="106.5" width="230" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JR4-Ky-5Ew" customClass="RUITextField" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="139" width="492" height="55"/>
+                                            <rect key="frame" x="0.0" y="138" width="492" height="55"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="dhw-hL-7M1"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEh-gS-j8K" customClass="RUILabel" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="784" y="107" width="46" height="27"/>
+                                            <rect key="frame" x="784" y="106.5" width="46" height="26.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9z-hP-V1h" customClass="DateView" customModule="Hospital" customModuleProvider="target">
-                                            <rect key="frame" x="784" y="139" width="200" height="55"/>
+                                            <rect key="frame" x="784" y="138" width="200" height="55"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="rvI-iJ-Hva"/>
@@ -1291,7 +1388,7 @@
                                 <constraint firstItem="QGr-H1-AmF" firstAttribute="trailing" secondItem="k59-VG-CnG" secondAttribute="trailing" id="Nkd-z5-d4S"/>
                                 <constraint firstItem="oA1-G6-dQf" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="O2f-X4-Lrh"/>
                                 <constraint firstItem="Mir-Uw-GVh" firstAttribute="trailing" secondItem="GtI-V7-Xi7" secondAttribute="trailing" id="PGJ-4E-7UR"/>
-                                <constraint firstItem="hTF-Pb-9St" firstAttribute="top" secondItem="sRc-lN-agJ" secondAttribute="bottom" constant="43" id="QPe-LK-Gk7"/>
+                                <constraint firstItem="hTF-Pb-9St" firstAttribute="top" secondItem="sRc-lN-agJ" secondAttribute="bottom" constant="30" id="QPe-LK-Gk7"/>
                                 <constraint firstItem="Mir-Uw-GVh" firstAttribute="leading" secondItem="GtI-V7-Xi7" secondAttribute="leading" id="RJw-7q-GnZ"/>
                                 <constraint firstItem="cuk-gf-i3b" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="TAW-tT-beC"/>
                                 <constraint firstItem="GtI-V7-Xi7" firstAttribute="trailing" secondItem="rHR-dw-CfX" secondAttribute="trailing" id="TNw-Ma-b8s"/>
