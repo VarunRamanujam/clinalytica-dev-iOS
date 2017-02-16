@@ -60,7 +60,7 @@ extension TakenMedicationCell : UITextFieldDelegate {
             if newStr.length() > Text_Length {
                 return false
             }
-            return false
+            return true
         } else if textField == codeDrugTF {
             if newStr.length() > Code_Drug_Length {
                 return false

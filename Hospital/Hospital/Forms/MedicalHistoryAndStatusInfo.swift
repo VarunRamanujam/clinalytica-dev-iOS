@@ -305,7 +305,7 @@ class MedicalHistoryAndStatusInfo: NSObject, Mappable {
     
     var q1Diseases = [MedicalHistory]()
     var q2MedicalProblems = CurrentMedicalProblems()
-    var q3      : Int!
+    var q3      : String!
     var q4ProblemsInThePast7daysInfo = ProblemsInThePast7daysInfo()
     var q5MedicationsInThe7daysInfo = MedicationsInThe7daysInfo()
     
@@ -342,7 +342,7 @@ class MedicalHistoryAndStatusInfo: NSObject, Mappable {
         if isEmptyString(string: patient_initials) ||
             isEmptyString(string: study) ||
             isEmptyString(string: vst_date) ||
-//            isEmptyString(string: q3) ||
+            isEmptyString(string: q3) ||
             isEmptyString(string: completed_by) ||
             isEmptyString(string: inv_date) {
             

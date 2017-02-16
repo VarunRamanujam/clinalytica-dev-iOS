@@ -395,7 +395,7 @@ extension FormTwoViewController {
         }
         
         
-        formTwoInfo.q3 = 3//feelingInThePast7Days.text
+        formTwoInfo.q3 = feelingInThePast7Days.text
         
         formTwoInfo.q4ProblemsInThePast7daysInfo.choice = getNumberFromBool(value: havePastProblems)
         if formTwoInfo.q4ProblemsInThePast7daysInfo.choice != nil &&
