@@ -24,6 +24,10 @@ let Doses_Per_Day_Length = 3
 let Code_Indication_Length = 60
 let Event_Code_Length = 4
 
+let ErrorMissingFields = "Some fields are missing."
+let ErrorWorkPhoneField = "Work Phone length should be 10 digits."
+let ErrorHomePhoneField = "Home Phone length should be 10 digits."
+
 let RaceOptions = ["White, not of Hispanic origin", "Black, not of Hispanic origin", "American Indian", "Alaskan Native", "Asian or Pacific Islander", "Hispanic"]
 
 let EducationOptions = ["Completed graduate/professional training",

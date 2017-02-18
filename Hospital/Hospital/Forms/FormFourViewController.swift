@@ -78,7 +78,7 @@ class FormFourViewController: FormViewController, HorizontalOptionViewDelegate {
         fectchModel()
         
         if formFourObject.isValid() == false {
-            showAlrt(fromController: self, title: "Error", message: "Some fields are missing.", cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
+            showAlrt(fromController: self, title: "Error", message: ErrorMissingFields, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
             
             return true
         }
@@ -233,27 +233,7 @@ extension FormFourViewController {
             appDelegate.hideProgressHudInView()
             
             if response != nil && response!.isSuccess() {
-                self.delegate?.formSubmitted(sender: self)
-            } else {
-                showAlrt(fromController: self, title: "Error", message: response?.statusMessage ?? ServerError, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
-            }
-        }
-    }
-    
-    func sendRequestToSubmitFormFive() {
-        
-        if appDelegate.hasConnectivity() == false {
-            appDelegate.showMessageHudWithMessage(message: NoInternetAccess, delay: 2.0)
-            return
-        }
-        
-        appDelegate.showProgressHudForViewMy(withDetailsLabel: "Please wait…", labelText: "Requesting")
-        appManager.sendRequestToSubmitFormFour(formFourObject: formFourObject) { (response) in
-            
-            appDelegate.hideProgressHudInView()
-            
-            if response != nil && response!.isSuccess() {
-                self.delegate?.formSubmitted(sender: self)
+                self.formSubmitted()
             } else {
                 showAlrt(fromController: self, title: "Error", message: response?.statusMessage ?? ServerError, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
             }

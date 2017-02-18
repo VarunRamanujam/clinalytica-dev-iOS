@@ -41,7 +41,7 @@ class FormOneViewController: FormViewController {
     @IBOutlet var formCompletedByTF: RUITextField!
     @IBOutlet var investigatorSignatureTF: RUITextField!
     @IBOutlet var signDate: DateView!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +62,12 @@ class FormOneViewController: FormViewController {
     }
     
     override func clearButtonClicked() {
+        
         addressTF.text = nil
         workTF.text = nil
         homePhoneTF.text = nil
         zipCodeTF.text = nil
         dateOfBirth.date = nil
-        
         
         genderOptionsGroup.selectedCheckBox?.on = false
         
@@ -97,8 +97,9 @@ class FormOneViewController: FormViewController {
         
         fectchModel()
         
-        if formOneObject.isValid() == false {
-            showAlrt(fromController: self, title: "Error", message: "Some fields are missing.", cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
+        let (valid , errorMessage) = formOneObject.isValid()
+        if valid == false {
+            showAlrt(fromController: self, title: "Error", message: errorMessage, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
             
             return true
         }
@@ -279,10 +280,12 @@ extension FormOneViewController {
         
         appDelegate.showProgressHudForViewMy(withDetailsLabel: "Please wait…", labelText: "Requesting")
         appManager.sendRequestToSubmitFormOne(formOneObject: formOneObject) { (response) in
+            
             appDelegate.hideProgressHudInView()
             
+            
             if response != nil && response!.isSuccess() {
-                self.delegate?.formSubmitted(sender: self)
+                self.formSubmitted()
             } else {
                 showAlrt(fromController: self, title: "Error", message: response?.statusMessage ?? ServerError, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
             }

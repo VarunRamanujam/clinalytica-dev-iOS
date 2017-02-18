@@ -17,6 +17,7 @@
                 <outlet property="havePastProblemsStackView" destination="nLA-el-fmT" id="D2S-KC-2Nl"/>
                 <outlet property="haveTakenMedicationsStackView" destination="y9P-rP-JG1" id="LFI-MO-BZH"/>
                 <outlet property="investigatorSignatureTF" destination="7OF-oZ-uWV" id="jT7-Oz-v8z"/>
+                <outlet property="maskView" destination="kMM-gc-oH8" id="PR7-3O-rjK"/>
                 <outlet property="medicalHistoryTableView" destination="Z6d-fn-2ti" id="X21-G2-NCQ"/>
                 <outlet property="medicalHistoryTableViewHeight" destination="tnv-GV-h9s" id="YxP-JN-hdR"/>
                 <outlet property="medicalStatuTableViewHeight" destination="VGD-dA-wEd" id="gKW-Rx-Dz0"/>
@@ -422,6 +423,10 @@
                                         <constraint firstItem="JO6-7w-2lV" firstAttribute="leading" secondItem="n2m-cN-22x" secondAttribute="leading" id="zdq-KW-2cs"/>
                                     </constraints>
                                 </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMM-gc-oH8" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="-0.5" width="375" height="2077"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.070000000000000007" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -429,19 +434,23 @@
                                 <constraint firstItem="Dt3-1e-fNQ" firstAttribute="trailing" secondItem="4ul-Vu-mHs" secondAttribute="trailing" id="0hI-4d-77X"/>
                                 <constraint firstItem="rEe-1x-GDV" firstAttribute="leading" secondItem="Dt3-1e-fNQ" secondAttribute="leading" id="3ZM-n4-eUT"/>
                                 <constraint firstItem="n2m-cN-22x" firstAttribute="top" secondItem="lNe-Ke-iuw" secondAttribute="bottom" constant="30" id="7Zc-DH-hcM"/>
+                                <constraint firstItem="kMM-gc-oH8" firstAttribute="width" secondItem="PSK-al-fgT" secondAttribute="width" id="CxV-Xh-EDt"/>
                                 <constraint firstItem="YSM-eI-NEN" firstAttribute="leading" secondItem="PSK-al-fgT" secondAttribute="leading" constant="20" id="EkP-VG-dy6"/>
                                 <constraint firstItem="4ul-Vu-mHs" firstAttribute="trailing" secondItem="Eu5-6g-EIl" secondAttribute="trailing" id="IWX-EL-CeB"/>
                                 <constraint firstItem="lNe-Ke-iuw" firstAttribute="top" secondItem="rEe-1x-GDV" secondAttribute="bottom" constant="30" id="MYi-pN-DIn"/>
                                 <constraint firstItem="lNe-Ke-iuw" firstAttribute="trailing" secondItem="rEe-1x-GDV" secondAttribute="trailing" id="NWz-CF-3Vb"/>
                                 <constraint firstItem="rEe-1x-GDV" firstAttribute="top" secondItem="Dt3-1e-fNQ" secondAttribute="bottom" constant="30" id="O0z-zr-nW2"/>
+                                <constraint firstItem="kMM-gc-oH8" firstAttribute="centerX" secondItem="PSK-al-fgT" secondAttribute="centerX" id="Pwc-5W-ilp"/>
                                 <constraint firstItem="lNe-Ke-iuw" firstAttribute="leading" secondItem="rEe-1x-GDV" secondAttribute="leading" id="RIh-Bw-7vC"/>
                                 <constraint firstItem="4ul-Vu-mHs" firstAttribute="top" secondItem="Eu5-6g-EIl" secondAttribute="bottom" constant="30" id="Tld-iW-poL"/>
+                                <constraint firstItem="kMM-gc-oH8" firstAttribute="centerY" secondItem="PSK-al-fgT" secondAttribute="centerY" id="WQl-JK-21v"/>
                                 <constraint firstItem="Eu5-6g-EIl" firstAttribute="trailing" secondItem="YSM-eI-NEN" secondAttribute="trailing" id="aXJ-Gw-q3p"/>
                                 <constraint firstAttribute="trailing" secondItem="YSM-eI-NEN" secondAttribute="trailing" constant="20" id="apa-UI-sjw"/>
                                 <constraint firstItem="n2m-cN-22x" firstAttribute="trailing" secondItem="lNe-Ke-iuw" secondAttribute="trailing" id="des-QA-Qc8"/>
                                 <constraint firstItem="YSM-eI-NEN" firstAttribute="top" secondItem="PSK-al-fgT" secondAttribute="top" id="fNu-0r-wSp"/>
                                 <constraint firstItem="n2m-cN-22x" firstAttribute="leading" secondItem="lNe-Ke-iuw" secondAttribute="leading" id="gN2-U8-1Ll"/>
                                 <constraint firstItem="Dt3-1e-fNQ" firstAttribute="top" secondItem="4ul-Vu-mHs" secondAttribute="bottom" constant="5" id="lkY-to-lEX"/>
+                                <constraint firstItem="kMM-gc-oH8" firstAttribute="height" secondItem="PSK-al-fgT" secondAttribute="height" id="p2o-Lm-VDV"/>
                                 <constraint firstAttribute="bottom" secondItem="n2m-cN-22x" secondAttribute="bottom" constant="20" id="pGC-5W-QPp"/>
                                 <constraint firstItem="Dt3-1e-fNQ" firstAttribute="leading" secondItem="4ul-Vu-mHs" secondAttribute="leading" id="qp5-DL-cUn"/>
                                 <constraint firstItem="Eu5-6g-EIl" firstAttribute="top" secondItem="YSM-eI-NEN" secondAttribute="bottom" constant="30" id="tJO-Ge-YrB"/>

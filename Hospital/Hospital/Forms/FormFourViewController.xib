@@ -16,6 +16,7 @@
                 <outlet property="dateRandomized" destination="hzc-Ui-1xZ" id="Hi9-Nh-rjM"/>
                 <outlet property="formCompletedByTF" destination="61f-rV-qoY" id="Glz-CL-oBT"/>
                 <outlet property="investigatorSignatureTF" destination="Q4a-sF-Ux2" id="svg-aD-BpU"/>
+                <outlet property="maskView" destination="Qnw-DP-XDS" id="jBl-gd-uAn"/>
                 <outlet property="oneToFiveQuestionsStackView" destination="Cr6-qI-aIi" id="CJ7-Rg-Cr1"/>
                 <outlet property="seventeenthQuestion" destination="9yD-U1-bTc" id="eKm-2x-NAh"/>
                 <outlet property="signDate" destination="VUf-J4-9bs" id="V2f-B5-Q81"/>
@@ -289,14 +290,20 @@
                                         <constraint firstItem="61f-rV-qoY" firstAttribute="trailing" secondItem="lKE-7g-GfC" secondAttribute="trailing" id="zzd-7A-PZj"/>
                                     </constraints>
                                 </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnw-DP-XDS" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="-0.5" y="-0.5" width="1024" height="1440"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.070000000000000007" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="6Z0-ay-cV2" firstAttribute="centerY" secondItem="B0W-yi-Rew" secondAttribute="centerY" id="1pu-Dw-YiH"/>
                                 <constraint firstItem="fez-Au-EoG" firstAttribute="trailing" secondItem="Yvf-YP-U1s" secondAttribute="trailing" id="3go-kD-uHu"/>
+                                <constraint firstItem="Qnw-DP-XDS" firstAttribute="width" secondItem="LPh-26-YhR" secondAttribute="width" id="5K6-KM-MmN"/>
                                 <constraint firstItem="Yvf-YP-U1s" firstAttribute="top" secondItem="wOH-yZ-mkY" secondAttribute="bottom" constant="30" id="5f2-GD-8EO"/>
                                 <constraint firstItem="wOH-yZ-mkY" firstAttribute="leading" secondItem="Cr6-qI-aIi" secondAttribute="leading" id="9DK-0i-uRz"/>
                                 <constraint firstItem="Yvf-YP-U1s" firstAttribute="leading" secondItem="wOH-yZ-mkY" secondAttribute="leading" id="AV8-18-toA"/>
+                                <constraint firstItem="Qnw-DP-XDS" firstAttribute="centerY" secondItem="LPh-26-YhR" secondAttribute="centerY" id="FTL-LY-j3E"/>
                                 <constraint firstItem="vKe-IH-yaM" firstAttribute="trailing" secondItem="l3q-Th-UI4" secondAttribute="trailing" id="Jdh-qS-Ovl"/>
                                 <constraint firstItem="Twf-Gk-550" firstAttribute="centerY" secondItem="6Z0-ay-cV2" secondAttribute="centerY" id="KOg-Xc-5rZ"/>
                                 <constraint firstItem="vKe-IH-yaM" firstAttribute="leading" secondItem="l3q-Th-UI4" secondAttribute="leading" id="R3a-27-18b"/>
@@ -311,8 +318,10 @@
                                 <constraint firstItem="vKe-IH-yaM" firstAttribute="top" secondItem="l3q-Th-UI4" secondAttribute="bottom" constant="30" id="igq-Tj-J1Z"/>
                                 <constraint firstItem="l3q-Th-UI4" firstAttribute="leading" secondItem="fez-Au-EoG" secondAttribute="leading" id="ila-Gt-1CQ"/>
                                 <constraint firstItem="Cr6-qI-aIi" firstAttribute="leading" secondItem="LPh-26-YhR" secondAttribute="leading" constant="20" id="jPU-Bx-SkT"/>
+                                <constraint firstItem="Qnw-DP-XDS" firstAttribute="height" secondItem="LPh-26-YhR" secondAttribute="height" id="kJr-HG-PJq"/>
                                 <constraint firstItem="B0W-yi-Rew" firstAttribute="leading" secondItem="6Z0-ay-cV2" secondAttribute="trailing" constant="10" id="lwj-LP-J27"/>
                                 <constraint firstItem="QBM-bf-Twx" firstAttribute="leading" secondItem="6Z0-ay-cV2" secondAttribute="leading" id="mBk-V6-9VH"/>
+                                <constraint firstItem="Qnw-DP-XDS" firstAttribute="centerX" secondItem="LPh-26-YhR" secondAttribute="centerX" id="mb0-4u-BYt"/>
                                 <constraint firstItem="wOH-yZ-mkY" firstAttribute="top" secondItem="Cr6-qI-aIi" secondAttribute="bottom" constant="30" id="rHe-CZ-vBP"/>
                                 <constraint firstItem="QBM-bf-Twx" firstAttribute="top" secondItem="B0W-yi-Rew" secondAttribute="bottom" constant="5" id="raF-zC-gfB"/>
                                 <constraint firstItem="Twf-Gk-550" firstAttribute="leading" secondItem="Yvf-YP-U1s" secondAttribute="leading" id="rfJ-7Y-rZD"/>

@@ -18,6 +18,7 @@
                 <outlet property="havePastProblemsStackView" destination="eSw-Ae-GdE" id="GbU-pi-k0p"/>
                 <outlet property="haveYouBeenFeelingTextView" destination="eip-Ps-3dj" id="5Ic-rd-xS0"/>
                 <outlet property="investigatorSignatureTF" destination="KUT-5h-7T3" id="Yzg-LM-GpE"/>
+                <outlet property="maskView" destination="dvD-vB-SQR" id="gK2-MR-kgc"/>
                 <outlet property="pastProblemsMaskView" destination="rdU-za-eFq" id="i7q-cC-q2k"/>
                 <outlet property="pastProblemsTableHeight" destination="Fho-uh-Wvk" id="ft4-7v-f85"/>
                 <outlet property="pastProblemsTableView" destination="54Q-tH-qiF" id="ySk-zg-m9d"/>
@@ -379,6 +380,10 @@
                                         <constraint firstAttribute="trailing" secondItem="igM-Hh-BWh" secondAttribute="trailing" id="p7Q-TV-m7e"/>
                                     </constraints>
                                 </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-vB-SQR" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="-0.5" y="-1" width="1024" height="1505"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.070000000000000007" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -388,6 +393,7 @@
                                 <constraint firstItem="PRd-On-Mhf" firstAttribute="top" secondItem="GJ3-Dm-C2L" secondAttribute="bottom" constant="30" id="2UJ-Sn-dvB"/>
                                 <constraint firstItem="YIf-j7-00v" firstAttribute="leading" secondItem="U7p-hp-LvO" secondAttribute="leading" id="4dy-10-Fyq"/>
                                 <constraint firstItem="eip-Ps-3dj" firstAttribute="top" secondItem="0O4-PM-CYh" secondAttribute="bottom" constant="5" id="5HR-1d-hcx"/>
+                                <constraint firstItem="dvD-vB-SQR" firstAttribute="centerY" secondItem="pZr-U0-8hN" secondAttribute="centerY" id="6px-DY-adO"/>
                                 <constraint firstItem="VSk-6J-8Zp" firstAttribute="leading" secondItem="I11-RH-iRe" secondAttribute="leading" id="71C-Fn-zHf"/>
                                 <constraint firstItem="U7p-hp-LvO" firstAttribute="top" secondItem="PRd-On-Mhf" secondAttribute="bottom" constant="5" id="7ab-bw-K9p"/>
                                 <constraint firstItem="eip-Ps-3dj" firstAttribute="trailing" secondItem="0O4-PM-CYh" secondAttribute="trailing" id="BvR-sM-qAR"/>
@@ -403,6 +409,7 @@
                                 <constraint firstItem="PRd-On-Mhf" firstAttribute="leading" secondItem="GJ3-Dm-C2L" secondAttribute="leading" id="MlF-qA-SJ0"/>
                                 <constraint firstItem="l0i-Ae-mz5" firstAttribute="top" secondItem="pZr-U0-8hN" secondAttribute="top" id="MuB-OS-2Yv"/>
                                 <constraint firstAttribute="trailing" secondItem="l0i-Ae-mz5" secondAttribute="trailing" constant="20" id="N8s-yv-x63"/>
+                                <constraint firstItem="dvD-vB-SQR" firstAttribute="centerX" secondItem="pZr-U0-8hN" secondAttribute="centerX" id="RGR-Cd-zit"/>
                                 <constraint firstItem="VSk-6J-8Zp" firstAttribute="top" secondItem="I11-RH-iRe" secondAttribute="bottom" constant="30" id="RrT-2M-Smn"/>
                                 <constraint firstItem="Hjs-l6-Xj4" firstAttribute="trailing" secondItem="l0i-Ae-mz5" secondAttribute="trailing" id="Rsh-Nk-Udk"/>
                                 <constraint firstItem="2Kh-Ya-i7U" firstAttribute="trailing" secondItem="IZE-rI-dik" secondAttribute="trailing" id="SNe-H7-3Dh"/>
@@ -414,6 +421,7 @@
                                 <constraint firstItem="U7p-hp-LvO" firstAttribute="leading" secondItem="PRd-On-Mhf" secondAttribute="leading" id="cA5-3g-Ae6"/>
                                 <constraint firstItem="ob5-Z0-5XP" firstAttribute="top" secondItem="l0i-Ae-mz5" secondAttribute="bottom" constant="5" id="dzB-eu-EPp"/>
                                 <constraint firstItem="0O4-PM-CYh" firstAttribute="leading" secondItem="Hjs-l6-Xj4" secondAttribute="leading" id="hb6-uO-8Wl"/>
+                                <constraint firstItem="dvD-vB-SQR" firstAttribute="width" secondItem="pZr-U0-8hN" secondAttribute="width" id="i8l-Bn-6ik"/>
                                 <constraint firstItem="GJ3-Dm-C2L" firstAttribute="top" secondItem="VSk-6J-8Zp" secondAttribute="bottom" constant="5" id="lMu-Ci-qwK"/>
                                 <constraint firstItem="YIf-j7-00v" firstAttribute="trailing" secondItem="U7p-hp-LvO" secondAttribute="trailing" id="mCk-nN-qSI"/>
                                 <constraint firstItem="IZE-rI-dik" firstAttribute="leading" secondItem="eip-Ps-3dj" secondAttribute="leading" id="mam-eh-jhK"/>
@@ -422,6 +430,7 @@
                                 <constraint firstItem="Hjs-l6-Xj4" firstAttribute="top" secondItem="ob5-Z0-5XP" secondAttribute="bottom" constant="30" id="u8k-VB-iUI"/>
                                 <constraint firstItem="GJ3-Dm-C2L" firstAttribute="leading" secondItem="VSk-6J-8Zp" secondAttribute="leading" id="vwz-3T-Cvv"/>
                                 <constraint firstItem="IZE-rI-dik" firstAttribute="top" secondItem="eip-Ps-3dj" secondAttribute="bottom" constant="30" id="xwT-3R-WbH"/>
+                                <constraint firstItem="dvD-vB-SQR" firstAttribute="height" secondItem="pZr-U0-8hN" secondAttribute="height" id="yt9-yW-Uka"/>
                             </constraints>
                         </view>
                     </subviews>

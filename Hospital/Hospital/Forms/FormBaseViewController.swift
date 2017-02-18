@@ -113,14 +113,28 @@ extension FormBaseViewController {
     }
     
     @IBAction func didPressClearButton(_ sender: RUIButton) {
-        childFormViewControllers[selectedPage].clearButtonClicked()
+        if formsStatus[selectedPage] != .Completed {
+            childFormViewControllers[selectedPage].clearButtonClicked()
+        }
     }
     
     @IBAction func didPressNextButton(_ sender: RUIButton) {
 
-        let status = childFormViewControllers[selectedPage].submitForm()
-        if status == false {
+//        #if DEBUG
+//        let powerBI = PowerBIWebViewController(nibName: "PowerBIWebViewController", bundle: nil)
+//        self.navigationController?.pushViewController(powerBI, animated: true)
+//            return
+//        #endif
+        
+        if formsStatus[selectedPage] == .Completed {
             formSubmitted(sender: childFormViewControllers[selectedPage])
+        } else {
+            _ = childFormViewControllers[selectedPage].submitForm()
+//            #if DEBUG
+//                if status == false {
+//                    formSubmitted(sender: childFormViewControllers[selectedPage])
+//                }
+//            #endif
         }
     }
 }
@@ -128,15 +142,21 @@ extension FormBaseViewController {
 //MARK:- FormViewControllerDelegate Menthods
 extension FormBaseViewController : FormViewControllerDelegate {
     func formSubmitted(sender: FormViewController) {
+        
+        formsStatus[selectedPage] = .Completed
+        
         if (selectedPage + 1) >= formsStatus.count {
+            let powerBI = PowerBIWebViewController(nibName: "PowerBIWebViewController", bundle: nil)
+            self.navigationController?.pushViewController(powerBI, animated: true)
             return
         }
         
-        formsStatus[selectedPage] = .Completed
         childFormViewControllers[selectedPage].beginAppearanceTransition(false, animated: false)
         childFormViewControllers[selectedPage].endAppearanceTransition()
         
-        formsStatus[selectedPage + 1] = .Inprogresss
+        if formsStatus[selectedPage + 1] == .None {
+            formsStatus[selectedPage + 1] = .Inprogresss
+        }
         
         selectedPage += 1
         addViewController(at: selectedPage)

@@ -103,7 +103,7 @@ class FormFiveViewController: FormViewController {
         fectchModel()
         
         if formFiveObject.isValid() == false {
-            showAlrt(fromController: self, title: "Error", message: "Some fields are missing.", cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
+            showAlrt(fromController: self, title: "Error", message: ErrorMissingFields, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
             
             return true
         }
@@ -278,8 +278,9 @@ extension FormFiveViewController {
             
             appDelegate.hideProgressHudInView()
             
+            
             if response != nil && response!.isSuccess() {
-                self.delegate?.formSubmitted(sender: self)
+                self.formSubmitted()
             } else {
                 showAlrt(fromController: self, title: "Error", message: response?.statusMessage ?? ServerError, cancelText: "OK", cancelAction: nil, otherText: nil, action: nil)
             }

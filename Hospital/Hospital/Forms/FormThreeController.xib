@@ -36,6 +36,7 @@
                 <outlet property="investigatorSignatureTF" destination="JR4-Ky-5Ew" id="HGQ-pU-tul"/>
                 <outlet property="liverFunctionTestStackView" destination="cuk-gf-i3b" id="PXM-Wh-PgK"/>
                 <outlet property="lymphocytesTF" destination="VtL-8k-cnt" id="jUE-Bx-45Y"/>
+                <outlet property="maskView" destination="Bhq-r3-Bji" id="BCO-FO-4cV"/>
                 <outlet property="monocytesTF" destination="aOG-pJ-Xf4" id="ROv-EY-V6j"/>
                 <outlet property="neutrophilsTF" destination="oA1-G6-dQf" id="0rJ-zs-EZd"/>
                 <outlet property="plateletCountTF" destination="KQL-l0-aKp" id="6Sn-ZB-ovg"/>
@@ -1368,12 +1369,17 @@
                                         <constraint firstItem="S9z-hP-V1h" firstAttribute="top" secondItem="JR4-Ky-5Ew" secondAttribute="top" id="zm2-kN-Pfq"/>
                                     </constraints>
                                 </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhq-r3-Bji" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="-0.5" y="-0.5" width="1024" height="3264"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.070000000000000007" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="k59-VG-CnG" firstAttribute="top" secondItem="xFk-AP-kyq" secondAttribute="bottom" constant="30" id="04L-8E-IyZ"/>
                                 <constraint firstItem="rHR-dw-CfX" firstAttribute="leading" secondItem="hTF-Pb-9St" secondAttribute="leading" id="8Hm-c5-zJi"/>
                                 <constraint firstItem="QGr-H1-AmF" firstAttribute="top" secondItem="k59-VG-CnG" secondAttribute="bottom" constant="30" id="Avo-7n-im6"/>
+                                <constraint firstItem="Bhq-r3-Bji" firstAttribute="width" secondItem="oPr-LC-bzw" secondAttribute="width" id="E5j-Ju-oNP"/>
                                 <constraint firstItem="Mir-Uw-GVh" firstAttribute="top" secondItem="GtI-V7-Xi7" secondAttribute="bottom" constant="30" id="EEh-vy-hxk"/>
                                 <constraint firstItem="oYi-pX-rOg" firstAttribute="top" secondItem="fPt-Bf-Lra" secondAttribute="bottom" constant="30" id="FHc-p3-fUF"/>
                                 <constraint firstAttribute="bottom" secondItem="oYi-pX-rOg" secondAttribute="bottom" constant="20" id="Fep-2z-blL"/>
@@ -1395,10 +1401,12 @@
                                 <constraint firstItem="oYi-pX-rOg" firstAttribute="leading" secondItem="fPt-Bf-Lra" secondAttribute="leading" id="TvQ-MW-Ht6"/>
                                 <constraint firstItem="oYi-pX-rOg" firstAttribute="trailing" secondItem="fPt-Bf-Lra" secondAttribute="trailing" id="XlT-RQ-VVR"/>
                                 <constraint firstItem="k59-VG-CnG" firstAttribute="leading" secondItem="xFk-AP-kyq" secondAttribute="leading" id="a3P-Xy-Nw0"/>
+                                <constraint firstItem="Bhq-r3-Bji" firstAttribute="centerY" secondItem="oPr-LC-bzw" secondAttribute="centerY" id="cX7-Xd-dVQ"/>
                                 <constraint firstItem="rHR-dw-CfX" firstAttribute="trailing" secondItem="hTF-Pb-9St" secondAttribute="trailing" id="cXi-Kd-Y5h"/>
                                 <constraint firstItem="GtI-V7-Xi7" firstAttribute="top" secondItem="rHR-dw-CfX" secondAttribute="bottom" constant="30" id="dmJ-0w-sjX"/>
                                 <constraint firstItem="GtI-V7-Xi7" firstAttribute="leading" secondItem="rHR-dw-CfX" secondAttribute="leading" id="e47-fk-Nuq"/>
                                 <constraint firstItem="kLa-8h-QDW" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="e8D-5F-CSu"/>
+                                <constraint firstItem="Bhq-r3-Bji" firstAttribute="centerX" secondItem="oPr-LC-bzw" secondAttribute="centerX" id="huC-hS-pun"/>
                                 <constraint firstItem="CJ2-WH-Acp" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="ifP-q0-YFr"/>
                                 <constraint firstItem="sRc-lN-agJ" firstAttribute="top" secondItem="oPr-LC-bzw" secondAttribute="top" constant="20" id="jey-FF-uHK"/>
                                 <constraint firstItem="51q-6D-0dU" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="jnE-6E-Xto"/>
@@ -1414,6 +1422,7 @@
                                 <constraint firstItem="QZc-gi-lFP" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="vwZ-Fi-6SU"/>
                                 <constraint firstItem="cIX-OU-ouB" firstAttribute="height" secondItem="lJ8-v4-LW6" secondAttribute="height" id="w7U-NS-5T3"/>
                                 <constraint firstItem="h2y-bD-dB4" firstAttribute="top" secondItem="QGr-H1-AmF" secondAttribute="bottom" constant="30" id="wDR-gf-zLe"/>
+                                <constraint firstItem="Bhq-r3-Bji" firstAttribute="height" secondItem="oPr-LC-bzw" secondAttribute="height" id="wWq-pf-YKC"/>
                                 <constraint firstItem="fPt-Bf-Lra" firstAttribute="top" secondItem="h2y-bD-dB4" secondAttribute="bottom" constant="30" id="z3W-23-n4O"/>
                             </constraints>
                         </view>

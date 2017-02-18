@@ -73,7 +73,7 @@ class BackgroundInformationForm1: NSObject, Mappable {
         date_of_inv <- map["date_of_inv"]
     }
     
-    func isValid() -> Bool {
+    func isValid() -> (Bool, String) {
         
         if isEmptyString(string: patient_initials) ||
            isEmptyString(string: study) ||
@@ -86,7 +86,7 @@ class BackgroundInformationForm1: NSObject, Mappable {
             isEmptyString(string: comments) ||
             isEmptyString(string: completed_by) ||
             isEmptyString(string: date_of_inv) {
-            return false
+            return (false, ErrorMissingFields)
         }
         
         if form_no == nil || form_no == 0 ||
@@ -104,9 +104,17 @@ class BackgroundInformationForm1: NSObject, Mappable {
             q11 == nil || q11 == 0 ||
             q12 == nil || q12 == 0
             {
-            return false
+            return (false, ErrorMissingFields)
         }
         
-        return true
+        if work_phone.length() != 10 {
+            return (false, ErrorWorkPhoneField)
+        }
+        
+        if home_phone.length() != 10 {
+            return (false, ErrorHomePhoneField)
+        }
+        
+        return (true, "")
     }
 }

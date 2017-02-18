@@ -25,6 +25,7 @@
                 <outlet property="investigatorSignatureTF" destination="rVb-e3-l2P" id="lCV-b4-XE0"/>
                 <outlet property="livingArrangementsOptions" destination="yXP-sG-vPW" id="pcn-U4-HTa"/>
                 <outlet property="marritalStatusOptions" destination="nA8-vS-cV0" id="qIF-6f-kNQ"/>
+                <outlet property="maskView" destination="SWp-Ef-Pbl" id="Zr1-mv-ih0"/>
                 <outlet property="pastEmployement" destination="Fkj-QX-sFm" id="ybM-aE-ZX8"/>
                 <outlet property="raceOptionsView" destination="1yz-2i-aU0" id="LyQ-6p-uX8"/>
                 <outlet property="signDate" destination="KfQ-JD-rJG" id="ZKP-wS-GAE"/>
@@ -704,6 +705,10 @@
                                         <constraint firstItem="var-8E-jIW" firstAttribute="leading" secondItem="izJ-UO-fuT" secondAttribute="leading" id="vWQ-kb-Xoh"/>
                                     </constraints>
                                 </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWp-Ef-Pbl" customClass="RUIView" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="-1" width="639" height="2032"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.070000000000000007" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -717,7 +722,11 @@
                                 <constraint firstItem="mcb-Gn-dQE" firstAttribute="width" secondItem="zpG-so-9M4" secondAttribute="width" constant="-40" id="Qhm-6u-yRU"/>
                                 <constraint firstItem="KfQ-JD-rJG" firstAttribute="height" secondItem="3d2-c8-oOz" secondAttribute="height" id="Zi5-Q1-e2B"/>
                                 <constraint firstItem="mcb-Gn-dQE" firstAttribute="top" secondItem="zpG-so-9M4" secondAttribute="top" id="eVL-2P-4R4"/>
+                                <constraint firstItem="SWp-Ef-Pbl" firstAttribute="height" secondItem="zpG-so-9M4" secondAttribute="height" id="gwU-33-M9h"/>
+                                <constraint firstItem="SWp-Ef-Pbl" firstAttribute="centerY" secondItem="zpG-so-9M4" secondAttribute="centerY" id="pcH-oX-Blj"/>
                                 <constraint firstItem="Mzq-vw-p7i" firstAttribute="trailing" secondItem="mcb-Gn-dQE" secondAttribute="trailing" id="so0-NQ-TtC"/>
+                                <constraint firstItem="SWp-Ef-Pbl" firstAttribute="width" secondItem="zpG-so-9M4" secondAttribute="width" id="ulD-5c-Yoo"/>
+                                <constraint firstItem="SWp-Ef-Pbl" firstAttribute="centerX" secondItem="zpG-so-9M4" secondAttribute="centerX" id="ybb-1L-gMh"/>
                             </constraints>
                         </view>
                     </subviews>

@@ -18,10 +18,13 @@ class FormViewController: RUIViewController {
     
     var appManager = AppManager()
     
+    @IBOutlet var maskView : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        maskView.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,5 +39,10 @@ class FormViewController: RUIViewController {
     
     func submitForm() -> Bool {
         return false
+    }
+    
+    func formSubmitted() {
+        delegate?.formSubmitted(sender: self)
+        maskView.isHidden = false
     }
 }
