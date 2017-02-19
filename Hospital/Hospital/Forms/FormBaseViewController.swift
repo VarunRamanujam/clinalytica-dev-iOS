@@ -19,6 +19,7 @@ class FormBaseViewController: RUIViewController {
     @IBOutlet var headerView: FormHeaderView!
     @IBOutlet var pageNumbersStackView: UIStackView!
     @IBOutlet var pageNumberButtons: [UIButton]!
+    @IBOutlet var plusFloatingButton: RUIButton!
     @IBOutlet var pageNumberDividers: [UIView]!
     
     @IBOutlet var scrollView: UIScrollView!
@@ -62,6 +63,7 @@ class FormBaseViewController: RUIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 
 //MARK:- UIScrollViewDelegate
@@ -119,22 +121,20 @@ extension FormBaseViewController {
     }
     
     @IBAction func didPressNextButton(_ sender: RUIButton) {
-
-//        #if DEBUG
-//        let powerBI = PowerBIWebViewController(nibName: "PowerBIWebViewController", bundle: nil)
-//        self.navigationController?.pushViewController(powerBI, animated: true)
-//            return
-//        #endif
         
         if formsStatus[selectedPage] == .Completed {
             formSubmitted(sender: childFormViewControllers[selectedPage])
         } else {
             _ = childFormViewControllers[selectedPage].submitForm()
-//            #if DEBUG
-//                if status == false {
-//                    formSubmitted(sender: childFormViewControllers[selectedPage])
-//                }
-//            #endif
+        }
+    }
+    
+    @IBAction func didPressOnNewFormButton(_ sender: RUIButton) {
+        if formsStatus[formsStatus.count - 1] == .Completed {
+            let baseViewCntl = FormBaseViewController(nibName: "FormBaseViewController", bundle: nil)
+            self.navigationController?.setViewControllers([baseViewCntl], animated: false)
+        } else {
+            showAlrt(fromController: self, title: "Error", message: "Please submit All 5 Forms", cancelText: "Ok", cancelAction: nil, otherText: nil, action: nil)
         }
     }
 }

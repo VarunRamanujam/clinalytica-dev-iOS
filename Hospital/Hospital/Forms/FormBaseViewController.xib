@@ -17,6 +17,7 @@
                 <outlet property="headerView" destination="nhy-uz-gIw" id="WBG-an-bKF"/>
                 <outlet property="nextButton" destination="H5c-Fv-AFj" id="AO0-nA-Pho"/>
                 <outlet property="pageNumbersStackView" destination="hVR-ag-dd7" id="4el-1q-kzQ"/>
+                <outlet property="plusFloatingButton" destination="ZyD-r2-S4H" id="t5s-9F-heM"/>
                 <outlet property="scrollContentStackView" destination="ZO5-8V-WED" id="JHC-P6-8zS"/>
                 <outlet property="scrollView" destination="svM-m0-ka7" id="owq-aj-INo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -173,6 +174,19 @@
                         <outlet property="delegate" destination="-1" id="eYo-XM-r7o"/>
                     </connections>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyD-r2-S4H" customClass="RUIButton" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="916" y="1158" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZyD-r2-S4H" secondAttribute="height" multiplier="1:1" id="Fxx-pR-lFL"/>
+                        <constraint firstAttribute="width" constant="80" id="XQa-ys-wN9"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="76"/>
+                    <state key="normal" image="Plus Floating"/>
+                    <connections>
+                        <action selector="didPressOnNewFormButton:" destination="-1" eventType="touchUpInside" id="X7K-YP-Cpf"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSo-Ad-hKl">
                     <rect key="frame" x="-2" y="1268" width="1028" height="100"/>
                     <subviews>
@@ -224,11 +238,16 @@
                 <constraint firstAttribute="trailing" secondItem="svM-m0-ka7" secondAttribute="trailing" id="SCK-93-2cM"/>
                 <constraint firstItem="zSo-Ad-hKl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="T3c-fB-Eko"/>
                 <constraint firstItem="nhy-uz-gIw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Tmu-67-gPx"/>
+                <constraint firstItem="zSo-Ad-hKl" firstAttribute="top" secondItem="ZyD-r2-S4H" secondAttribute="bottom" constant="30" id="WOh-uY-qlv"/>
                 <constraint firstItem="svM-m0-ka7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xrp-lL-jPw"/>
                 <constraint firstItem="hVR-ag-dd7" firstAttribute="top" secondItem="nhy-uz-gIw" secondAttribute="bottom" constant="20" id="bpD-bb-bZN"/>
                 <constraint firstAttribute="trailing" secondItem="zSo-Ad-hKl" secondAttribute="trailing" constant="-2" id="o3X-g7-4RB"/>
+                <constraint firstItem="zSo-Ad-hKl" firstAttribute="trailing" secondItem="ZyD-r2-S4H" secondAttribute="trailing" constant="30" id="xU0-6D-c6o"/>
                 <constraint firstItem="hVR-ag-dd7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yWM-bl-I6a"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Plus Floating" width="16" height="16"/>
+    </resources>
 </document>
