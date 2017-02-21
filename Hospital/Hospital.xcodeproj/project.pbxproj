@@ -31,10 +31,6 @@
 		041A36891E3F21D000C23BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041A36871E3F21D000C23BE6 /* Main.storyboard */; };
 		041A368B1E3F21D000C23BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041A368A1E3F21D000C23BE6 /* Assets.xcassets */; };
 		041A368E1E3F21D000C23BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041A368C1E3F21D000C23BE6 /* LaunchScreen.storyboard */; };
-		041A36961E3F25F800C23BE6 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36951E3F25F800C23BE6 /* View1.swift */; };
-		041A36981E3F260200C23BE6 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36971E3F260200C23BE6 /* View2.swift */; };
-		041A369A1E3F261600C23BE6 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041A36991E3F261600C23BE6 /* View1.xib */; };
-		041A369C1E3F262000C23BE6 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041A369B1E3F262000C23BE6 /* View2.xib */; };
 		041A36A21E3F5F2300C23BE6 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36A11E3F5F2300C23BE6 /* HelperFunctions.swift */; };
 		041A36A41E3F63CB00C23BE6 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36A31E3F63CB00C23BE6 /* PasscodeView.swift */; };
 		041A36A61E3F879B00C23BE6 /* String+RUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A36A51E3F879B00C23BE6 /* String+RUI.swift */; };
@@ -133,10 +129,6 @@
 		041A368A1E3F21D000C23BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041A368D1E3F21D000C23BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041A368F1E3F21D000C23BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		041A36951E3F25F800C23BE6 /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
-		041A36971E3F260200C23BE6 /* View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
-		041A36991E3F261600C23BE6 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
-		041A369B1E3F262000C23BE6 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
 		041A36A11E3F5F2300C23BE6 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		041A36A31E3F63CB00C23BE6 /* PasscodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
 		041A36A51E3F879B00C23BE6 /* String+RUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RUI.swift"; sourceTree = "<group>"; };
@@ -276,10 +268,6 @@
 				04FD76481E410149001AAE6D /* Forms */,
 				041A36831E3F21D000C23BE6 /* AppDelegate.swift */,
 				041A36851E3F21D000C23BE6 /* ViewController.swift */,
-				041A36951E3F25F800C23BE6 /* View1.swift */,
-				041A36991E3F261600C23BE6 /* View1.xib */,
-				041A36971E3F260200C23BE6 /* View2.swift */,
-				041A369B1E3F262000C23BE6 /* View2.xib */,
 				041A36871E3F21D000C23BE6 /* Main.storyboard */,
 				041A368A1E3F21D000C23BE6 /* Assets.xcassets */,
 				041A368C1E3F21D000C23BE6 /* LaunchScreen.storyboard */,
@@ -539,8 +527,6 @@
 				0412F2111E45BF100060D952 /* MedicalStatusCell.xib in Resources */,
 				041A368B1E3F21D000C23BE6 /* Assets.xcassets in Resources */,
 				04204B071E44CA7100B7CB9E /* MedicalHistoryAndStatusCell.xib in Resources */,
-				041A369A1E3F261600C23BE6 /* View1.xib in Resources */,
-				041A369C1E3F262000C23BE6 /* View2.xib in Resources */,
 				04187D0C1E477C3D00B7492D /* TakenMedicationCell.xib in Resources */,
 				04187D101E477C4E00B7492D /* TakenMedicationTitleCell.xib in Resources */,
 				041A36891E3F21D000C23BE6 /* Main.storyboard in Resources */,
@@ -642,7 +628,6 @@
 				0440E42C1E523170009D0A34 /* BackgroundInformationForm1.swift in Sources */,
 				0412F2151E45D3900060D952 /* OptionsPopOverViewController.swift in Sources */,
 				04BF46B11E42450C00E2F0AF /* FormHeaderView.swift in Sources */,
-				041A36961E3F25F800C23BE6 /* View1.swift in Sources */,
 				04BF46AC1E4241E300E2F0AF /* FormFiveViewController.swift in Sources */,
 				04187D0F1E477C4E00B7492D /* TakenMedicationTitleCell.swift in Sources */,
 				04204B061E44CA7100B7CB9E /* MedicalHistoryAndStatusCell.swift in Sources */,
@@ -678,7 +663,6 @@
 				04BF46B71E42493500E2F0AF /* DateView.swift in Sources */,
 				041B9E701E54753F008DBE7E /* MedicalHistoryAndStatusInfo.swift in Sources */,
 				041B9E6E1E540A23008DBE7E /* Date+RUI.swift in Sources */,
-				041A36981E3F260200C23BE6 /* View2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
