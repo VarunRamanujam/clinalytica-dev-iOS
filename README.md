@@ -10,4 +10,4 @@ Small percentage of the clinical trials are completed on time. Conducting a cost
 
 Our comprehensive solution (CA Clinical Intelligence Platform) empowers our customers (CROs) to gain insights into the data faster and enable quick decision making.
 
-alt tag
+<img src="http://demo-logoorbit.com/clinalytica/wp-content/uploads/2017/02/Untitled-1.png" alt="Clinalytica Solutions" width="300" height="300" />
